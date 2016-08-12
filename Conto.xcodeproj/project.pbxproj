@@ -7,25 +7,255 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5280443E1D5DB92400388530 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5280443D1D5DB92400388530 /* AppDelegate.m */; };
 		528044411D5DB92400388530 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 528044401D5DB92400388530 /* main.m */; };
-		528044441D5DB92400388530 /* Document.m in Sources */ = {isa = PBXBuildFile; fileRef = 528044431D5DB92400388530 /* Document.m */; };
-		528044471D5DB92400388530 /* Document.xib in Resources */ = {isa = PBXBuildFile; fileRef = 528044451D5DB92400388530 /* Document.xib */; };
 		528044491D5DB92400388530 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 528044481D5DB92400388530 /* Assets.xcassets */; };
-		5280444C1D5DB92400388530 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5280444A1D5DB92400388530 /* MainMenu.xib */; };
+		528044FF1D5DB98300388530 /* ContoAppIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 528044531D5DB98300388530 /* ContoAppIcon.icns */; };
+		528045001D5DB98300388530 /* ContoDocIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 528044541D5DB98300388530 /* ContoDocIcon.icns */; };
+		528045011D5DB98300388530 /* CXAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 528044561D5DB98300388530 /* CXAppDelegate.m */; };
+		528045021D5DB98300388530 /* CXDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 528044581D5DB98300388530 /* CXDocument.m */; };
+		528045031D5DB98300388530 /* CXGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5280445A1D5DB98300388530 /* CXGraphView.m */; };
+		528045041D5DB98300388530 /* CXGraphWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5280445C1D5DB98300388530 /* CXGraphWindowController.m */; };
+		528045051D5DB98300388530 /* CXMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5280445E1D5DB98300388530 /* CXMainWindowController.m */; };
+		528045061D5DB98300388530 /* CXPreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 528044601D5DB98300388530 /* CXPreferencesController.m */; };
+		528045071D5DB98300388530 /* CXSummaryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 528044621D5DB98300388530 /* CXSummaryController.m */; };
+		528045081D5DB98300388530 /* Conto Help Folder idx in Resources */ = {isa = PBXBuildFile; fileRef = 528044651D5DB98300388530 /* Conto Help Folder idx */; };
+		528045091D5DB98300388530 /* cxAdd.html in Resources */ = {isa = PBXBuildFile; fileRef = 528044661D5DB98300388530 /* cxAdd.html */; };
+		5280450A1D5DB98300388530 /* cxCredits.html in Resources */ = {isa = PBXBuildFile; fileRef = 528044671D5DB98300388530 /* cxCredits.html */; };
+		5280450B1D5DB98300388530 /* cxEdit.html in Resources */ = {isa = PBXBuildFile; fileRef = 528044681D5DB98300388530 /* cxEdit.html */; };
+		5280450C1D5DB98300388530 /* cxEncryption.html in Resources */ = {isa = PBXBuildFile; fileRef = 528044691D5DB98300388530 /* cxEncryption.html */; };
+		5280450D1D5DB98300388530 /* cxGraphWindow.html in Resources */ = {isa = PBXBuildFile; fileRef = 5280446A1D5DB98300388530 /* cxGraphWindow.html */; };
+		5280450E1D5DB98300388530 /* cxHistory.html in Resources */ = {isa = PBXBuildFile; fileRef = 5280446B1D5DB98300388530 /* cxHistory.html */; };
+		5280450F1D5DB98300388530 /* cxindex.html in Resources */ = {isa = PBXBuildFile; fileRef = 5280446C1D5DB98300388530 /* cxindex.html */; };
+		528045101D5DB98300388530 /* cxLicense.html in Resources */ = {isa = PBXBuildFile; fileRef = 5280446D1D5DB98300388530 /* cxLicense.html */; };
+		528045111D5DB98300388530 /* cxPredefinedDescriptions.html in Resources */ = {isa = PBXBuildFile; fileRef = 5280446E1D5DB98300388530 /* cxPredefinedDescriptions.html */; };
+		528045121D5DB98300388530 /* cxSearch.html in Resources */ = {isa = PBXBuildFile; fileRef = 5280446F1D5DB98300388530 /* cxSearch.html */; };
+		528045131D5DB98300388530 /* cxSetup.html in Resources */ = {isa = PBXBuildFile; fileRef = 528044701D5DB98300388530 /* cxSetup.html */; };
+		528045141D5DB98300388530 /* cxStart.html in Resources */ = {isa = PBXBuildFile; fileRef = 528044711D5DB98300388530 /* cxStart.html */; };
+		528045151D5DB98300388530 /* cxSummaryWindow.html in Resources */ = {isa = PBXBuildFile; fileRef = 528044721D5DB98300388530 /* cxSummaryWindow.html */; };
+		528045161D5DB98300388530 /* cxToC.html in Resources */ = {isa = PBXBuildFile; fileRef = 528044731D5DB98300388530 /* cxToC.html */; };
+		528045171D5DB98300388530 /* ContoAppIcon48x48.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 528044751D5DB98300388530 /* ContoAppIcon48x48.tiff */; };
+		528045181D5DB98300388530 /* ContoIcon16x16.gif in Resources */ = {isa = PBXBuildFile; fileRef = 528044761D5DB98300388530 /* ContoIcon16x16.gif */; };
+		528045191D5DB98300388530 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 528044771D5DB98300388530 /* Credits.rtf */; };
+		5280451A1D5DB98300388530 /* CXDocument.nib in Resources */ = {isa = PBXBuildFile; fileRef = 528044791D5DB98300388530 /* CXDocument.nib */; };
+		5280451B1D5DB98300388530 /* CXGraph.nib in Resources */ = {isa = PBXBuildFile; fileRef = 5280447B1D5DB98300388530 /* CXGraph.nib */; };
+		5280451C1D5DB98300388530 /* CXPassphrase.nib in Resources */ = {isa = PBXBuildFile; fileRef = 5280447D1D5DB98300388530 /* CXPassphrase.nib */; };
+		5280451D1D5DB98300388530 /* CXPreferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = 5280447F1D5DB98300388530 /* CXPreferences.nib */; };
+		5280451E1D5DB98300388530 /* CXSummary.nib in Resources */ = {isa = PBXBuildFile; fileRef = 528044811D5DB98300388530 /* CXSummary.nib */; };
+		5280451F1D5DB98300388530 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 528044831D5DB98300388530 /* InfoPlist.strings */; };
+		528045201D5DB98300388530 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 528044851D5DB98300388530 /* Localizable.strings */; };
+		528045211D5DB98300388530 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 528044871D5DB98300388530 /* MainMenu.nib */; };
+		528045221D5DB98300388530 /* Conto Help Folder idx in Resources */ = {isa = PBXBuildFile; fileRef = 5280448B1D5DB98300388530 /* Conto Help Folder idx */; };
+		528045231D5DB98300388530 /* cxAdd.html in Resources */ = {isa = PBXBuildFile; fileRef = 5280448C1D5DB98300388530 /* cxAdd.html */; };
+		528045241D5DB98300388530 /* cxCredits.html in Resources */ = {isa = PBXBuildFile; fileRef = 5280448D1D5DB98300388530 /* cxCredits.html */; };
+		528045251D5DB98300388530 /* cxEdit.html in Resources */ = {isa = PBXBuildFile; fileRef = 5280448E1D5DB98300388530 /* cxEdit.html */; };
+		528045261D5DB98300388530 /* cxEncryption.html in Resources */ = {isa = PBXBuildFile; fileRef = 5280448F1D5DB98300388530 /* cxEncryption.html */; };
+		528045271D5DB98300388530 /* cxGraphWindow.html in Resources */ = {isa = PBXBuildFile; fileRef = 528044901D5DB98300388530 /* cxGraphWindow.html */; };
+		528045281D5DB98300388530 /* cxHistory.html in Resources */ = {isa = PBXBuildFile; fileRef = 528044911D5DB98300388530 /* cxHistory.html */; };
+		528045291D5DB98300388530 /* cxindex.html in Resources */ = {isa = PBXBuildFile; fileRef = 528044921D5DB98300388530 /* cxindex.html */; };
+		5280452A1D5DB98300388530 /* cxLicense.html in Resources */ = {isa = PBXBuildFile; fileRef = 528044931D5DB98300388530 /* cxLicense.html */; };
+		5280452B1D5DB98300388530 /* cxPredefinedDescriptions.html in Resources */ = {isa = PBXBuildFile; fileRef = 528044941D5DB98300388530 /* cxPredefinedDescriptions.html */; };
+		5280452C1D5DB98300388530 /* cxSearch.html in Resources */ = {isa = PBXBuildFile; fileRef = 528044951D5DB98300388530 /* cxSearch.html */; };
+		5280452D1D5DB98300388530 /* cxSetup.html in Resources */ = {isa = PBXBuildFile; fileRef = 528044961D5DB98300388530 /* cxSetup.html */; };
+		5280452E1D5DB98300388530 /* cxStart.html in Resources */ = {isa = PBXBuildFile; fileRef = 528044971D5DB98300388530 /* cxStart.html */; };
+		5280452F1D5DB98300388530 /* cxSummaryWindow.html in Resources */ = {isa = PBXBuildFile; fileRef = 528044981D5DB98300388530 /* cxSummaryWindow.html */; };
+		528045301D5DB98300388530 /* cxToC.html in Resources */ = {isa = PBXBuildFile; fileRef = 528044991D5DB98300388530 /* cxToC.html */; };
+		528045311D5DB98300388530 /* ContoAppIcon48x48.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 5280449B1D5DB98300388530 /* ContoAppIcon48x48.tiff */; };
+		528045321D5DB98300388530 /* ContoIcon16x16.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5280449C1D5DB98300388530 /* ContoIcon16x16.gif */; };
+		528045331D5DB98300388530 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 5280449D1D5DB98300388530 /* Credits.rtf */; };
+		528045341D5DB98300388530 /* CXDocument.nib in Resources */ = {isa = PBXBuildFile; fileRef = 5280449F1D5DB98300388530 /* CXDocument.nib */; };
+		528045351D5DB98300388530 /* CXGraph.nib in Resources */ = {isa = PBXBuildFile; fileRef = 528044A11D5DB98300388530 /* CXGraph.nib */; };
+		528045361D5DB98300388530 /* CXPassphrase.nib in Resources */ = {isa = PBXBuildFile; fileRef = 528044A31D5DB98300388530 /* CXPassphrase.nib */; };
+		528045371D5DB98300388530 /* CXPreferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = 528044A51D5DB98300388530 /* CXPreferences.nib */; };
+		528045381D5DB98300388530 /* CXSummary.nib in Resources */ = {isa = PBXBuildFile; fileRef = 528044A71D5DB98300388530 /* CXSummary.nib */; };
+		528045391D5DB98300388530 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 528044A91D5DB98300388530 /* InfoPlist.strings */; };
+		5280453A1D5DB98300388530 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 528044AB1D5DB98300388530 /* Localizable.strings */; };
+		5280453B1D5DB98300388530 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 528044AD1D5DB98300388530 /* MainMenu.nib */; };
+		5280453C1D5DB98300388530 /* Conto Help Folder idx in Resources */ = {isa = PBXBuildFile; fileRef = 528044B11D5DB98300388530 /* Conto Help Folder idx */; };
+		5280453D1D5DB98300388530 /* cxAdd.html in Resources */ = {isa = PBXBuildFile; fileRef = 528044B21D5DB98300388530 /* cxAdd.html */; };
+		5280453E1D5DB98300388530 /* cxCredits.html in Resources */ = {isa = PBXBuildFile; fileRef = 528044B31D5DB98300388530 /* cxCredits.html */; };
+		5280453F1D5DB98300388530 /* cxEdit.html in Resources */ = {isa = PBXBuildFile; fileRef = 528044B41D5DB98300388530 /* cxEdit.html */; };
+		528045401D5DB98300388530 /* cxEncryption.html in Resources */ = {isa = PBXBuildFile; fileRef = 528044B51D5DB98300388530 /* cxEncryption.html */; };
+		528045411D5DB98300388530 /* cxGraphWindow.html in Resources */ = {isa = PBXBuildFile; fileRef = 528044B61D5DB98300388530 /* cxGraphWindow.html */; };
+		528045421D5DB98300388530 /* cxHistory.html in Resources */ = {isa = PBXBuildFile; fileRef = 528044B71D5DB98300388530 /* cxHistory.html */; };
+		528045431D5DB98300388530 /* cxindex.html in Resources */ = {isa = PBXBuildFile; fileRef = 528044B81D5DB98300388530 /* cxindex.html */; };
+		528045441D5DB98300388530 /* cxLicense.html in Resources */ = {isa = PBXBuildFile; fileRef = 528044B91D5DB98300388530 /* cxLicense.html */; };
+		528045451D5DB98300388530 /* cxPredefinedDescriptions.html in Resources */ = {isa = PBXBuildFile; fileRef = 528044BA1D5DB98300388530 /* cxPredefinedDescriptions.html */; };
+		528045461D5DB98300388530 /* cxSearch.html in Resources */ = {isa = PBXBuildFile; fileRef = 528044BB1D5DB98300388530 /* cxSearch.html */; };
+		528045471D5DB98300388530 /* cxSetup.html in Resources */ = {isa = PBXBuildFile; fileRef = 528044BC1D5DB98300388530 /* cxSetup.html */; };
+		528045481D5DB98300388530 /* cxStart.html in Resources */ = {isa = PBXBuildFile; fileRef = 528044BD1D5DB98300388530 /* cxStart.html */; };
+		528045491D5DB98300388530 /* cxSummaryWindow.html in Resources */ = {isa = PBXBuildFile; fileRef = 528044BE1D5DB98300388530 /* cxSummaryWindow.html */; };
+		5280454A1D5DB98300388530 /* cxToC.html in Resources */ = {isa = PBXBuildFile; fileRef = 528044BF1D5DB98300388530 /* cxToC.html */; };
+		5280454B1D5DB98300388530 /* ContoAppIcon48x48.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 528044C11D5DB98300388530 /* ContoAppIcon48x48.tiff */; };
+		5280454C1D5DB98300388530 /* ContoIcon16x16.gif in Resources */ = {isa = PBXBuildFile; fileRef = 528044C21D5DB98300388530 /* ContoIcon16x16.gif */; };
+		5280454D1D5DB98300388530 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 528044C31D5DB98300388530 /* Credits.rtf */; };
+		5280454E1D5DB98300388530 /* CXDocument.nib in Resources */ = {isa = PBXBuildFile; fileRef = 528044C51D5DB98300388530 /* CXDocument.nib */; };
+		5280454F1D5DB98300388530 /* CXGraph.nib in Resources */ = {isa = PBXBuildFile; fileRef = 528044C71D5DB98300388530 /* CXGraph.nib */; };
+		528045501D5DB98300388530 /* CXPassphrase.nib in Resources */ = {isa = PBXBuildFile; fileRef = 528044C91D5DB98300388530 /* CXPassphrase.nib */; };
+		528045511D5DB98300388530 /* CXPreferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = 528044CB1D5DB98300388530 /* CXPreferences.nib */; };
+		528045521D5DB98300388530 /* CXSummary.nib in Resources */ = {isa = PBXBuildFile; fileRef = 528044CD1D5DB98300388530 /* CXSummary.nib */; };
+		528045531D5DB98300388530 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 528044CF1D5DB98300388530 /* InfoPlist.strings */; };
+		528045541D5DB98300388530 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 528044D11D5DB98300388530 /* Localizable.strings */; };
+		528045551D5DB98300388530 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 528044D31D5DB98300388530 /* MainMenu.nib */; };
+		528045561D5DB98300388530 /* globals.m in Sources */ = {isa = PBXBuildFile; fileRef = 528044D61D5DB98300388530 /* globals.m */; };
+		528045571D5DB98300388530 /* Conto Help Folder idx in Resources */ = {isa = PBXBuildFile; fileRef = 528044D91D5DB98300388530 /* Conto Help Folder idx */; };
+		528045581D5DB98300388530 /* cxAdd.html in Resources */ = {isa = PBXBuildFile; fileRef = 528044DA1D5DB98300388530 /* cxAdd.html */; };
+		528045591D5DB98300388530 /* cxCredits.html in Resources */ = {isa = PBXBuildFile; fileRef = 528044DB1D5DB98300388530 /* cxCredits.html */; };
+		5280455A1D5DB98300388530 /* cxEdit.html in Resources */ = {isa = PBXBuildFile; fileRef = 528044DC1D5DB98300388530 /* cxEdit.html */; };
+		5280455B1D5DB98300388530 /* cxEncryption.html in Resources */ = {isa = PBXBuildFile; fileRef = 528044DD1D5DB98300388530 /* cxEncryption.html */; };
+		5280455C1D5DB98300388530 /* cxGraphWindow.html in Resources */ = {isa = PBXBuildFile; fileRef = 528044DE1D5DB98300388530 /* cxGraphWindow.html */; };
+		5280455D1D5DB98300388530 /* cxHistory.html in Resources */ = {isa = PBXBuildFile; fileRef = 528044DF1D5DB98300388530 /* cxHistory.html */; };
+		5280455E1D5DB98300388530 /* cxindex.html in Resources */ = {isa = PBXBuildFile; fileRef = 528044E01D5DB98300388530 /* cxindex.html */; };
+		5280455F1D5DB98300388530 /* cxLicense.html in Resources */ = {isa = PBXBuildFile; fileRef = 528044E11D5DB98300388530 /* cxLicense.html */; };
+		528045601D5DB98300388530 /* cxPredefinedDescriptions.html in Resources */ = {isa = PBXBuildFile; fileRef = 528044E21D5DB98300388530 /* cxPredefinedDescriptions.html */; };
+		528045611D5DB98300388530 /* cxSearch.html in Resources */ = {isa = PBXBuildFile; fileRef = 528044E31D5DB98300388530 /* cxSearch.html */; };
+		528045621D5DB98300388530 /* cxSetup.html in Resources */ = {isa = PBXBuildFile; fileRef = 528044E41D5DB98300388530 /* cxSetup.html */; };
+		528045631D5DB98300388530 /* cxStart.html in Resources */ = {isa = PBXBuildFile; fileRef = 528044E51D5DB98300388530 /* cxStart.html */; };
+		528045641D5DB98300388530 /* cxSummaryWindow.html in Resources */ = {isa = PBXBuildFile; fileRef = 528044E61D5DB98300388530 /* cxSummaryWindow.html */; };
+		528045651D5DB98300388530 /* cxToC.html in Resources */ = {isa = PBXBuildFile; fileRef = 528044E71D5DB98300388530 /* cxToC.html */; };
+		528045661D5DB98300388530 /* ContoAppIcon48x48.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 528044E91D5DB98300388530 /* ContoAppIcon48x48.tiff */; };
+		528045671D5DB98300388530 /* ContoIcon16x16.gif in Resources */ = {isa = PBXBuildFile; fileRef = 528044EA1D5DB98300388530 /* ContoIcon16x16.gif */; };
+		528045681D5DB98300388530 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 528044EB1D5DB98300388530 /* Credits.rtf */; };
+		528045691D5DB98300388530 /* CXDocument.nib in Resources */ = {isa = PBXBuildFile; fileRef = 528044ED1D5DB98300388530 /* CXDocument.nib */; };
+		5280456A1D5DB98300388530 /* CXGraph.nib in Resources */ = {isa = PBXBuildFile; fileRef = 528044EF1D5DB98300388530 /* CXGraph.nib */; };
+		5280456B1D5DB98300388530 /* CXPassphrase.nib in Resources */ = {isa = PBXBuildFile; fileRef = 528044F11D5DB98300388530 /* CXPassphrase.nib */; };
+		5280456C1D5DB98300388530 /* CXPreferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = 528044F31D5DB98300388530 /* CXPreferences.nib */; };
+		5280456D1D5DB98300388530 /* CXSummary.nib in Resources */ = {isa = PBXBuildFile; fileRef = 528044F51D5DB98300388530 /* CXSummary.nib */; };
+		5280456E1D5DB98300388530 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 528044F71D5DB98300388530 /* InfoPlist.strings */; };
+		5280456F1D5DB98300388530 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 528044F91D5DB98300388530 /* Localizable.strings */; };
+		528045701D5DB98300388530 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 528044FB1D5DB98300388530 /* MainMenu.nib */; };
+		528045711D5DB98300388530 /* NextPageAction.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 528044FD1D5DB98300388530 /* NextPageAction.tiff */; };
+		528045721D5DB98300388530 /* PreviousPageAction.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 528044FE1D5DB98300388530 /* PreviousPageAction.tiff */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		528044391D5DB92400388530 /* Conto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Conto.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5280443C1D5DB92400388530 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		5280443D1D5DB92400388530 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		528044401D5DB92400388530 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		528044421D5DB92400388530 /* Document.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Document.h; sourceTree = "<group>"; };
-		528044431D5DB92400388530 /* Document.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Document.m; sourceTree = "<group>"; };
-		528044461D5DB92400388530 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/Document.xib; sourceTree = "<group>"; };
 		528044481D5DB92400388530 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5280444B1D5DB92400388530 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		5280444D1D5DB92400388530 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		528044531D5DB98300388530 /* ContoAppIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = ContoAppIcon.icns; sourceTree = "<group>"; };
+		528044541D5DB98300388530 /* ContoDocIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = ContoDocIcon.icns; sourceTree = "<group>"; };
+		528044551D5DB98300388530 /* CXAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXAppDelegate.h; sourceTree = "<group>"; };
+		528044561D5DB98300388530 /* CXAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXAppDelegate.m; sourceTree = "<group>"; };
+		528044571D5DB98300388530 /* CXDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXDocument.h; sourceTree = "<group>"; };
+		528044581D5DB98300388530 /* CXDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXDocument.m; sourceTree = "<group>"; };
+		528044591D5DB98300388530 /* CXGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXGraphView.h; sourceTree = "<group>"; };
+		5280445A1D5DB98300388530 /* CXGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXGraphView.m; sourceTree = "<group>"; };
+		5280445B1D5DB98300388530 /* CXGraphWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXGraphWindowController.h; sourceTree = "<group>"; };
+		5280445C1D5DB98300388530 /* CXGraphWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXGraphWindowController.m; sourceTree = "<group>"; };
+		5280445D1D5DB98300388530 /* CXMainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMainWindowController.h; sourceTree = "<group>"; };
+		5280445E1D5DB98300388530 /* CXMainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMainWindowController.m; sourceTree = "<group>"; };
+		5280445F1D5DB98300388530 /* CXPreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXPreferencesController.h; sourceTree = "<group>"; };
+		528044601D5DB98300388530 /* CXPreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXPreferencesController.m; sourceTree = "<group>"; };
+		528044611D5DB98300388530 /* CXSummaryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXSummaryController.h; sourceTree = "<group>"; };
+		528044621D5DB98300388530 /* CXSummaryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXSummaryController.m; sourceTree = "<group>"; };
+		528044651D5DB98300388530 /* Conto Help Folder idx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Conto Help Folder idx"; sourceTree = "<group>"; };
+		528044661D5DB98300388530 /* cxAdd.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxAdd.html; sourceTree = "<group>"; };
+		528044671D5DB98300388530 /* cxCredits.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxCredits.html; sourceTree = "<group>"; };
+		528044681D5DB98300388530 /* cxEdit.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxEdit.html; sourceTree = "<group>"; };
+		528044691D5DB98300388530 /* cxEncryption.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxEncryption.html; sourceTree = "<group>"; };
+		5280446A1D5DB98300388530 /* cxGraphWindow.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxGraphWindow.html; sourceTree = "<group>"; };
+		5280446B1D5DB98300388530 /* cxHistory.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxHistory.html; sourceTree = "<group>"; };
+		5280446C1D5DB98300388530 /* cxindex.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxindex.html; sourceTree = "<group>"; };
+		5280446D1D5DB98300388530 /* cxLicense.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxLicense.html; sourceTree = "<group>"; };
+		5280446E1D5DB98300388530 /* cxPredefinedDescriptions.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxPredefinedDescriptions.html; sourceTree = "<group>"; };
+		5280446F1D5DB98300388530 /* cxSearch.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxSearch.html; sourceTree = "<group>"; };
+		528044701D5DB98300388530 /* cxSetup.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxSetup.html; sourceTree = "<group>"; };
+		528044711D5DB98300388530 /* cxStart.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxStart.html; sourceTree = "<group>"; };
+		528044721D5DB98300388530 /* cxSummaryWindow.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxSummaryWindow.html; sourceTree = "<group>"; };
+		528044731D5DB98300388530 /* cxToC.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxToC.html; sourceTree = "<group>"; };
+		528044751D5DB98300388530 /* ContoAppIcon48x48.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = ContoAppIcon48x48.tiff; sourceTree = "<group>"; };
+		528044761D5DB98300388530 /* ContoIcon16x16.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ContoIcon16x16.gif; sourceTree = "<group>"; };
+		528044781D5DB98300388530 /* Dutch */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = Dutch; path = Credits.rtf; sourceTree = "<group>"; };
+		5280447A1D5DB98300388530 /* Dutch */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Dutch; path = CXDocument.nib; sourceTree = "<group>"; };
+		5280447C1D5DB98300388530 /* Dutch */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Dutch; path = CXGraph.nib; sourceTree = "<group>"; };
+		5280447E1D5DB98300388530 /* Dutch */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Dutch; path = CXPassphrase.nib; sourceTree = "<group>"; };
+		528044801D5DB98300388530 /* Dutch */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Dutch; path = CXPreferences.nib; sourceTree = "<group>"; };
+		528044821D5DB98300388530 /* Dutch */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Dutch; path = CXSummary.nib; sourceTree = "<group>"; };
+		528044841D5DB98300388530 /* Dutch */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Dutch; path = InfoPlist.strings; sourceTree = "<group>"; };
+		528044861D5DB98300388530 /* Dutch */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Dutch; path = Localizable.strings; sourceTree = "<group>"; };
+		528044881D5DB98300388530 /* Dutch */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Dutch; path = MainMenu.nib; sourceTree = "<group>"; };
+		5280448B1D5DB98300388530 /* Conto Help Folder idx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Conto Help Folder idx"; sourceTree = "<group>"; };
+		5280448C1D5DB98300388530 /* cxAdd.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxAdd.html; sourceTree = "<group>"; };
+		5280448D1D5DB98300388530 /* cxCredits.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxCredits.html; sourceTree = "<group>"; };
+		5280448E1D5DB98300388530 /* cxEdit.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxEdit.html; sourceTree = "<group>"; };
+		5280448F1D5DB98300388530 /* cxEncryption.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxEncryption.html; sourceTree = "<group>"; };
+		528044901D5DB98300388530 /* cxGraphWindow.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxGraphWindow.html; sourceTree = "<group>"; };
+		528044911D5DB98300388530 /* cxHistory.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxHistory.html; sourceTree = "<group>"; };
+		528044921D5DB98300388530 /* cxindex.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxindex.html; sourceTree = "<group>"; };
+		528044931D5DB98300388530 /* cxLicense.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxLicense.html; sourceTree = "<group>"; };
+		528044941D5DB98300388530 /* cxPredefinedDescriptions.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxPredefinedDescriptions.html; sourceTree = "<group>"; };
+		528044951D5DB98300388530 /* cxSearch.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxSearch.html; sourceTree = "<group>"; };
+		528044961D5DB98300388530 /* cxSetup.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxSetup.html; sourceTree = "<group>"; };
+		528044971D5DB98300388530 /* cxStart.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxStart.html; sourceTree = "<group>"; };
+		528044981D5DB98300388530 /* cxSummaryWindow.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxSummaryWindow.html; sourceTree = "<group>"; };
+		528044991D5DB98300388530 /* cxToC.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxToC.html; sourceTree = "<group>"; };
+		5280449B1D5DB98300388530 /* ContoAppIcon48x48.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = ContoAppIcon48x48.tiff; sourceTree = "<group>"; };
+		5280449C1D5DB98300388530 /* ContoIcon16x16.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ContoIcon16x16.gif; sourceTree = "<group>"; };
+		5280449E1D5DB98300388530 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = Credits.rtf; sourceTree = "<group>"; };
+		528044A01D5DB98300388530 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = CXDocument.nib; sourceTree = "<group>"; };
+		528044A21D5DB98300388530 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = CXGraph.nib; sourceTree = "<group>"; };
+		528044A41D5DB98300388530 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = CXPassphrase.nib; sourceTree = "<group>"; };
+		528044A61D5DB98300388530 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = CXPreferences.nib; sourceTree = "<group>"; };
+		528044A81D5DB98300388530 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = CXSummary.nib; sourceTree = "<group>"; };
+		528044AA1D5DB98300388530 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = English; path = InfoPlist.strings; sourceTree = "<group>"; };
+		528044AC1D5DB98300388530 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = English; path = Localizable.strings; sourceTree = "<group>"; };
+		528044AE1D5DB98300388530 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = MainMenu.nib; sourceTree = "<group>"; };
+		528044B11D5DB98300388530 /* Conto Help Folder idx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Conto Help Folder idx"; sourceTree = "<group>"; };
+		528044B21D5DB98300388530 /* cxAdd.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxAdd.html; sourceTree = "<group>"; };
+		528044B31D5DB98300388530 /* cxCredits.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxCredits.html; sourceTree = "<group>"; };
+		528044B41D5DB98300388530 /* cxEdit.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxEdit.html; sourceTree = "<group>"; };
+		528044B51D5DB98300388530 /* cxEncryption.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxEncryption.html; sourceTree = "<group>"; };
+		528044B61D5DB98300388530 /* cxGraphWindow.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxGraphWindow.html; sourceTree = "<group>"; };
+		528044B71D5DB98300388530 /* cxHistory.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxHistory.html; sourceTree = "<group>"; };
+		528044B81D5DB98300388530 /* cxindex.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxindex.html; sourceTree = "<group>"; };
+		528044B91D5DB98300388530 /* cxLicense.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxLicense.html; sourceTree = "<group>"; };
+		528044BA1D5DB98300388530 /* cxPredefinedDescriptions.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxPredefinedDescriptions.html; sourceTree = "<group>"; };
+		528044BB1D5DB98300388530 /* cxSearch.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxSearch.html; sourceTree = "<group>"; };
+		528044BC1D5DB98300388530 /* cxSetup.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxSetup.html; sourceTree = "<group>"; };
+		528044BD1D5DB98300388530 /* cxStart.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxStart.html; sourceTree = "<group>"; };
+		528044BE1D5DB98300388530 /* cxSummaryWindow.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxSummaryWindow.html; sourceTree = "<group>"; };
+		528044BF1D5DB98300388530 /* cxToC.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxToC.html; sourceTree = "<group>"; };
+		528044C11D5DB98300388530 /* ContoAppIcon48x48.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = ContoAppIcon48x48.tiff; sourceTree = "<group>"; };
+		528044C21D5DB98300388530 /* ContoIcon16x16.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ContoIcon16x16.gif; sourceTree = "<group>"; };
+		528044C41D5DB98300388530 /* French */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = French; path = Credits.rtf; sourceTree = "<group>"; };
+		528044C61D5DB98300388530 /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = CXDocument.nib; sourceTree = "<group>"; };
+		528044C81D5DB98300388530 /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = CXGraph.nib; sourceTree = "<group>"; };
+		528044CA1D5DB98300388530 /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = CXPassphrase.nib; sourceTree = "<group>"; };
+		528044CC1D5DB98300388530 /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = CXPreferences.nib; sourceTree = "<group>"; };
+		528044CE1D5DB98300388530 /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = CXSummary.nib; sourceTree = "<group>"; };
+		528044D01D5DB98300388530 /* French */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = French; path = InfoPlist.strings; sourceTree = "<group>"; };
+		528044D21D5DB98300388530 /* French */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = French; path = Localizable.strings; sourceTree = "<group>"; };
+		528044D41D5DB98300388530 /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = MainMenu.nib; sourceTree = "<group>"; };
+		528044D51D5DB98300388530 /* globals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = globals.h; sourceTree = "<group>"; };
+		528044D61D5DB98300388530 /* globals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = globals.m; sourceTree = "<group>"; };
+		528044D91D5DB98300388530 /* Conto Help Folder idx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Conto Help Folder idx"; sourceTree = "<group>"; };
+		528044DA1D5DB98300388530 /* cxAdd.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxAdd.html; sourceTree = "<group>"; };
+		528044DB1D5DB98300388530 /* cxCredits.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxCredits.html; sourceTree = "<group>"; };
+		528044DC1D5DB98300388530 /* cxEdit.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxEdit.html; sourceTree = "<group>"; };
+		528044DD1D5DB98300388530 /* cxEncryption.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxEncryption.html; sourceTree = "<group>"; };
+		528044DE1D5DB98300388530 /* cxGraphWindow.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxGraphWindow.html; sourceTree = "<group>"; };
+		528044DF1D5DB98300388530 /* cxHistory.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxHistory.html; sourceTree = "<group>"; };
+		528044E01D5DB98300388530 /* cxindex.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxindex.html; sourceTree = "<group>"; };
+		528044E11D5DB98300388530 /* cxLicense.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxLicense.html; sourceTree = "<group>"; };
+		528044E21D5DB98300388530 /* cxPredefinedDescriptions.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxPredefinedDescriptions.html; sourceTree = "<group>"; };
+		528044E31D5DB98300388530 /* cxSearch.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxSearch.html; sourceTree = "<group>"; };
+		528044E41D5DB98300388530 /* cxSetup.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxSetup.html; sourceTree = "<group>"; };
+		528044E51D5DB98300388530 /* cxStart.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxStart.html; sourceTree = "<group>"; };
+		528044E61D5DB98300388530 /* cxSummaryWindow.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxSummaryWindow.html; sourceTree = "<group>"; };
+		528044E71D5DB98300388530 /* cxToC.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cxToC.html; sourceTree = "<group>"; };
+		528044E91D5DB98300388530 /* ContoAppIcon48x48.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = ContoAppIcon48x48.tiff; sourceTree = "<group>"; };
+		528044EA1D5DB98300388530 /* ContoIcon16x16.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ContoIcon16x16.gif; sourceTree = "<group>"; };
+		528044EC1D5DB98300388530 /* Italian */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = Italian; path = Credits.rtf; sourceTree = "<group>"; };
+		528044EE1D5DB98300388530 /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = CXDocument.nib; sourceTree = "<group>"; };
+		528044F01D5DB98300388530 /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = CXGraph.nib; sourceTree = "<group>"; };
+		528044F21D5DB98300388530 /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = CXPassphrase.nib; sourceTree = "<group>"; };
+		528044F41D5DB98300388530 /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = CXPreferences.nib; sourceTree = "<group>"; };
+		528044F61D5DB98300388530 /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = CXSummary.nib; sourceTree = "<group>"; };
+		528044F81D5DB98300388530 /* Italian */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Italian; path = InfoPlist.strings; sourceTree = "<group>"; };
+		528044FA1D5DB98300388530 /* Italian */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Italian; path = Localizable.strings; sourceTree = "<group>"; };
+		528044FC1D5DB98300388530 /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = MainMenu.nib; sourceTree = "<group>"; };
+		528044FD1D5DB98300388530 /* NextPageAction.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = NextPageAction.tiff; sourceTree = "<group>"; };
+		528044FE1D5DB98300388530 /* PreviousPageAction.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = PreviousPageAction.tiff; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +288,31 @@
 		5280443B1D5DB92400388530 /* Conto */ = {
 			isa = PBXGroup;
 			children = (
-				5280443C1D5DB92400388530 /* AppDelegate.h */,
-				5280443D1D5DB92400388530 /* AppDelegate.m */,
-				528044421D5DB92400388530 /* Document.h */,
-				528044431D5DB92400388530 /* Document.m */,
-				528044451D5DB92400388530 /* Document.xib */,
+				528044531D5DB98300388530 /* ContoAppIcon.icns */,
+				528044541D5DB98300388530 /* ContoDocIcon.icns */,
+				528044551D5DB98300388530 /* CXAppDelegate.h */,
+				528044561D5DB98300388530 /* CXAppDelegate.m */,
+				528044571D5DB98300388530 /* CXDocument.h */,
+				528044581D5DB98300388530 /* CXDocument.m */,
+				528044591D5DB98300388530 /* CXGraphView.h */,
+				5280445A1D5DB98300388530 /* CXGraphView.m */,
+				5280445B1D5DB98300388530 /* CXGraphWindowController.h */,
+				5280445C1D5DB98300388530 /* CXGraphWindowController.m */,
+				5280445D1D5DB98300388530 /* CXMainWindowController.h */,
+				5280445E1D5DB98300388530 /* CXMainWindowController.m */,
+				5280445F1D5DB98300388530 /* CXPreferencesController.h */,
+				528044601D5DB98300388530 /* CXPreferencesController.m */,
+				528044611D5DB98300388530 /* CXSummaryController.h */,
+				528044621D5DB98300388530 /* CXSummaryController.m */,
+				528044631D5DB98300388530 /* Dutch.lproj */,
+				528044891D5DB98300388530 /* English.lproj */,
+				528044AF1D5DB98300388530 /* French.lproj */,
+				528044D51D5DB98300388530 /* globals.h */,
+				528044D61D5DB98300388530 /* globals.m */,
+				528044D71D5DB98300388530 /* Italian.lproj */,
+				528044FD1D5DB98300388530 /* NextPageAction.tiff */,
+				528044FE1D5DB98300388530 /* PreviousPageAction.tiff */,
 				528044481D5DB92400388530 /* Assets.xcassets */,
-				5280444A1D5DB92400388530 /* MainMenu.xib */,
 				5280444D1D5DB92400388530 /* Info.plist */,
 				5280443F1D5DB92400388530 /* Supporting Files */,
 			);
@@ -77,6 +325,202 @@
 				528044401D5DB92400388530 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		528044631D5DB98300388530 /* Dutch.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				528044641D5DB98300388530 /* Conto Help Folder */,
+				528044771D5DB98300388530 /* Credits.rtf */,
+				528044791D5DB98300388530 /* CXDocument.nib */,
+				5280447B1D5DB98300388530 /* CXGraph.nib */,
+				5280447D1D5DB98300388530 /* CXPassphrase.nib */,
+				5280447F1D5DB98300388530 /* CXPreferences.nib */,
+				528044811D5DB98300388530 /* CXSummary.nib */,
+				528044831D5DB98300388530 /* InfoPlist.strings */,
+				528044851D5DB98300388530 /* Localizable.strings */,
+				528044871D5DB98300388530 /* MainMenu.nib */,
+			);
+			path = Dutch.lproj;
+			sourceTree = "<group>";
+		};
+		528044641D5DB98300388530 /* Conto Help Folder */ = {
+			isa = PBXGroup;
+			children = (
+				528044651D5DB98300388530 /* Conto Help Folder idx */,
+				528044661D5DB98300388530 /* cxAdd.html */,
+				528044671D5DB98300388530 /* cxCredits.html */,
+				528044681D5DB98300388530 /* cxEdit.html */,
+				528044691D5DB98300388530 /* cxEncryption.html */,
+				5280446A1D5DB98300388530 /* cxGraphWindow.html */,
+				5280446B1D5DB98300388530 /* cxHistory.html */,
+				5280446C1D5DB98300388530 /* cxindex.html */,
+				5280446D1D5DB98300388530 /* cxLicense.html */,
+				5280446E1D5DB98300388530 /* cxPredefinedDescriptions.html */,
+				5280446F1D5DB98300388530 /* cxSearch.html */,
+				528044701D5DB98300388530 /* cxSetup.html */,
+				528044711D5DB98300388530 /* cxStart.html */,
+				528044721D5DB98300388530 /* cxSummaryWindow.html */,
+				528044731D5DB98300388530 /* cxToC.html */,
+				528044741D5DB98300388530 /* images */,
+			);
+			path = "Conto Help Folder";
+			sourceTree = "<group>";
+		};
+		528044741D5DB98300388530 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				528044751D5DB98300388530 /* ContoAppIcon48x48.tiff */,
+				528044761D5DB98300388530 /* ContoIcon16x16.gif */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		528044891D5DB98300388530 /* English.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				5280448A1D5DB98300388530 /* Conto Help Folder */,
+				5280449D1D5DB98300388530 /* Credits.rtf */,
+				5280449F1D5DB98300388530 /* CXDocument.nib */,
+				528044A11D5DB98300388530 /* CXGraph.nib */,
+				528044A31D5DB98300388530 /* CXPassphrase.nib */,
+				528044A51D5DB98300388530 /* CXPreferences.nib */,
+				528044A71D5DB98300388530 /* CXSummary.nib */,
+				528044A91D5DB98300388530 /* InfoPlist.strings */,
+				528044AB1D5DB98300388530 /* Localizable.strings */,
+				528044AD1D5DB98300388530 /* MainMenu.nib */,
+			);
+			path = English.lproj;
+			sourceTree = "<group>";
+		};
+		5280448A1D5DB98300388530 /* Conto Help Folder */ = {
+			isa = PBXGroup;
+			children = (
+				5280448B1D5DB98300388530 /* Conto Help Folder idx */,
+				5280448C1D5DB98300388530 /* cxAdd.html */,
+				5280448D1D5DB98300388530 /* cxCredits.html */,
+				5280448E1D5DB98300388530 /* cxEdit.html */,
+				5280448F1D5DB98300388530 /* cxEncryption.html */,
+				528044901D5DB98300388530 /* cxGraphWindow.html */,
+				528044911D5DB98300388530 /* cxHistory.html */,
+				528044921D5DB98300388530 /* cxindex.html */,
+				528044931D5DB98300388530 /* cxLicense.html */,
+				528044941D5DB98300388530 /* cxPredefinedDescriptions.html */,
+				528044951D5DB98300388530 /* cxSearch.html */,
+				528044961D5DB98300388530 /* cxSetup.html */,
+				528044971D5DB98300388530 /* cxStart.html */,
+				528044981D5DB98300388530 /* cxSummaryWindow.html */,
+				528044991D5DB98300388530 /* cxToC.html */,
+				5280449A1D5DB98300388530 /* images */,
+			);
+			path = "Conto Help Folder";
+			sourceTree = "<group>";
+		};
+		5280449A1D5DB98300388530 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				5280449B1D5DB98300388530 /* ContoAppIcon48x48.tiff */,
+				5280449C1D5DB98300388530 /* ContoIcon16x16.gif */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		528044AF1D5DB98300388530 /* French.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				528044B01D5DB98300388530 /* Conto Help Folder */,
+				528044C31D5DB98300388530 /* Credits.rtf */,
+				528044C51D5DB98300388530 /* CXDocument.nib */,
+				528044C71D5DB98300388530 /* CXGraph.nib */,
+				528044C91D5DB98300388530 /* CXPassphrase.nib */,
+				528044CB1D5DB98300388530 /* CXPreferences.nib */,
+				528044CD1D5DB98300388530 /* CXSummary.nib */,
+				528044CF1D5DB98300388530 /* InfoPlist.strings */,
+				528044D11D5DB98300388530 /* Localizable.strings */,
+				528044D31D5DB98300388530 /* MainMenu.nib */,
+			);
+			path = French.lproj;
+			sourceTree = "<group>";
+		};
+		528044B01D5DB98300388530 /* Conto Help Folder */ = {
+			isa = PBXGroup;
+			children = (
+				528044B11D5DB98300388530 /* Conto Help Folder idx */,
+				528044B21D5DB98300388530 /* cxAdd.html */,
+				528044B31D5DB98300388530 /* cxCredits.html */,
+				528044B41D5DB98300388530 /* cxEdit.html */,
+				528044B51D5DB98300388530 /* cxEncryption.html */,
+				528044B61D5DB98300388530 /* cxGraphWindow.html */,
+				528044B71D5DB98300388530 /* cxHistory.html */,
+				528044B81D5DB98300388530 /* cxindex.html */,
+				528044B91D5DB98300388530 /* cxLicense.html */,
+				528044BA1D5DB98300388530 /* cxPredefinedDescriptions.html */,
+				528044BB1D5DB98300388530 /* cxSearch.html */,
+				528044BC1D5DB98300388530 /* cxSetup.html */,
+				528044BD1D5DB98300388530 /* cxStart.html */,
+				528044BE1D5DB98300388530 /* cxSummaryWindow.html */,
+				528044BF1D5DB98300388530 /* cxToC.html */,
+				528044C01D5DB98300388530 /* images */,
+			);
+			path = "Conto Help Folder";
+			sourceTree = "<group>";
+		};
+		528044C01D5DB98300388530 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				528044C11D5DB98300388530 /* ContoAppIcon48x48.tiff */,
+				528044C21D5DB98300388530 /* ContoIcon16x16.gif */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		528044D71D5DB98300388530 /* Italian.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				528044D81D5DB98300388530 /* Conto Help Folder */,
+				528044EB1D5DB98300388530 /* Credits.rtf */,
+				528044ED1D5DB98300388530 /* CXDocument.nib */,
+				528044EF1D5DB98300388530 /* CXGraph.nib */,
+				528044F11D5DB98300388530 /* CXPassphrase.nib */,
+				528044F31D5DB98300388530 /* CXPreferences.nib */,
+				528044F51D5DB98300388530 /* CXSummary.nib */,
+				528044F71D5DB98300388530 /* InfoPlist.strings */,
+				528044F91D5DB98300388530 /* Localizable.strings */,
+				528044FB1D5DB98300388530 /* MainMenu.nib */,
+			);
+			path = Italian.lproj;
+			sourceTree = "<group>";
+		};
+		528044D81D5DB98300388530 /* Conto Help Folder */ = {
+			isa = PBXGroup;
+			children = (
+				528044D91D5DB98300388530 /* Conto Help Folder idx */,
+				528044DA1D5DB98300388530 /* cxAdd.html */,
+				528044DB1D5DB98300388530 /* cxCredits.html */,
+				528044DC1D5DB98300388530 /* cxEdit.html */,
+				528044DD1D5DB98300388530 /* cxEncryption.html */,
+				528044DE1D5DB98300388530 /* cxGraphWindow.html */,
+				528044DF1D5DB98300388530 /* cxHistory.html */,
+				528044E01D5DB98300388530 /* cxindex.html */,
+				528044E11D5DB98300388530 /* cxLicense.html */,
+				528044E21D5DB98300388530 /* cxPredefinedDescriptions.html */,
+				528044E31D5DB98300388530 /* cxSearch.html */,
+				528044E41D5DB98300388530 /* cxSetup.html */,
+				528044E51D5DB98300388530 /* cxStart.html */,
+				528044E61D5DB98300388530 /* cxSummaryWindow.html */,
+				528044E71D5DB98300388530 /* cxToC.html */,
+				528044E81D5DB98300388530 /* images */,
+			);
+			path = "Conto Help Folder";
+			sourceTree = "<group>";
+		};
+		528044E81D5DB98300388530 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				528044E91D5DB98300388530 /* ContoAppIcon48x48.tiff */,
+				528044EA1D5DB98300388530 /* ContoIcon16x16.gif */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,7 +563,10 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
+				Dutch,
+				English,
+				French,
+				Italian,
 			);
 			mainGroup = 528044301D5DB92400388530;
 			productRefGroup = 5280443A1D5DB92400388530 /* Products */;
@@ -136,9 +583,115 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				528045321D5DB98300388530 /* ContoIcon16x16.gif in Resources */,
+				528045721D5DB98300388530 /* PreviousPageAction.tiff in Resources */,
+				5280452D1D5DB98300388530 /* cxSetup.html in Resources */,
+				5280450A1D5DB98300388530 /* cxCredits.html in Resources */,
+				528045511D5DB98300388530 /* CXPreferences.nib in Resources */,
+				528045571D5DB98300388530 /* Conto Help Folder idx in Resources */,
+				528045301D5DB98300388530 /* cxToC.html in Resources */,
+				528045701D5DB98300388530 /* MainMenu.nib in Resources */,
+				5280451A1D5DB98300388530 /* CXDocument.nib in Resources */,
+				5280454F1D5DB98300388530 /* CXGraph.nib in Resources */,
+				528045411D5DB98300388530 /* cxGraphWindow.html in Resources */,
+				5280452B1D5DB98300388530 /* cxPredefinedDescriptions.html in Resources */,
+				5280453B1D5DB98300388530 /* MainMenu.nib in Resources */,
+				528045091D5DB98300388530 /* cxAdd.html in Resources */,
+				528045581D5DB98300388530 /* cxAdd.html in Resources */,
+				528045161D5DB98300388530 /* cxToC.html in Resources */,
+				528045651D5DB98300388530 /* cxToC.html in Resources */,
+				528045551D5DB98300388530 /* MainMenu.nib in Resources */,
+				528045601D5DB98300388530 /* cxPredefinedDescriptions.html in Resources */,
+				5280456F1D5DB98300388530 /* Localizable.strings in Resources */,
+				5280452F1D5DB98300388530 /* cxSummaryWindow.html in Resources */,
+				528045531D5DB98300388530 /* InfoPlist.strings in Resources */,
+				528045681D5DB98300388530 /* Credits.rtf in Resources */,
+				5280453C1D5DB98300388530 /* Conto Help Folder idx in Resources */,
+				5280455B1D5DB98300388530 /* cxEncryption.html in Resources */,
+				528045591D5DB98300388530 /* cxCredits.html in Resources */,
+				5280452E1D5DB98300388530 /* cxStart.html in Resources */,
+				5280451D1D5DB98300388530 /* CXPreferences.nib in Resources */,
+				528045471D5DB98300388530 /* cxSetup.html in Resources */,
+				5280451C1D5DB98300388530 /* CXPassphrase.nib in Resources */,
+				5280456C1D5DB98300388530 /* CXPreferences.nib in Resources */,
+				528045441D5DB98300388530 /* cxLicense.html in Resources */,
+				528045111D5DB98300388530 /* cxPredefinedDescriptions.html in Resources */,
+				528045171D5DB98300388530 /* ContoAppIcon48x48.tiff in Resources */,
+				528045361D5DB98300388530 /* CXPassphrase.nib in Resources */,
+				528045691D5DB98300388530 /* CXDocument.nib in Resources */,
+				5280450C1D5DB98300388530 /* cxEncryption.html in Resources */,
+				528045521D5DB98300388530 /* CXSummary.nib in Resources */,
+				528045341D5DB98300388530 /* CXDocument.nib in Resources */,
 				528044491D5DB92400388530 /* Assets.xcassets in Resources */,
-				528044471D5DB92400388530 /* Document.xib in Resources */,
-				5280444C1D5DB92400388530 /* MainMenu.xib in Resources */,
+				5280453F1D5DB98300388530 /* cxEdit.html in Resources */,
+				528045271D5DB98300388530 /* cxGraphWindow.html in Resources */,
+				5280453D1D5DB98300388530 /* cxAdd.html in Resources */,
+				528045001D5DB98300388530 /* ContoDocIcon.icns in Resources */,
+				528045641D5DB98300388530 /* cxSummaryWindow.html in Resources */,
+				528045081D5DB98300388530 /* Conto Help Folder idx in Resources */,
+				528045481D5DB98300388530 /* cxStart.html in Resources */,
+				528045221D5DB98300388530 /* Conto Help Folder idx in Resources */,
+				5280455C1D5DB98300388530 /* cxGraphWindow.html in Resources */,
+				5280451B1D5DB98300388530 /* CXGraph.nib in Resources */,
+				528045631D5DB98300388530 /* cxStart.html in Resources */,
+				528045461D5DB98300388530 /* cxSearch.html in Resources */,
+				5280454C1D5DB98300388530 /* ContoIcon16x16.gif in Resources */,
+				5280454B1D5DB98300388530 /* ContoAppIcon48x48.tiff in Resources */,
+				5280450E1D5DB98300388530 /* cxHistory.html in Resources */,
+				5280456A1D5DB98300388530 /* CXGraph.nib in Resources */,
+				528045141D5DB98300388530 /* cxStart.html in Resources */,
+				528045491D5DB98300388530 /* cxSummaryWindow.html in Resources */,
+				5280450F1D5DB98300388530 /* cxindex.html in Resources */,
+				528045661D5DB98300388530 /* ContoAppIcon48x48.tiff in Resources */,
+				528045401D5DB98300388530 /* cxEncryption.html in Resources */,
+				528045671D5DB98300388530 /* ContoIcon16x16.gif in Resources */,
+				528045501D5DB98300388530 /* CXPassphrase.nib in Resources */,
+				528045371D5DB98300388530 /* CXPreferences.nib in Resources */,
+				528045541D5DB98300388530 /* Localizable.strings in Resources */,
+				528045711D5DB98300388530 /* NextPageAction.tiff in Resources */,
+				528045621D5DB98300388530 /* cxSetup.html in Resources */,
+				5280451F1D5DB98300388530 /* InfoPlist.strings in Resources */,
+				5280456E1D5DB98300388530 /* InfoPlist.strings in Resources */,
+				5280455F1D5DB98300388530 /* cxLicense.html in Resources */,
+				528045421D5DB98300388530 /* cxHistory.html in Resources */,
+				528045201D5DB98300388530 /* Localizable.strings in Resources */,
+				528045291D5DB98300388530 /* cxindex.html in Resources */,
+				528045391D5DB98300388530 /* InfoPlist.strings in Resources */,
+				5280453A1D5DB98300388530 /* Localizable.strings in Resources */,
+				5280455E1D5DB98300388530 /* cxindex.html in Resources */,
+				5280454D1D5DB98300388530 /* Credits.rtf in Resources */,
+				5280450D1D5DB98300388530 /* cxGraphWindow.html in Resources */,
+				528045451D5DB98300388530 /* cxPredefinedDescriptions.html in Resources */,
+				528044FF1D5DB98300388530 /* ContoAppIcon.icns in Resources */,
+				528045281D5DB98300388530 /* cxHistory.html in Resources */,
+				528045131D5DB98300388530 /* cxSetup.html in Resources */,
+				5280455A1D5DB98300388530 /* cxEdit.html in Resources */,
+				528045251D5DB98300388530 /* cxEdit.html in Resources */,
+				5280454E1D5DB98300388530 /* CXDocument.nib in Resources */,
+				5280450B1D5DB98300388530 /* cxEdit.html in Resources */,
+				528045231D5DB98300388530 /* cxAdd.html in Resources */,
+				528045351D5DB98300388530 /* CXGraph.nib in Resources */,
+				528045181D5DB98300388530 /* ContoIcon16x16.gif in Resources */,
+				5280454A1D5DB98300388530 /* cxToC.html in Resources */,
+				528045101D5DB98300388530 /* cxLicense.html in Resources */,
+				528045241D5DB98300388530 /* cxCredits.html in Resources */,
+				5280453E1D5DB98300388530 /* cxCredits.html in Resources */,
+				528045151D5DB98300388530 /* cxSummaryWindow.html in Resources */,
+				5280456B1D5DB98300388530 /* CXPassphrase.nib in Resources */,
+				5280452C1D5DB98300388530 /* cxSearch.html in Resources */,
+				528045431D5DB98300388530 /* cxindex.html in Resources */,
+				5280455D1D5DB98300388530 /* cxHistory.html in Resources */,
+				528045311D5DB98300388530 /* ContoAppIcon48x48.tiff in Resources */,
+				5280451E1D5DB98300388530 /* CXSummary.nib in Resources */,
+				528045211D5DB98300388530 /* MainMenu.nib in Resources */,
+				528045191D5DB98300388530 /* Credits.rtf in Resources */,
+				528045261D5DB98300388530 /* cxEncryption.html in Resources */,
+				528045331D5DB98300388530 /* Credits.rtf in Resources */,
+				528045381D5DB98300388530 /* CXSummary.nib in Resources */,
+				528045611D5DB98300388530 /* cxSearch.html in Resources */,
+				5280456D1D5DB98300388530 /* CXSummary.nib in Resources */,
+				528045121D5DB98300388530 /* cxSearch.html in Resources */,
+				5280452A1D5DB98300388530 /* cxLicense.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,29 +702,307 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				528044441D5DB92400388530 /* Document.m in Sources */,
+				528045561D5DB98300388530 /* globals.m in Sources */,
+				528045041D5DB98300388530 /* CXGraphWindowController.m in Sources */,
+				528045011D5DB98300388530 /* CXAppDelegate.m in Sources */,
+				528045021D5DB98300388530 /* CXDocument.m in Sources */,
 				528044411D5DB92400388530 /* main.m in Sources */,
-				5280443E1D5DB92400388530 /* AppDelegate.m in Sources */,
+				528045031D5DB98300388530 /* CXGraphView.m in Sources */,
+				528045051D5DB98300388530 /* CXMainWindowController.m in Sources */,
+				528045061D5DB98300388530 /* CXPreferencesController.m in Sources */,
+				528045071D5DB98300388530 /* CXSummaryController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		528044451D5DB92400388530 /* Document.xib */ = {
+		528044771D5DB98300388530 /* Credits.rtf */ = {
 			isa = PBXVariantGroup;
 			children = (
-				528044461D5DB92400388530 /* Base */,
+				528044781D5DB98300388530 /* Dutch */,
 			);
-			name = Document.xib;
+			name = Credits.rtf;
 			sourceTree = "<group>";
 		};
-		5280444A1D5DB92400388530 /* MainMenu.xib */ = {
+		528044791D5DB98300388530 /* CXDocument.nib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5280444B1D5DB92400388530 /* Base */,
+				5280447A1D5DB98300388530 /* Dutch */,
 			);
-			name = MainMenu.xib;
+			name = CXDocument.nib;
+			sourceTree = "<group>";
+		};
+		5280447B1D5DB98300388530 /* CXGraph.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5280447C1D5DB98300388530 /* Dutch */,
+			);
+			name = CXGraph.nib;
+			sourceTree = "<group>";
+		};
+		5280447D1D5DB98300388530 /* CXPassphrase.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5280447E1D5DB98300388530 /* Dutch */,
+			);
+			name = CXPassphrase.nib;
+			sourceTree = "<group>";
+		};
+		5280447F1D5DB98300388530 /* CXPreferences.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				528044801D5DB98300388530 /* Dutch */,
+			);
+			name = CXPreferences.nib;
+			sourceTree = "<group>";
+		};
+		528044811D5DB98300388530 /* CXSummary.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				528044821D5DB98300388530 /* Dutch */,
+			);
+			name = CXSummary.nib;
+			sourceTree = "<group>";
+		};
+		528044831D5DB98300388530 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				528044841D5DB98300388530 /* Dutch */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		528044851D5DB98300388530 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				528044861D5DB98300388530 /* Dutch */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		528044871D5DB98300388530 /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				528044881D5DB98300388530 /* Dutch */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+		5280449D1D5DB98300388530 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5280449E1D5DB98300388530 /* English */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		5280449F1D5DB98300388530 /* CXDocument.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				528044A01D5DB98300388530 /* English */,
+			);
+			name = CXDocument.nib;
+			sourceTree = "<group>";
+		};
+		528044A11D5DB98300388530 /* CXGraph.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				528044A21D5DB98300388530 /* English */,
+			);
+			name = CXGraph.nib;
+			sourceTree = "<group>";
+		};
+		528044A31D5DB98300388530 /* CXPassphrase.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				528044A41D5DB98300388530 /* English */,
+			);
+			name = CXPassphrase.nib;
+			sourceTree = "<group>";
+		};
+		528044A51D5DB98300388530 /* CXPreferences.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				528044A61D5DB98300388530 /* English */,
+			);
+			name = CXPreferences.nib;
+			sourceTree = "<group>";
+		};
+		528044A71D5DB98300388530 /* CXSummary.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				528044A81D5DB98300388530 /* English */,
+			);
+			name = CXSummary.nib;
+			sourceTree = "<group>";
+		};
+		528044A91D5DB98300388530 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				528044AA1D5DB98300388530 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		528044AB1D5DB98300388530 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				528044AC1D5DB98300388530 /* English */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		528044AD1D5DB98300388530 /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				528044AE1D5DB98300388530 /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+		528044C31D5DB98300388530 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				528044C41D5DB98300388530 /* French */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		528044C51D5DB98300388530 /* CXDocument.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				528044C61D5DB98300388530 /* French */,
+			);
+			name = CXDocument.nib;
+			sourceTree = "<group>";
+		};
+		528044C71D5DB98300388530 /* CXGraph.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				528044C81D5DB98300388530 /* French */,
+			);
+			name = CXGraph.nib;
+			sourceTree = "<group>";
+		};
+		528044C91D5DB98300388530 /* CXPassphrase.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				528044CA1D5DB98300388530 /* French */,
+			);
+			name = CXPassphrase.nib;
+			sourceTree = "<group>";
+		};
+		528044CB1D5DB98300388530 /* CXPreferences.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				528044CC1D5DB98300388530 /* French */,
+			);
+			name = CXPreferences.nib;
+			sourceTree = "<group>";
+		};
+		528044CD1D5DB98300388530 /* CXSummary.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				528044CE1D5DB98300388530 /* French */,
+			);
+			name = CXSummary.nib;
+			sourceTree = "<group>";
+		};
+		528044CF1D5DB98300388530 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				528044D01D5DB98300388530 /* French */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		528044D11D5DB98300388530 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				528044D21D5DB98300388530 /* French */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		528044D31D5DB98300388530 /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				528044D41D5DB98300388530 /* French */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+		528044EB1D5DB98300388530 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				528044EC1D5DB98300388530 /* Italian */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		528044ED1D5DB98300388530 /* CXDocument.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				528044EE1D5DB98300388530 /* Italian */,
+			);
+			name = CXDocument.nib;
+			sourceTree = "<group>";
+		};
+		528044EF1D5DB98300388530 /* CXGraph.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				528044F01D5DB98300388530 /* Italian */,
+			);
+			name = CXGraph.nib;
+			sourceTree = "<group>";
+		};
+		528044F11D5DB98300388530 /* CXPassphrase.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				528044F21D5DB98300388530 /* Italian */,
+			);
+			name = CXPassphrase.nib;
+			sourceTree = "<group>";
+		};
+		528044F31D5DB98300388530 /* CXPreferences.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				528044F41D5DB98300388530 /* Italian */,
+			);
+			name = CXPreferences.nib;
+			sourceTree = "<group>";
+		};
+		528044F51D5DB98300388530 /* CXSummary.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				528044F61D5DB98300388530 /* Italian */,
+			);
+			name = CXSummary.nib;
+			sourceTree = "<group>";
+		};
+		528044F71D5DB98300388530 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				528044F81D5DB98300388530 /* Italian */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		528044F91D5DB98300388530 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				528044FA1D5DB98300388530 /* Italian */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		528044FB1D5DB98300388530 /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				528044FC1D5DB98300388530 /* Italian */,
+			);
+			name = MainMenu.nib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -262,6 +1093,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Conto/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -274,6 +1106,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Conto/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";

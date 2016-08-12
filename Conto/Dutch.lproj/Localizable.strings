@@ -1,0 +1,169 @@
+/* Income */
+"Income" = "Inkomsten";
+/* Expense */
+"Expense" = "Uitgaven";
+/* Balance */
+"Balance" = "Balans";
+
+/* Name of Delete menu item and Delete button*/
+"Delete" = "Wissen";
+/* Name of Summary Info menu item */
+"Summary Info" = "Overzicht Totalen";
+/* Name of Graph menu item */
+"Graph" = "Grafiek";
+/* Name of Copy As Text menu item */
+"Copy As Text" = "Copy As Text";
+/* Name of Cut menu item */
+"Cut" = "Knip";
+/* Title text for deletion sheet */
+//"Do you really want to delete the selected record(s)?" = "Weet u zeker dat u de geselecteerde record(s) wilt verwijderen?";
+/* Don't delete button */
+//"Don't delete" = "Niet wissen";
+/* Message text for deletion sheet */
+//"You will not be able to undo this operation" = "Deze handeling kan niet ongedaan gemaakt worden";
+/* Name of month January */
+"January" = "Januari";
+/* Name of month February */
+"February" = "Februari";
+/* Name of month March */
+"March" = "Maart";
+/* Name of month April */
+"April" = "April";
+/* Name of month May */
+"May" = "Mei";
+/* Name of month June */
+"June" = "Juni";
+/* Name of month July */
+"July" = "Juli";
+/* Name of month August */
+"August" = "Augustus";
+/* Name of month September */
+"September" = "September";
+/* Name of month October */
+"October" = "Oktober";
+/* Name of month November */
+"November" = "November";
+/* Name of month December */
+"December" = "December";
+/* Total */
+"Total" = "Totaal";
+/* Short name for January */
+"Jan" = "Jan";
+/* Short name for February */
+"Feb" = "Feb";
+/* Short name for March */
+"Mar" = "Mrt";
+/* Short name for April */
+"Apr" = "Apr";
+/* Short name for May */
+"May " = "Mei";
+/* Short name for June */
+"Jun" = "Jun";
+/* Short name for July */
+"Jul" = "Jul";
+/* Short name for August */
+"Aug" = "Aug";
+/* Short name for September */
+"Sep" = "Sep";
+/* Short name for October */
+"Oct" = "Okt";
+/* Short name for November */
+"Nov" = "Nov";
+/* Short name for December */
+"Dec" = "Dec";
+
+/* Title of Summary Window */
+"Summary Info for " = "Overzicht Totalen voor ";
+/* Title of Graph window */
+"Graph for " = "Grafiek voor ";
+/* Title of Preferences window */
+"Preferences" = "Voorkeuren";
+
+/* Information name */
+"My info" = "Mijn info";
+/* Information value */
+"My value" = "Mijn waarde";
+/* Undo/Redo menu item names */
+/* Tick off Checkbox */
+/* Name of undo/redo menu item after Tick Off control was set */
+"Activate Tick Off" = "Automatisch afvinken aan";
+/* Name of undo/redo menu item after Tick Off control was cleared */
+"Deactivate Tick Off" = "Automatisch afvinken uit";
+/* Name of undo/redo menu item after changing month via pop up menu */
+"Change Month" = "Wijzig maand";
+/* Name of undo/redo menu item after setting transaction type */
+"Set Transaction Type" = "Kiezen type transactie";
+/* Name of undo/redo menu item after dragging an image */
+"Set Logo" = "Logo kiezen";
+/* Name of undo/redo menu item after deleting the image */
+"Delete Logo" = "Logo verwijderen";
+/* Name of undo/redo menu item after adding a record */
+"Add Record" = "Record toevoegen";
+/* Name of undo/redo menu item after removing record(s) */
+"Remove Record(s)" = "Record(s) verwijderen";
+/* Name of undo/redo menu item after switching a tick off in table */
+"Set Tick Off" = "Vinkje plaatsen";
+"Clear Tick Off" = "Vinkje verwijderen";
+/* Name of undo/redo menu item after sorting */
+"Sort" = "Sorteren";
+/* Name of undo/redo menu item after sorting by date */
+"Sort by Date" = "Sorteer op datum";
+/* Name of undo/redo menu item after sorting by description */
+"Sort by Description" = "Sorteer op omschrijving";
+/* Name of undo/redo menu item after sorting by tick off */
+"Sort by Tick Off" = "Sorteer op vinkje";
+/* Name of undo/redo menu item after sorting by income */
+"Sort by Income" = "Sorteer op inkomsten";
+/* Name of undo/redo menu item after sorting by expense */
+"Sort by Expense" = "Sorteer op uitgaven";
+/* Name of undo/redo menu item after changing value in table */
+"Change Value" = "Waarde veranderen";
+/* Name of undo/redo menu item after adding an info */
+"Add Account Info" = "Toevoegen rekening info";
+/* Name of undo/redo menu item after changing info in info table */
+"Change Info" = "Wijzigen info";
+/* Name of undo/redo menu item after removing account info(s) */
+"Remove Account Info(s)" = "Verwijderen rekening info";
+/* Name of undo/redo menu item after dragging records(s) */
+"Drag Record(s)" = "Drag Record(s)";
+/* Name of undo/redo menu item after dragging info(s) */
+"Drag Info(s)" = "Drag Info(s)";
+/* Name of undo/redo menu item after cutting record(s) */
+"Cut Record(s)" = "Cut Record(s)";
+/* Name of undo/redo menu item after pasting record(s) */
+"Paste Record(s)" = "Paste Record(s)";
+
+/* Tooltips */
+/* Tooltip for date format dd-mm-yy */
+"Date must have format: dd-mm-yy (e.g. 24-12-02)" = "Datum moet als volgt ingevoerd worden: dd-mm-jj (bijv. 24-12-02)";
+/* Tooltip for date format dd/mm/yy */
+"Date must have format: dd/mm/yy (e.g. 24/12/02)" = "Datum moet als volgt ingevoerd worden: dd/mm/jj (bijv. 24/12/02)";
+/* Tooltip for date format dd-mm */
+"Date must have format: dd-mm (e.g. 24-12)" = "Datum moet als volgt ingevoerd worden: dd-mm (bijv. 24-12)";
+/* Tooltip for date format dd/mm */
+"Date must have format: dd/mm (e.g. 24/12)" = "Datum moet als volgt ingevoerd worden: dd/mm (bijv. 24/12)";
+/* Tooltip for date format day month year */
+"Date must have format: day month year (e.g. 24 december 2002)" = "Datum moet als volgt ingevoerd worden: dag maand jaar (bijv. 24 december 2002)";
+/* Tooltip for date format day abbr.month year */
+"Date must have format: day abbr.month year (e.g. 24 dec 2002)" = "Datum moet als volgt ingevoerd worden: dag maand (afkorting) jaar (bijv. 24 dec 2002)";
+/* Tooltip for date format day month */
+"Date must have format: day month (e.g. 24 december)" = "Datum moet als volgt ingevoerd worden: dag maand (bijv. 24 december)";
+/* Tooltip for date format day abbr.month */
+"Date must have format: day abbr.month (e.g. 24 dec)" = "Datum moet als volgt ingevoerd worden: dag maand (afkorting) (bijv. 24 dec)";
+/* Title of absolute path error */
+"Gpg directory path is not correct" = "Gpg bestandslocatie incorrect";
+/* Text of absolute path error */
+"The path you have specified in the Preferences is not a valid absolute path. Please check it and try again." =
+"De opgegeven bestandslocatie in Voorkeuren is geen geldige locatie. Controleer de locatie en probeer het opnieuw.";
+/* Title of gpg not found error */
+"I cannot find the gpg executable" = "Ik kan het uitvoerbare bestand van gpg niet vinden";
+/* Text of gpg not found error */
+"Please check the path in the Preferences and try again." = "Controleer de bestandslocatie in Voorkeuren en probeer het opnieuw.";
+/* Title of encryption failed error */
+"Encryption failed" = "Encryptie mislukt";
+/* Text of encryption failed error */
+"Public key not found. Please check the Preferences and try again." = "Public key niet gevonden. Controleer de voorkeuren en probeer het opnieuw.";
+/* Title of decryption failed error */
+"Decryption failed" = "Decryptie mislukt";
+/* Text of decryption failed error */
+"Passphrase not valid." = "Passphrase ongeldig.";

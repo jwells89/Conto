@@ -1,0 +1,42 @@
+{
+    IBClasses = (
+        {CLASS = CXDocument; LANGUAGE = ObjC; SUPERCLASS = NSDocument; }, 
+        {
+            ACTIONS = {
+                addAction = id; 
+                deleteLogo = id; 
+                deleteRecords = id; 
+                draggedLogoAction = id; 
+                inOutAction = id; 
+                monthPopUpAction = id; 
+                nextMonthAction = id; 
+                prevMonthAction = id; 
+                printDocumentView = id; 
+                tickOffAction = id; 
+            }; 
+            CLASS = CXMainWindowController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                addButton = NSButton; 
+                amountField = NSTextField; 
+                balanceField = NSTextField; 
+                dateField = NSTextField; 
+                descriptionField = NSComboBox; 
+                expenseField = NSTextField; 
+                inOutRadioCluster = NSMatrix; 
+                incomeField = NSTextField; 
+                logoImageView = NSImageView; 
+                monthPopUpMenu = NSPopUpButton; 
+                monthlyBalanceField = NSTextField; 
+                nextButton = NSButton; 
+                prevButton = NSButton; 
+                searchTextField = NSTextField; 
+                table = NSTableView; 
+                tickOffSwitch = NSButton; 
+            }; 
+            SUPERCLASS = NSWindowController; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

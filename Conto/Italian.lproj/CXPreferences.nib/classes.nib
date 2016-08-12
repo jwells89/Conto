@@ -1,0 +1,52 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {
+                addDescriptionAction = id; 
+                autocompleteAction = id; 
+                currencyPositionAction = id; 
+                currencySymbolAction = id; 
+                dateFormatAction = id; 
+                decimalSeparatorAction = id; 
+                expenseOperationPopUpAction = id; 
+                fontSizeAction = id; 
+                gpgPathAction = id; 
+                gridAction = id; 
+                incomeOperationPopUpAction = id; 
+                keyIDAction = id; 
+                numberOfDecimalsAction = id; 
+                removeDescriptionAction = id; 
+                thousandSeparatorAction = id; 
+                useEncryptionAction = id; 
+            }; 
+            CLASS = CXPreferencesController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                addButton = NSButton; 
+                autocompleteCheckbox = NSButton; 
+                currencyPositionRadioCluster = NSMatrix; 
+                currencyTextField = NSTextField; 
+                dateFormatRadioCluster = NSMatrix; 
+                decimalSeparatorRadioCluster = NSMatrix; 
+                decimalStepper = NSStepper; 
+                decimalTextField = NSTextField; 
+                descriptionTextField = NSTextField; 
+                descriptionsTableView = NSTableView; 
+                encryptionCheckbox = NSButton; 
+                expenseOpTextField = NSTextField; 
+                expenseOperationButton = NSPopUpButton; 
+                fontRadioCluster = NSMatrix; 
+                gpgPathTextField = NSTextField; 
+                gridCheckbox = NSButton; 
+                incomeOpTextField = NSTextField; 
+                incomeOperationButton = NSPopUpButton; 
+                keyIDTextField = NSTextField; 
+                removeButton = NSButton; 
+                thousandSeparatorCheckbox = NSButton; 
+            }; 
+            SUPERCLASS = NSWindowController; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

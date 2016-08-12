@@ -1,0 +1,19 @@
+{
+    IBClasses = (
+        {CLASS = CXDocument; LANGUAGE = ObjC; SUPERCLASS = NSDocument; }, 
+        {
+            ACTIONS = {addInfoAction = id; removeInfoAction = id; }; 
+            CLASS = CXSummaryController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                addInfoButton = NSButton; 
+                infoTable = NSTableView; 
+                removeInfoButton = NSButton; 
+                summaryTable = NSTableView; 
+            }; 
+            SUPERCLASS = NSWindowController; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

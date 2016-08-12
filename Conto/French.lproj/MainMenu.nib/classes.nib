@@ -1,0 +1,70 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {showPreferences = id; }; 
+            CLASS = CXAppDelegate; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {showGraphWindow = id; }; 
+            CLASS = CXDocument; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSDocument; 
+        }, 
+        {
+            ACTIONS = {
+                addAction = id; 
+                deleteLogo = id; 
+                deleteRecords = id; 
+                draggedLogoAction = id; 
+                inOutAction = id; 
+                monthPopUpAction = id; 
+                printDocumentView = id; 
+                tickOffAction = id; 
+            }; 
+            CLASS = CXMainWindowController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                addButton = NSButton; 
+                amountField = NSTextField; 
+                balanceField = NSTextField; 
+                dateField = NSTextField; 
+                descriptionField = NSTextField; 
+                expenseField = NSTextField; 
+                inOutRadioCluster = NSMatrix; 
+                incomeField = NSTextField; 
+                logoImageView = NSImageView; 
+                monthPopUpMenu = NSPopUpButton; 
+                table = NSTableView; 
+                tickOffSwitch = NSButton; 
+            }; 
+            SUPERCLASS = NSWindowController; 
+        }, 
+        {
+            ACTIONS = {addInfoAction = id; }; 
+            CLASS = CXSummaryController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                addInfoButton = NSButton; 
+                infoTable = NSTableView; 
+                summaryTable = NSTableView; 
+            }; 
+            SUPERCLASS = NSWindowController; 
+        }, 
+        {
+            ACTIONS = {
+                copyAsText = id; 
+                deleteLogo = id; 
+                deleteRecords = id; 
+                printDocumentView = id; 
+                showGraphWindow = id; 
+                showSummaryWindow = id; 
+            }; 
+            CLASS = FirstResponder; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

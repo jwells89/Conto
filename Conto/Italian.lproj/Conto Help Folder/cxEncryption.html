@@ -1,0 +1,15 @@
+<html>
+<head>
+<title>Cifratura</title>
+</head>
+<body>
+
+<FONT SIZE="4" FACE="Lucida Grande,Helvetica,Arial"><b> Cifratura </b></font>
+
+<FONT SIZE="2" FACE="Lucida Grande,Helvetica,Arial">
+<p>Conto permette di cifrare i propri documenti per la massima riservatezza. A tale scopo, Conto usa il noto e ben testato programma Unix <tt>gpg</tt>. Ci&ograve; significa che occorre avere installato e correttamente configurato <a href="http://www.gnupg.org">GnuPG</a> 1.0.6 o superiore, e che occorre avere familiarit&agrave; con la cifratura a chiave pubblica per poterla utilizzare in Conto. Si veda la documentazione di GnuPG per ulteriori informazioni.</p>
+
+<p>Per cifrare i documenti basta attivare l'opzione <b>Usa cifratura</b> nelle <b>Preferenze</b>. Occorre specificare la directory in cui si trova il programma <tt>gpg</tt> (tipicamente, <tt>/usr/local/bin</tt>,  oppure <tt>/sw/bin</tt> se si &egrave; installato GnuPG usando <a href="http://fink.sourceforge.net/">Fink</a>) e scrivere l'identificatore della propria chiave pubblica nel campo <b>Identit&agrave;</b> (nella maggior parte dei casi, il proprio nome &egrave; sufficiente): se questo campo &egrave; lasciato vuoto, Conto usa il valore di default specificato in <tt>gpg</tt> (che pu&ograve; essere o non essere la propria chiave. Si noti che se si cifra con una chiave diversa dalla propria non si sar&agrave; pi&uacute; in grado di riaprire il documento!). Se tutto &egrave; configurato correttamente, Conto registra i documenti cifrandoli automaticamente con la chiave pubblica specificata. Quando si apre un documento cifrato con la propria chiave pubblica, Conto richiede all'utente la frase segreta (passphrase) che permette di sbloccare la chiave privata corrispondente e di decifrare il documento.</p>
+</FONT>
+</body>
+</html>

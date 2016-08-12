@@ -1,0 +1,175 @@
+/* Income */
+"Income" = "Avere";
+/* Expense */
+"Expense" = "Dare";
+/* Balance */
+"Balance" = "Saldo";
+
+/* Name of Delete menu item and Delete button*/
+"Delete" = "Cancella";
+/* Name of Summary Info menu item */
+"Summary Info" = "Informazioni";
+/* Name of Graph menu item */
+"Graph" = "Istogramma";
+/* Name of Copy As Text menu item */
+"Copy As Text" = "Copia come Testo";
+/* Name of Cut menu item */
+"Cut" = "Taglia";
+
+/* Title text for deletion sheet */
+//"Do you really want to delete the selected record(s)?" = "Do you really want to delete the selected record(s)?";
+/* Don't delete button */
+//"Don't delete" = "Don't delete";
+/* Message text for deletion sheet */
+//"You will not be able to undo this operation" = "You will not be able to undo this operation";
+
+/* Name of month January */
+"January" = "Gennaio";
+/* Name of month February */
+"February" = "Febbraio";
+/* Name of month March */
+"March" = "Marzo";
+/* Name of month April */
+"April" = "Aprile";
+/* Name of month May */
+"May" = "Maggio";
+/* Name of month June */
+"June" = "Giugno";
+/* Name of month July */
+"July" = "Luglio";
+/* Name of month August */
+"August" = "Agosto";
+/* Name of month September */
+"September" = "Settembre";
+/* Name of month October */
+"October" = "Ottobre";
+/* Name of month November */
+"November" = "Novembre";
+/* Name of month December */
+"December" = "Dicembre";
+/* Total */
+"Total" = "Totale";
+
+/* Short name for January */
+"Jan" = "Gen";
+/* Short name for February */
+"Feb" = "Feb";
+/* Short name for March */
+"Mar" = "Mar";
+/* Short name for April */
+"Apr" = "Apr";
+/* Short name for May */
+"May " = "Mag";
+/* Short name for June */
+"Jun" = "Giu";
+/* Short name for July */
+"Jul" = "Lug";
+/* Short name for August */
+"Aug" = "Ago";
+/* Short name for September */
+"Sep" = "Set";
+/* Short name for October */
+"Oct" = "Ott";
+/* Short name for November */
+"Nov" = "Nov";
+/* Short name for December */
+"Dec" = "Dic";
+
+/* Title of Summary Window */
+"Summary Info for " = "Informazioni per ";
+/* Title of Graph window */
+"Graph for " = "Istogramma per ";
+/* Title of Preferences window */
+"Preferences" = "Preferenze";
+
+/* Information name */
+"My info" = "Nome Info";
+/* Information value */
+"My value" = "Valore";
+
+
+/* Undo/Redo menu item names */
+/* Tick off Checkbox */
+/* Name of undo/redo menu item after Tick Off control was set */
+"Activate Tick Off" = "Attiva Spunta";
+/* Name of undo/redo menu item after Tick Off control was cleared */
+"Deactivate Tick Off" = "Disattiva Spunta";
+/* Name of undo/redo menu item after changing month via pop up menu */
+"Change Month" = "Cambia Mese";
+/* Name of undo/redo menu item after setting transaction type */
+"Set Transaction Type" = "Imposta Tipo Importo";
+/* Name of undo/redo menu item after dragging an image */
+"Set Logo" = "Imposta Logo";
+/* Name of undo/redo menu item after deleting the image */
+"Delete Logo" = "Elimina Logo";
+/* Name of undo/redo menu item after adding a record */
+"Add Record" = "Aggiungi Record";
+/* Name of undo/redo menu item after removing record(s) */
+"Remove Record(s)" = "Elimina Record";
+/* Name of undo/redo menu item after switching a tick off in table */
+"Set Tick Off" = "Aggiungi Spunta";
+"Clear Tick Off" = "Togli Spunta";
+/* Name of undo/redo menu item after sorting */
+"Sort" = "Ordina";
+/* Name of undo/redo menu item after sorting by date */
+"Sort by Date" = "Ordina per Data";
+/* Name of undo/redo menu item after sorting by description */
+"Sort by Description" = "Ordina per Descrizione";
+/* Name of undo/redo menu item after sorting by tick off */
+"Sort by Tick Off" = "Ordina per Spunta";
+/* Name of undo/redo menu item after sorting by income */
+"Sort by Income" = "Ordina per Avere";
+/* Name of undo/redo menu item after sorting by expense */
+"Sort by Expense" = "Ordina per Dare";
+/* Name of undo/redo menu item after changing value in table */
+"Change Value" = "Cambia Valore";
+/* Name of undo/redo menu item after adding an info */
+"Add Account Info" = "Aggiungi Informazione";
+/* Name of undo/redo menu item after changing info in info table */
+"Change Info" = "Modifica Informazione";
+/* Name of undo/redo menu item after removing account info(s) */
+"Remove Account Info(s)" = "Elimina Informazione/i";
+/* Name of undo/redo menu item after dragging records(s) */
+"Drag Record(s)" = "Sposta Record";
+/* Name of undo/redo menu item after dragging info(s) */
+"Drag Info(s)" = "Sposta Informazioni";
+/* Name of undo/redo menu item after cutting record(s) */
+"Cut Record(s)" = "Taglia Record";
+/* Name of undo/redo menu item after pasting record(s) */
+"Paste Record(s)" = "Incolla Record";
+
+/* Tooltips */
+/* Tooltip for date format dd-mm-yy */
+"Date must have format: dd-mm-yy (e.g. 24-12-02)" = "Formato data: gg-mm-aa (es. 24-12-02)";
+/* Tooltip for date format dd/mm/yy */
+"Date must have format: dd/mm/yy (e.g. 24/12/02)" = "Formato data: gg/mm/aa (es. 24/12/02)";
+/* Tooltip for date format dd-mm */
+"Date must have format: dd-mm (e.g. 24-12)" = "Formato data: gg-mm (es. 24-12)";
+/* Tooltip for date format dd/mm */
+"Date must have format: dd/mm (e.g. 24/12)" = "Formato data: gg/mm (es. 24/12)";
+/* Tooltip for date format day month year */
+"Date must have format: day month year (e.g. 24 december 2002)" = "Formato data: giorno mese anno (es. 24 dicembre 2002)";
+/* Tooltip for date format day abbr.month year */
+"Date must have format: day abbr.month year (e.g. 24 dec 2002)" = "Formato data: giorno mese abbr. anno (es. 24 dic 2002)";
+/* Tooltip for date format day month */
+"Date must have format: day month (e.g. 24 december)" = "Formato data: giorno mese (es. 24 dicembre)";
+/* Tooltip for date format day abbr.month */
+"Date must have format: day abbr.month (e.g. 24 dec)" = "Formato data: giorno mese abbr. (es. 24 dic)";
+
+/* Title of absolute path error */
+"Gpg directory path is not correct" = "Percorso gpg non corretto";
+/* Text of absolute path error */
+"The path you have specified in the Preferences is not a valid absolute path. Please check it and try again." =
+"Il percorso specificato nelle Preferenze non \U00E8 un percorso valido. Per favore, controlla e riprova.";
+/* Title of gpg not found error */
+"I cannot find the gpg executable" = "Non riesco a trovare il programma gpg";
+/* Text of gpg not found error */
+"Please check the path in the Preferences and try again." = "Per favore, controlla il percorso nelle Preferenze e riprova.";
+/* Title of encryption failed error */
+"Encryption failed" = "Cifratura non riuscita";
+/* Text of encryption failed error */
+"Public key not found. Please check the Preferences and try again." = "Chiave non trovata. Per favore, controlla l'identit\U00E0 nelle Preferenze e riprova.";
+/* Title of decryption failed error */
+"Decryption failed" = "Decifrazione non riuscita";
+/* Text of decryption failed error */
+"Passphrase not valid." = "La frase segreta inserita non \U00E8 corretta.";

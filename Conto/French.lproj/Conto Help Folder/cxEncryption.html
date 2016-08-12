@@ -1,0 +1,17 @@
+<html>
+<head>
+<title>Encryption</title>
+</head>
+<body>
+
+<FONT SIZE="4" FACE="Lucida Grande,Helvetica,Arial"><b> Encryption </b></font>
+
+<FONT SIZE="2" FACE="Lucida Grande,Helvetica,Arial">
+<p>You may choose to encrypt your documents for maximum privacy. Since encryption is not a trivial matter, Conto uses the well known and tested <tt>gpg</tt> Unix program to cypher your data. This means that you must have a working installation of <a href="http://www.gnupg.org">GnuPG</a> 1.0.6 or later to use encryption and you must know what public-key encryption is. See GnuPG documentation for reference.</p>
+
+<p>If you have successfully installed GnuPG and have created your key-pair, you can use encryption in Conto. Make sure that the <b>Use encryption</b> checkbox in the <b>Preferences</b> is selected, and that the <b>gpg path:</b> text field contains the directory where <tt>gpg</tt> is located (typically, it is <tt>/usr/local/bin</tt>, or <tt>/sw/bin</tt> if you installed GnuPG via <a href="http://fink.sourceforge.net/">Fink</a>). You may optionally write your key ID in <b>Your key ID:</b> text field (in most cases your name is sufficient): if you leave it blank, Conto encrypts to the default recipient (which may or may not be your key. Please note that if you encrypt to someone else's key, you won't be able to open the document again!).</p>
+<p>If you have setup things properly, Conto will save your documents automatically encrypting them using the specified key. Every time you open the document, you will be asked for your passphrase.
+</p>
+</FONT>
+</body>
+</html>

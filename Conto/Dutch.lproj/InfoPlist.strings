@@ -1,0 +1,7 @@
+/* Localized versions of Info.plist keys */
+
+CFBundleName = "Conto";
+CFBundleShortVersionString = "Conto versie 1.2.0";
+CFBundleGetInfoString = "Conto versie 1.2.0; Copyright ©2002, Nicola Vitacolonna.";
+NSHumanReadableCopyright = "Copyright \U00A9 2002 Nicola Vitacolonna.\nDit programma is uitgebracht onder de GPL-licentie.";
+CFBundleHelpBookName = "Conto Helptekst";

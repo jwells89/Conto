@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Activate Tick Off</key>
+	<string>Valider</string>
+	<key>Add Account Info</key>
+	<string>Ajouter information de compte</string>
+	<key>Add Record</key>
+	<string>Ajouter l'enregistrement</string>
+	<key>Apr</key>
+	<string>Avr</string>
+	<key>April</key>
+	<string>Avril</string>
+	<key>Aug</key>
+	<string>Aou</string>
+	<key>August</key>
+	<string>Août</string>
+	<key>Balance</key>
+	<string>Balance</string>
+	<key>Change Info</key>
+	<string>Changer Info</string>
+	<key>Change Month</key>
+	<string>Changer Mois</string>
+	<key>Change Value</key>
+	<string>Changer Valeur</string>
+	<key>Clear Tick Off</key>
+	<string>Effacer la validation</string>
+	<key>Copy As Text</key>
+	<string>Copier comme texte</string>
+	<key>Cut</key>
+	<string>Couper</string>
+	<key>Cut Record(s)</key>
+	<string>Couper le(s) enregistrement(s)</string>
+	<key>Date must have format: day abbr.month (e.g. 24 dec)</key>
+	<string>Date doit avoir le format jj abrév mois (24 dec)</string>
+	<key>Date must have format: day abbr.month year (e.g. 24 dec 2002)</key>
+	<string>Date doit avoir le format jj abrév mois aaaa (24 dec 2002)</string>
+	<key>Date must have format: day month (e.g. 24 december)</key>
+	<string>Date doit avoir le format jj mois (24 decembre)</string>
+	<key>Date must have format: day month year (e.g. 24 december 2002)</key>
+	<string>Date doit avoir le format jj mois aaaa (24 decembre 2002)</string>
+	<key>Date must have format: dd-mm (e.g. 24-12)</key>
+	<string>Date doit avoir le format jj-mm (24-12)</string>
+	<key>Date must have format: dd-mm-yy (e.g. 24-12-02)</key>
+	<string>Date doit avoir le format jj-mm-aa (24-12-02)</string>
+	<key>Date must have format: dd/mm (e.g. 24/12)</key>
+	<string>Date doit avoir le format jj/mm (24/12)</string>
+	<key>Date must have format: dd/mm/yy (e.g. 24/12/02)</key>
+	<string>Date doit avoir le format jj/mm/aa (24/12/02)</string>
+	<key>Deactivate Tick Off</key>
+	<string>Invalider</string>
+	<key>Dec</key>
+	<string>Dec</string>
+	<key>December</key>
+	<string>Decembre</string>
+	<key>Decryption failed</key>
+	<string>Erreur de décryptage</string>
+	<key>Delete</key>
+	<string>Effacer</string>
+	<key>Delete Logo</key>
+	<string>Effacer le logo</string>
+	<key>Drag Info(s)</key>
+	<string>Glisser Info(s)</string>
+	<key>Drag Record(s)</key>
+	<string>Glisser Enregistrement(s)</string>
+	<key>Encryption failed</key>
+	<string>Erreur de cryptage</string>
+	<key>Expense</key>
+	<string>Débit</string>
+	<key>Feb</key>
+	<string>Feb</string>
+	<key>February</key>
+	<string>Février</string>
+	<key>Gpg directory path is not correct</key>
+	<string>Le dossier du GPG est incorrect</string>
+	<key>Graph</key>
+	<string>Graphique</string>
+	<key>Graph for </key>
+	<string>Graphique pour </string>
+	<key>I cannot find the gpg executable</key>
+	<string>Je ne trouve pas l'application GPG</string>
+	<key>Income</key>
+	<string>Crédit</string>
+	<key>Jan</key>
+	<string>Jan</string>
+	<key>January</key>
+	<string>Janvier</string>
+	<key>Jul</key>
+	<string>Jui</string>
+	<key>July</key>
+	<string>Juillet</string>
+	<key>Jun</key>
+	<string>Jui</string>
+	<key>June</key>
+	<string>Juin</string>
+	<key>Mar</key>
+	<string>Mar</string>
+	<key>March</key>
+	<string>Mars</string>
+	<key>May</key>
+	<string>Mai</string>
+	<key>May </key>
+	<string>Mai</string>
+	<key>My info</key>
+	<string>Mon info</string>
+	<key>My value</key>
+	<string>Ma valeur</string>
+	<key>Nov</key>
+	<string>Nov</string>
+	<key>November</key>
+	<string>Novembre</string>
+	<key>Oct</key>
+	<string>Oct</string>
+	<key>October</key>
+	<string>Octobre</string>
+	<key>Passphrase not valid.</key>
+	<string>Mot de passe incorrect</string>
+	<key>Paste Record(s)</key>
+	<string>Coller Enregistrement(s)</string>
+	<key>Please check the path in the Preferences and try again.</key>
+	<string>Vérifier le chemin dans les préférences et réessayer.</string>
+	<key>Preferences</key>
+	<string>Préférences</string>
+	<key>Public key not found. Please check the Preferences and try again.</key>
+	<string>La clef par défaut est introuvable. Vérifier les préférences.</string>
+	<key>Remove Account Info(s)</key>
+	<string>Enlever le(s) info(s) de compte</string>
+	<key>Remove Record(s)</key>
+	<string>Enlever le(s) enregistrement(s)</string>
+	<key>Sep</key>
+	<string>Sep</string>
+	<key>September</key>
+	<string>Septembre</string>
+	<key>Set Logo</key>
+	<string>Définir le logo</string>
+	<key>Set Tick Off</key>
+	<string>Valider</string>
+	<key>Set Transaction Type</key>
+	<string>Définir le type de transaction</string>
+	<key>Sort</key>
+	<string>Trier</string>
+	<key>Sort by Date</key>
+	<string>Trier par date</string>
+	<key>Sort by Description</key>
+	<string>Trier par description</string>
+	<key>Sort by Expense</key>
+	<string>Trier par débit</string>
+	<key>Sort by Income</key>
+	<string>Trier par crédit</string>
+	<key>Sort by Tick Off</key>
+	<string>Trier par validation</string>
+	<key>Summary Info</key>
+	<string>Infos résumées</string>
+	<key>Summary Info for </key>
+	<string>Infos résumées pour </string>
+	<key>The path you have specified in the Preferences is not a valid absolute path. Please check it and try again.</key>
+	<string>Le dossier spécifié dans les préférences n'est pas un chemin absolu. Merci de le corriger.</string>
+	<key>Total</key>
+	<string>Total</string>
+</dict>
+</plist>
