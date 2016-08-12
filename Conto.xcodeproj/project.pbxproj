@@ -1,0 +1,308 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5280443E1D5DB92400388530 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5280443D1D5DB92400388530 /* AppDelegate.m */; };
+		528044411D5DB92400388530 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 528044401D5DB92400388530 /* main.m */; };
+		528044441D5DB92400388530 /* Document.m in Sources */ = {isa = PBXBuildFile; fileRef = 528044431D5DB92400388530 /* Document.m */; };
+		528044471D5DB92400388530 /* Document.xib in Resources */ = {isa = PBXBuildFile; fileRef = 528044451D5DB92400388530 /* Document.xib */; };
+		528044491D5DB92400388530 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 528044481D5DB92400388530 /* Assets.xcassets */; };
+		5280444C1D5DB92400388530 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5280444A1D5DB92400388530 /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		528044391D5DB92400388530 /* Conto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Conto.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5280443C1D5DB92400388530 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5280443D1D5DB92400388530 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		528044401D5DB92400388530 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		528044421D5DB92400388530 /* Document.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Document.h; sourceTree = "<group>"; };
+		528044431D5DB92400388530 /* Document.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Document.m; sourceTree = "<group>"; };
+		528044461D5DB92400388530 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/Document.xib; sourceTree = "<group>"; };
+		528044481D5DB92400388530 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5280444B1D5DB92400388530 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		5280444D1D5DB92400388530 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		528044361D5DB92400388530 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		528044301D5DB92400388530 = {
+			isa = PBXGroup;
+			children = (
+				5280443B1D5DB92400388530 /* Conto */,
+				5280443A1D5DB92400388530 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5280443A1D5DB92400388530 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				528044391D5DB92400388530 /* Conto.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5280443B1D5DB92400388530 /* Conto */ = {
+			isa = PBXGroup;
+			children = (
+				5280443C1D5DB92400388530 /* AppDelegate.h */,
+				5280443D1D5DB92400388530 /* AppDelegate.m */,
+				528044421D5DB92400388530 /* Document.h */,
+				528044431D5DB92400388530 /* Document.m */,
+				528044451D5DB92400388530 /* Document.xib */,
+				528044481D5DB92400388530 /* Assets.xcassets */,
+				5280444A1D5DB92400388530 /* MainMenu.xib */,
+				5280444D1D5DB92400388530 /* Info.plist */,
+				5280443F1D5DB92400388530 /* Supporting Files */,
+			);
+			path = Conto;
+			sourceTree = "<group>";
+		};
+		5280443F1D5DB92400388530 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				528044401D5DB92400388530 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		528044381D5DB92400388530 /* Conto */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 528044501D5DB92400388530 /* Build configuration list for PBXNativeTarget "Conto" */;
+			buildPhases = (
+				528044351D5DB92400388530 /* Sources */,
+				528044361D5DB92400388530 /* Frameworks */,
+				528044371D5DB92400388530 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Conto;
+			productName = Conto;
+			productReference = 528044391D5DB92400388530 /* Conto.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		528044311D5DB92400388530 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "John Wells";
+				TargetAttributes = {
+					528044381D5DB92400388530 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 528044341D5DB92400388530 /* Build configuration list for PBXProject "Conto" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 528044301D5DB92400388530;
+			productRefGroup = 5280443A1D5DB92400388530 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				528044381D5DB92400388530 /* Conto */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		528044371D5DB92400388530 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				528044491D5DB92400388530 /* Assets.xcassets in Resources */,
+				528044471D5DB92400388530 /* Document.xib in Resources */,
+				5280444C1D5DB92400388530 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		528044351D5DB92400388530 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				528044441D5DB92400388530 /* Document.m in Sources */,
+				528044411D5DB92400388530 /* main.m in Sources */,
+				5280443E1D5DB92400388530 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		528044451D5DB92400388530 /* Document.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				528044461D5DB92400388530 /* Base */,
+			);
+			name = Document.xib;
+			sourceTree = "<group>";
+		};
+		5280444A1D5DB92400388530 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5280444B1D5DB92400388530 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5280444E1D5DB92400388530 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		5280444F1D5DB92400388530 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		528044511D5DB92400388530 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Conto/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.johnwells.Conto;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		528044521D5DB92400388530 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Conto/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.johnwells.Conto;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		528044341D5DB92400388530 /* Build configuration list for PBXProject "Conto" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5280444E1D5DB92400388530 /* Debug */,
+				5280444F1D5DB92400388530 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		528044501D5DB92400388530 /* Build configuration list for PBXNativeTarget "Conto" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				528044511D5DB92400388530 /* Debug */,
+				528044521D5DB92400388530 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 528044311D5DB92400388530 /* Project object */;
+}
