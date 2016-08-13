@@ -79,24 +79,24 @@
 
 // Managing data
 //- (void)addRecord:(NSMutableDictionary *)record forMonth:(CXMonth)aMonth;
-- (void)insertRecord:(NSMutableDictionary *)record atIndex:(unsigned)index forMonth:(CXMonth)aMonth;
+- (void)insertRecord:(NSMutableDictionary *)record atIndex:(NSUInteger)index forMonth:(CXMonth)aMonth;
 - (NSMutableArray *)getRecordsForMonth:(CXMonth)aMonth;
 - (BOOL)modifyField:(id)columnIdentifier ofRecord:(NSMutableDictionary *)theRecord
            forMonth:(CXMonth)aMonth newValue:(id)anObject;
 // The following is deprecated
-- (BOOL)modifyFieldAtRow:(unsigned)row column:(id)columnIdentifier forMonth:(CXMonth)aMonth newValue:(id)anObject;
+- (BOOL)modifyFieldAtRow:(NSUInteger)row column:(id)columnIdentifier forMonth:(CXMonth)aMonth newValue:(id)anObject;
 //- (void) removeRecordsWithIndices:(NSEnumerator *)indices forMonth:(CXMonth)aMonth;
 - (void)removeRecordIdenticalTo:(NSMutableDictionary *)aRecord forMonth:(CXMonth)aMonth;
 // The following is deprecated
-- (void) removeRecordAtIndex:(unsigned)index forMonth:(CXMonth)aMonth;
-- (void)moveRecord:(NSMutableDictionary *)record toIndex:(unsigned)newIndex forMonth:(CXMonth)aMonth;
+- (void) removeRecordAtIndex:(NSUInteger)index forMonth:(CXMonth)aMonth;
+- (void)moveRecord:(NSMutableDictionary *)record toIndex:(NSUInteger)newIndex forMonth:(CXMonth)aMonth;
 // The following is deprecated
-- (void)moveRecordFromIndex:(unsigned)index toIndex:(unsigned)newIndex forMonth:(CXMonth)aMonth;
+- (void)moveRecordFromIndex:(NSUInteger)index toIndex:(NSUInteger)newIndex forMonth:(CXMonth)aMonth;
 - (void)sortRecordsField:(id)fieldIdentifier forMonth:(CXMonth)aMonth;
 - (void)unsort:(NSArray *)oldArray field:(id)fieldIdentifier forMonth:(CXMonth)aMonth; // To undo sorting
-- (void)insertInfo:(NSMutableDictionary *)info atIndex:(unsigned)index;
-- (void)removeInfoAtIndex:(unsigned)index;
-- (void)modifyInfoAtRow:(unsigned)row column:(id)columnIdentifier newValue:(id)anObject;
+- (void)insertInfo:(NSMutableDictionary *)info atIndex:(NSUInteger)index;
+- (void)removeInfoAtIndex:(NSUInteger)index;
+- (void)modifyInfoAtRow:(NSUInteger)row column:(id)columnIdentifier newValue:(id)anObject;
 
 - (double)incomeForMonth:(CXMonth)aMonth;
 - (void)addValueToIncome:(double)value forMonth:(CXMonth)aMonth;
@@ -106,18 +106,18 @@
 - (void)updateBalances;
 - (double)applyOperation:(CXOperationType)operation withValue:(double)value toAmount:(double)theAmount;
 - (double)applyInverseOperation:(CXOperationType)operation withValue:(double)value toAmount:(double)theAmount;
-- (double)getSumValueForKey:(id)field month:(int)aMonth;
+- (double)getSumValueForKey:(id)field month:(CXMonth)aMonth;
 - (double)getMaximumValue;
 - (double)getMinimumValue;
 
 - (void)filterDescriptionsInMonth:(CXMonth)month;
 - (double)incomeOfFilteredRecords;
 - (double)expenseOfFilteredRecords;
-- (void)insertFilteredRecord:(NSMutableDictionary *)record atIndex:(unsigned)index;
+- (void)insertFilteredRecord:(NSMutableDictionary *)record atIndex:(NSUInteger)index;
 - (void)removeFilteredRecordIdenticalTo:(NSMutableDictionary *)record;
 
 - (void)triggerTickOffForRecord:(NSMutableDictionary *)record;
-- (void)triggerTickOffAtIndex:(int)row;
+- (void)triggerTickOffAtIndex:(NSInteger)row;
 
 - (void)printView:(NSView *)theView;
 

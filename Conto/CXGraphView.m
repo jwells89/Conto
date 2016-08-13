@@ -93,7 +93,7 @@
   float labelValue, labelStepValue, labelStepV;
   CXMonth m;
   NSNumberFormatter *formatter;
-  int i;
+  NSInteger i;
 
   // Get format for labels
   //formatter = [[self graphController] numberFormatter];

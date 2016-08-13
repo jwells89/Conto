@@ -80,9 +80,9 @@ static id sharedInstance = nil; // There is only one instance of this class. We 
   [self updateRadioCluster:[self fontRadioCluster] setting:[Prefs integerForKey:CXFontSizeKey]];
   [self updateCheckbox:[self thousandSeparatorCheckbox] setting:[Prefs boolForKey:CXThousandSeparatorKey]];
   [[self currencyTextField] setStringValue:[Prefs stringForKey:CXCurrencySymbolKey]];
-  [[self decimalTextField] setIntValue:[Prefs integerForKey:CXNumberOfDecimalsKey]];
+  [[self decimalTextField] setIntegerValue:[Prefs integerForKey:CXNumberOfDecimalsKey]];
   // Synchronize the decimal stepper with the text field
-  [[self decimalStepper] setIntValue:[Prefs integerForKey:CXNumberOfDecimalsKey]];
+  [[self decimalStepper] setIntegerValue:[Prefs integerForKey:CXNumberOfDecimalsKey]];
   [self updateCheckbox:[self gridCheckbox] setting:[Prefs boolForKey:CXGridKey]];
   // Encryption items
   isEncryptionEnabled = [Prefs boolForKey:CXUseEncryptionKey];
@@ -118,17 +118,17 @@ static id sharedInstance = nil; // There is only one instance of this class. We 
   //NSMutableDictionary *predefinedDescription;
   NSMutableDictionary *defaultPrefs = [NSMutableDictionary dictionary];
 
-  [defaultPrefs setObject:[NSNumber numberWithInt:(int)Smaller] forKey:CXFontSizeKey]; // Small system font
-  [defaultPrefs setObject:[NSNumber numberWithInt:(int)After] forKey:CXCurrencyPositionKey]; // Currency symbol after number
-  [defaultPrefs setObject:[NSString stringWithString:@" Û"] forKey:CXCurrencySymbolKey]; // Default currency is euro
+  [defaultPrefs setObject:[NSNumber numberWithInt:(NSInteger)Smaller] forKey:CXFontSizeKey]; // Small system font
+  [defaultPrefs setObject:[NSNumber numberWithInt:(NSInteger)After] forKey:CXCurrencyPositionKey]; // Currency symbol after number
+  [defaultPrefs setObject:@" â‚¬" forKey:CXCurrencySymbolKey]; // Default currency is euro
   [defaultPrefs setObject:[NSNumber numberWithInt:2] forKey:CXNumberOfDecimalsKey]; // Two decimals 
   [defaultPrefs setObject:[NSNumber numberWithInt:0] forKey:CXDecimalSeparatorKey]; // Default is comma
-  [defaultPrefs setObject:[NSNumber numberWithInt:(int)NSOnState] forKey:CXThousandSeparatorKey]; // Default is YES
+  [defaultPrefs setObject:[NSNumber numberWithInt:(NSInteger)NSOnState] forKey:CXThousandSeparatorKey]; // Default is YES
   [defaultPrefs setObject:[NSNumber numberWithInt:0] forKey:CXDateFormatKey]; // Default is dd-mm-yy
-  [defaultPrefs setObject:[NSNumber numberWithInt:(int)NSOffState] forKey:CXGridKey];
-  [defaultPrefs setObject:[NSNumber numberWithInt:(int)NSOffState] forKey:CXUseEncryptionKey]; // Default is NO encryption
-  [defaultPrefs setObject:[NSString stringWithString:@"/usr/local/bin"] forKey:CXGpgPathKey]; // Default gpg path
-  [defaultPrefs setObject:[NSString stringWithString:@""] forKey:CXKeyIDKey]; // Default key ID
+  [defaultPrefs setObject:[NSNumber numberWithInt:(NSInteger)NSOffState] forKey:CXGridKey];
+  [defaultPrefs setObject:[NSNumber numberWithInt:(NSInteger)NSOffState] forKey:CXUseEncryptionKey]; // Default is NO encryption
+  [defaultPrefs setObject:@"/usr/local/bin" forKey:CXGpgPathKey]; // Default gpg path
+  [defaultPrefs setObject:@"" forKey:CXKeyIDKey]; // Default key ID
 
   // Set default predefined descriptions
   //predefinedDescription = [NSMutableDictionary dictionaryWithCapacity:1];
@@ -136,7 +136,7 @@ static id sharedInstance = nil; // There is only one instance of this class. We 
   //[descriptions addObject:predefinedDescription];
   //[defaultPrefs setObject:[NSArray arrayWithObject:predefinedDescription] forKey:CXDescriptionsArrayKey];
 
-  [defaultPrefs setObject:[NSNumber numberWithInt:(int)NSOnState] forKey:CXAutocompleteKey]; // Default is autocomplete
+  [defaultPrefs setObject:[NSNumber numberWithInt:(NSInteger)NSOnState] forKey:CXAutocompleteKey]; // Default is autocomplete
   // Register the dictionary of defaults
   [Prefs registerDefaults:defaultPrefs];
   //[Prefs synchronize];
@@ -264,12 +264,12 @@ static id sharedInstance = nil; // There is only one instance of this class. We 
   NSMutableDictionary *newAttrs = [NSMutableDictionary dictionary];
   NSMutableString *formatString = [[NSMutableString alloc] init];
   NSMutableString *percentFormatString;
-  int i;
+  NSInteger i;
   NSString *decimalSeparator;
   NSString *thousandSeparator;
   CXCurrencyPosition currencyPosition = (CXCurrencyPosition)[Prefs integerForKey:CXCurrencyPositionKey];
   NSString *currencySymbol = [Prefs stringForKey:CXCurrencySymbolKey];
-  int numberOfDecimals = [Prefs integerForKey:CXNumberOfDecimalsKey];
+  NSInteger numberOfDecimals = [Prefs integerForKey:CXNumberOfDecimalsKey];
   BOOL hasThousandSeparator = [Prefs boolForKey:CXThousandSeparatorKey];
 
   switch ((CXSeparator)[Prefs integerForKey:CXDecimalSeparatorKey]) {
@@ -440,13 +440,13 @@ static id sharedInstance = nil; // There is only one instance of this class. We 
 
 // Descriptions
 - (IBAction)addDescriptionAction:(id)sender {
-  int inOp = [[self incomeOperationButton] indexOfSelectedItem];
-  int outOp = [[self expenseOperationButton] indexOfSelectedItem];
+  NSInteger inOp = [[self incomeOperationButton] indexOfSelectedItem];
+  NSInteger outOp = [[self expenseOperationButton] indexOfSelectedItem];
   NSMutableDictionary *newDescription = [NSMutableDictionary dictionaryWithCapacity:5]; // Autoreleased
 
   [newDescription setObject:[[self descriptionTextField] stringValue] forKey:CXDefaultDescriptionKey];
   if (inOp != NoOperation) {
-    [newDescription setObject:[NSNumber numberWithInt:inOp] forKey:CXIncomeOperationKey];
+    [newDescription setObject:[NSNumber numberWithInteger:inOp] forKey:CXIncomeOperationKey];
     if ((nil == [[self incomeOpTextField] objectValue]) ||
         ([[[self incomeOpTextField] objectValue] isEqual:[NSDecimalNumber notANumber]])) {
       [[self incomeOpTextField] setObjectValue:[NSDecimalNumber zero]];
@@ -454,7 +454,7 @@ static id sharedInstance = nil; // There is only one instance of this class. We 
     [newDescription setObject:[[self incomeOpTextField] objectValue] forKey:CXIncomeOpValueKey];
   }
   if (outOp != NoOperation) {
-    [newDescription setObject:[NSNumber numberWithInt:outOp] forKey:CXExpenseOperationKey];
+    [newDescription setObject:[NSNumber numberWithInteger:outOp] forKey:CXExpenseOperationKey];
     if ((nil == [[self expenseOpTextField] objectValue]) ||
         ([[[self expenseOpTextField] objectValue] isEqual:[NSDecimalNumber notANumber]])) {
       [[self expenseOpTextField] setObjectValue:[NSDecimalNumber zero]];
@@ -515,7 +515,7 @@ static id sharedInstance = nil; // There is only one instance of this class. We 
   }
 }
 
-- (void)updateRadioCluster:(NSMatrix *)control setting:(int)value {
+- (void)updateRadioCluster:(NSMatrix *)control setting:(NSInteger)value {
   if (value != [[control selectedCell] tag]) {
     [control selectCellWithTag:value];
   }
@@ -556,14 +556,14 @@ static id sharedInstance = nil; // There is only one instance of this class. We 
 
 
 // Table view methods (this class is the data source of the Descriptions TableView)
-- (int)numberOfRowsInTableView:(NSTableView *)descriptionsTableView {
+- (NSInteger)numberOfRowsInTableView:(NSTableView *)descriptionsTableView {
   if (nil == descriptions)
     return 0;
   else
     return [descriptions count];
 }
 
-- (id)tableView:(NSTableView *)descriptionsTableView objectValueForTableColumn:(NSTableColumn *)aTableColumn row:(int)rowIndex {
+- (id)tableView:(NSTableView *)descriptionsTableView objectValueForTableColumn:(NSTableColumn *)aTableColumn row:(NSInteger)rowIndex {
   id theValue;
 
   NSParameterAssert(rowIndex >= 0 && rowIndex < [descriptions count]);
@@ -575,13 +575,13 @@ static id sharedInstance = nil; // There is only one instance of this class. We 
 }
 
 - (void)tableView:(NSTableView *)descriptionsTableView setObjectValue:(id)anObject
-   forTableColumn:(NSTableColumn *)aTableColumn row:(int)rowIndex {
+   forTableColumn:(NSTableColumn *)aTableColumn row:(NSInteger)rowIndex {
 }
 
 // This class is the delegate of the Descriptions TableView, so it is automatically
 // registered to receive NSTableViewSelectionDidChangeNotification.
 - (void)tableViewSelectionDidChange:(NSNotification *)aNotification {
-  int row = [[self descriptionsTableView] selectedRow];
+  NSInteger row = [[self descriptionsTableView] selectedRow];
   [[self removeButton] setEnabled:(row > -1)]; // Enable Remove button if a selection is active
   if (row > -1 && row < [[self descriptions] count]) {
     [[self descriptionTextField] setStringValue:
@@ -612,7 +612,7 @@ static id sharedInstance = nil; // There is only one instance of this class. We 
 
 - (NSDragOperation)tableView:(NSTableView*)tableView
                 validateDrop:(id <NSDraggingInfo>)info
-                 proposedRow:(int)row
+                 proposedRow:(NSInteger)row
        proposedDropOperation:(NSTableViewDropOperation)operation {
   if (operation == NSTableViewDropAbove) {
     return NSDragOperationAll;
@@ -621,9 +621,9 @@ static id sharedInstance = nil; // There is only one instance of this class. We 
 }
 
 - (BOOL)tableView:(NSTableView*)tableView acceptDrop:(id <NSDraggingInfo>)info
-              row:(int)row
+              row:(NSInteger)row
     dropOperation:(NSTableViewDropOperation)operation {
-  int i, index;
+  NSInteger i, index;
   NSMutableArray *tempArray;
   NSArray *rows;
 

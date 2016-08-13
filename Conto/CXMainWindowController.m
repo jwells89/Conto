@@ -215,12 +215,12 @@
 - (void)setNumberFormatterFromPrefs {
   NSMutableDictionary *newAttrs = [NSMutableDictionary dictionary];
   NSMutableString *formatString = [[NSMutableString alloc] init];
-  int i;
+  NSInteger i;
   NSString *decimalSeparator;
   NSString *thousandSeparator;
   CXCurrencyPosition currencyPosition = (CXCurrencyPosition)[Prefs integerForKey:CXCurrencyPositionKey];
   NSString *currencySymbol = [Prefs stringForKey:CXCurrencySymbolKey];
-  int numberOfDecimals = [Prefs integerForKey:CXNumberOfDecimalsKey];
+  NSInteger numberOfDecimals = [Prefs integerForKey:CXNumberOfDecimalsKey];
   BOOL hasThousandSeparator = [Prefs boolForKey:CXThousandSeparatorKey];
 
   switch ((CXSeparator)[Prefs integerForKey:CXDecimalSeparatorKey]) {
@@ -256,7 +256,7 @@
       [formatString appendString:currencySymbol];
       break;
   }
-  //[numberFormatter setFormat:@"#,##0.00 Û;0.00 Û;-#,##0.00 Û"];
+  //[numberFormatter setFormat:@"#,##0.00 â‚¬;0.00 â‚¬;-#,##0.00 â‚¬"];
   [[self numberFormatter] setFormat:formatString];
   [newAttrs setObject:[NSColor redColor] forKey:@"NSColor"];
   [[self numberFormatter] setTextAttributesForNegativeValues:newAttrs];
@@ -345,13 +345,13 @@
     }
 }
 
-- (void)updatePopUpButton:(NSPopUpButton *)control setting:(int)value {
+- (void)updatePopUpButton:(NSPopUpButton *)control setting:(NSInteger)value {
     if (value != [control indexOfSelectedItem]) {
         [control selectItemAtIndex:value];
     }
 }
 
-- (void)updateRadioCluster:(NSMatrix *)control setting:(int)value {
+- (void)updateRadioCluster:(NSMatrix *)control setting:(NSInteger)value {
     if (value != [[control selectedCell] tag]) {
         [control selectCellWithTag:value];
     }
@@ -487,7 +487,7 @@
 
 - (void)updateComboBox:(NSNotification *)notification {
   /*
-  int nItems = [[[CXPreferencesController sharedPreferencesController] descriptions] count];
+  NSInteger nItems = [[[CXPreferencesController sharedPreferencesController] descriptions] count];
   if (nItems < 10)
     [[self descriptionField] setNumberOfVisibleItems:nItems];
   else
@@ -506,7 +506,7 @@
 {
   NSMutableDictionary *record = [NSMutableDictionary dictionaryWithCapacity:5];
   double theAmount, newAmount;
-  unsigned int index;
+  NSUInteger index;
   CXOperationType inOp, outOp;
   BOOL foundPredefinedDescription;
   NSArray *descriptions;
@@ -517,7 +517,7 @@
     [[self dateField] setObjectValue:[NSDate date]];
   }
   [record setObject:[[self dateField] objectValue] forKey:@"Date"]; 
-  [record setObject:([[self document] tickOff] ? @"Ã" : @"") forKey:@"Check"];
+  [record setObject:([[self document] tickOff] ? @"âœ“" : @"") forKey:@"Check"];
   newDescription = [[self descriptionField] stringValue];
   [record setObject:newDescription forKey:@"Description"];
 
@@ -747,8 +747,8 @@
 - (IBAction)paste:(id)sender {
   NSArray *tempArray;
   NSPasteboard *pboard = [NSPasteboard generalPasteboard];
-  int i;
-  int n;
+  NSInteger i;
+  NSInteger n;
   /*
   if (isFilterOn) { // Show all before pasting
     [[self searchTextField] setStringValue:@""];
@@ -778,7 +778,7 @@
   NSDateFormatter *dateFormatter;
   NSArray *tableColumns = [[self table] tableColumns];
   NSString *columnIdentifier;
-  int i;
+  NSInteger i;
 
   if (isFilterOn) // Copy from filtered array
     records = [[self document] filteredRecords];
@@ -815,7 +815,7 @@
 }
 
 - (IBAction)prevMonthAction:(id)sender {
-  int newMonthIndex;
+  NSInteger newMonthIndex;
 
   newMonthIndex = [[self monthPopUpMenu] indexOfSelectedItem] - 1;
   if (newMonthIndex < January)
@@ -827,7 +827,7 @@
 }
 
 - (IBAction)nextMonthAction:(id)sender {
-  int newMonthIndex;
+  NSInteger newMonthIndex;
 
   newMonthIndex = [[self monthPopUpMenu] indexOfSelectedItem] + 1;
   if (newMonthIndex > December)
@@ -841,7 +841,7 @@
 
 // Used to toggle the checkmark in Check column when the user clicks on a cell
 - (void)handleClickOnTableItem {
-  int column, row;
+  NSInteger column, row;
   NSMutableDictionary *theRecord;
 
   column = [[self table] clickedColumn];
@@ -872,7 +872,7 @@
   NSEnumerator *selectedRowEnum;
   NSNumber *rowIndex;
   NSMutableArray *recordsToDelete;
-  int i;
+  NSInteger i;
 
   recordsToDelete = [[NSMutableArray alloc] init]; // Released later in this method
   selectedRowEnum = [[self table] selectedRowEnumerator];
@@ -941,7 +941,7 @@
 #define MONTHTABLE [[self document] getRecordsForMonth:CurrentMonth]
 
 // Table view methods
-- (int)numberOfRowsInTableView:(NSTableView *)mainTableView
+- (NSInteger)numberOfRowsInTableView:(NSTableView *)mainTableView
 {
   if (isFilterOn) // Count filtered records
     return [[[self document] filteredRecords] count];
@@ -949,7 +949,7 @@
     return [MONTHTABLE count];
 }
 
-- (id)tableView:(NSTableView *)mainTableView objectValueForTableColumn:(NSTableColumn *)aTableColumn row:(int)rowIndex
+- (id)tableView:(NSTableView *)mainTableView objectValueForTableColumn:(NSTableColumn *)aTableColumn row:(NSInteger)rowIndex
 {
   NSArray *dataForTheTable;
   id theRecord, theValue;
@@ -967,7 +967,7 @@
   return theValue;
 }
 
-- (void)tableView:(NSTableView *)mainTableView setObjectValue:(id)anObject forTableColumn:(NSTableColumn *)aTableColumn row:(int)rowIndex
+- (void)tableView:(NSTableView *)mainTableView setObjectValue:(id)anObject forTableColumn:(NSTableColumn *)aTableColumn row:(NSInteger)rowIndex
 {
   NSString *columnId;
   NSMutableDictionary *theRecord;
@@ -1026,7 +1026,7 @@ static NSArray *rowsToBeDragged;
 
 - (BOOL)tableView:(NSTableView *)tableView writeRows:(NSArray*)rows toPasteboard:(NSPasteboard*)pboard {
   NSMutableArray *tempArray;
-  int i;
+  NSInteger i;
 
   tempArray = [[NSMutableArray alloc] init];
   if (isFilterOn) {
@@ -1057,7 +1057,7 @@ static NSArray *rowsToBeDragged;
 
 - (NSDragOperation)tableView:(NSTableView*)tableView
                 validateDrop:(id <NSDraggingInfo>)info
-                proposedRow:(int)row
+                proposedRow:(NSInteger)row
                 proposedDropOperation:(NSTableViewDropOperation)operation {
  // if (tableView == [info draggingSource]) {
     if (operation == NSTableViewDropAbove) {
@@ -1068,9 +1068,9 @@ static NSArray *rowsToBeDragged;
 }
 
 - (BOOL)tableView:(NSTableView*)tableView acceptDrop:(id <NSDraggingInfo>)info
-                                          row:(int)row
+                                          row:(NSInteger)row
                                           dropOperation:(NSTableViewDropOperation)operation {
-  int i, index;
+  NSInteger i, index;
   NSMutableArray *tempArray;
 
   if (tableView == [info draggingSource]) { // Dragging within the same table
@@ -1082,7 +1082,7 @@ static NSArray *rowsToBeDragged;
     if ([rowsToBeDragged count] > 0 && row != -1 && row <= [[self table] numberOfRows]) {
       // Remove all dragged elements from the table.
       // Some care must be put in the way we delete items,
-      // because we must keep the right point where to insert the dragged items
+      // because we must keep the right poNSInteger where to insert the dragged items
       // (and the user may be dragging multiple non-adjacent items,
       // the user may be dragging from a filtered table, and so on...)
       for (i = [rowsToBeDragged count] - 1; i >= 0 ; i--) {
@@ -1188,14 +1188,14 @@ static NSArray *rowsToBeDragged;
 
 // Delegate methods for TableView
 
-- (BOOL)tableView:(NSTableView *)aTableView shouldEditTableColumn:(NSTableColumn *)aTableColumn row:(int)rowIndex {
+- (BOOL)tableView:(NSTableView *)aTableView shouldEditTableColumn:(NSTableColumn *)aTableColumn row:(NSInteger)rowIndex {
   [[self monthPopUpMenu] setEnabled:NO];
   return YES;
 }
 
 /*
 - (void)tableView:(NSTableView*)tableView didClickTableColumn:(NSTableColumn *)tableColumn {
-  int row;
+  NSInteger row;
 
   row = [[self table] clickedRow];
 }
@@ -1234,11 +1234,11 @@ static NSArray *rowsToBeDragged;
 }
 
 // Combo box methods (this class is the data source of the NSComboBox)
-- (int)numberOfItemsInComboBox:(NSComboBox *)aComboBox {
+- (NSInteger)numberOfItemsInComboBox:(NSComboBox *)aComboBox {
   return [[[CXPreferencesController sharedPreferencesController] descriptions] count];
 }
 
-- (id)comboBox:(NSComboBox *)aComboBox objectValueForItemAtIndex:(int)index {
+- (id)comboBox:(NSComboBox *)aComboBox objectValueForItemAtIndex:(NSInteger)index {
   NSArray *predefinedDescriptions;
   predefinedDescriptions = [[CXPreferencesController sharedPreferencesController] descriptions];
   return [[predefinedDescriptions objectAtIndex:index] objectForKey:CXDefaultDescriptionKey];

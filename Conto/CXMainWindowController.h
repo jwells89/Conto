@@ -81,8 +81,8 @@
    
 // Generic view updaters
 - (void)updateCheckbox:(NSButton *)control setting:(BOOL)value;
-- (void)updatePopUpButton:(NSPopUpButton *)control setting:(int)value;
-- (void)updateRadioCluster:(NSMatrix *)control setting:(int)value;
+- (void)updatePopUpButton:(NSPopUpButton *)control setting:(NSInteger)value;
+- (void)updateRadioCluster:(NSMatrix *)control setting:(NSInteger)value;
 // Specific view updaters
 - (void)updateTickOffSwitch:(NSNotification *)notification;
 - (void)updateMonthPopUpMenu:(NSNotification *)notification;
@@ -113,18 +113,18 @@
 //---
 - (void)handleClickOnTableItem; // Designated selector for the setAction: method in TableView (see windowDidLoad)
 - (void)deleteRecords:(id)sender;
-//- (void)deleteSheetDidEnd:(NSWindow *)window returnCode:(int)returnCode contextInfo:(void *)contextInfo;
+//- (void)deleteSheetDidEnd:(NSWindow *)window returnCode:(NSInteger)returnCode contextInfo:(void *)contextInfo;
 - (void)deleteLogo:(id)sender;
 
 - (void)filterDescriptions;
 
 // Table view methods (this class is the data source of the main TableView)
-- (int)numberOfRowsInTableView:(NSTableView *)mainTableView;
-- (id)tableView:(NSTableView *)mainTableView objectValueForTableColumn:(NSTableColumn *)aTableColumn row:(int)rowIndex;
-- (void)tableView:(NSTableView *)mainTableView setObjectValue:(id)anObject forTableColumn:(NSTableColumn *)aTableColumn row:(int)rowIndex;
+- (NSInteger)numberOfRowsInTableView:(NSTableView *)mainTableView;
+- (id)tableView:(NSTableView *)mainTableView objectValueForTableColumn:(NSTableColumn *)aTableColumn row:(NSInteger)rowIndex;
+- (void)tableView:(NSTableView *)mainTableView setObjectValue:(id)anObject forTableColumn:(NSTableColumn *)aTableColumn row:(NSInteger)rowIndex;
 
 // Combo box methods (this class is the data source of the NSComboBox)
-- (int)numberOfItemsInComboBox:(NSComboBox *)aComboBox;
-- (id)comboBox:(NSComboBox *)aComboBox objectValueForItemAtIndex:(int)index;
+- (NSInteger)numberOfItemsInComboBox:(NSComboBox *)aComboBox;
+- (id)comboBox:(NSComboBox *)aComboBox objectValueForItemAtIndex:(NSInteger)index;
 
 @end

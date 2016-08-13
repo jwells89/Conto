@@ -125,16 +125,16 @@
 
 // Generic view updaters
 - (void)updateCheckbox:(NSButton *)control setting:(BOOL)value;
-- (void)updateRadioCluster:(NSMatrix *)control setting:(int)value;
+- (void)updateRadioCluster:(NSMatrix *)control setting:(NSInteger)value;
 
 // Notifications
 - (void)updateDescriptionsTableView:(NSNotification *)notification;
 - (void)setNumberFormat:(NSNotification *)notification;
 
 // Table view methods (this class is the data source of the Descriptions TableView)
-- (int)numberOfRowsInTableView:(NSTableView *)descriptionsTableView;
-- (id)tableView:(NSTableView *)descriptionsTableView objectValueForTableColumn:(NSTableColumn *)aTableColumn row:(int)rowIndex;
-- (void)tableView:(NSTableView *)descriptionsTableView setObjectValue:(id)anObject forTableColumn:(NSTableColumn *)aTableColumn row:(int)rowIndex;
+- (NSInteger)numberOfRowsInTableView:(NSTableView *)descriptionsTableView;
+- (id)tableView:(NSTableView *)descriptionsTableView objectValueForTableColumn:(NSTableColumn *)aTableColumn row:(NSInteger)rowIndex;
+- (void)tableView:(NSTableView *)descriptionsTableView setObjectValue:(id)anObject forTableColumn:(NSTableColumn *)aTableColumn row:(NSInteger)rowIndex;
 
 
 @end

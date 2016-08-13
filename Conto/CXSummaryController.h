@@ -59,7 +59,7 @@
 
 // TableView methods
 // (this class is the data source of the summary and info TableView)
-- (int)numberOfRowsInTableView:(NSTableView *)summaryTableView;
-- (id)tableView:(NSTableView *)summaryTableView objectValueForTableColumn:(NSTableColumn *)aTableColumn row:(int)rowIndex;
+- (NSInteger)numberOfRowsInTableView:(NSTableView *)summaryTableView;
+- (id)tableView:(NSTableView *)summaryTableView objectValueForTableColumn:(NSTableColumn *)aTableColumn row:(NSInteger)rowIndex;
 
 @end

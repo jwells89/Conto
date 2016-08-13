@@ -125,12 +125,12 @@
 - (void)setNumberFormatterFromPrefs {
   NSMutableDictionary *newAttrs = [NSMutableDictionary dictionary];
   NSMutableString *formatString = [[NSMutableString alloc] init];
-  int i;
+  NSInteger i;
   NSString *decimalSeparator;
   NSString *thousandSeparator;
   CXCurrencyPosition currencyPosition = (CXCurrencyPosition)[Prefs integerForKey:CXCurrencyPositionKey];
   NSString *currencySymbol = [Prefs stringForKey:CXCurrencySymbolKey];
-  int numberOfDecimals = [Prefs integerForKey:CXNumberOfDecimalsKey];
+  NSInteger numberOfDecimals = [Prefs integerForKey:CXNumberOfDecimalsKey];
   BOOL hasThousandSeparator = [Prefs boolForKey:CXThousandSeparatorKey];
 
   switch ((CXSeparator)[Prefs integerForKey:CXDecimalSeparatorKey]) {
@@ -205,7 +205,7 @@
 }
 
 - (IBAction)removeInfoAction:(id)sender {
-  int i;
+  NSInteger i;
   
   i = [[self infoTable] numberOfRows];
   while (i-- >= 0) {
@@ -298,14 +298,14 @@
 
 // TableView methods
 // (this class is the data source of the summary and info TableView)
-- (int)numberOfRowsInTableView:(NSTableView *)theTable {
+- (NSInteger)numberOfRowsInTableView:(NSTableView *)theTable {
   if ([theTable isEqual:[self summaryTable]])
     return 13; // One row for each month plus one row for totals
   else // Account info table
     return [[[self document] accountInfo] count];
 }
 
-- (id)tableView:(NSTableView *)theTable objectValueForTableColumn:(NSTableColumn *)aTableColumn row:(int)rowIndex {
+- (id)tableView:(NSTableView *)theTable objectValueForTableColumn:(NSTableColumn *)aTableColumn row:(NSInteger)rowIndex {
   if ([theTable isEqual:[self summaryTable]]) {
     NSParameterAssert(rowIndex >= 0 && rowIndex < 13);
     if ([[aTableColumn identifier] isEqual:@"Month"])
@@ -323,7 +323,7 @@
   }
 }
 
-- (void)tableView:(NSTableView *)infoTableView setObjectValue:(id)anObject forTableColumn:(NSTableColumn *)aTableColumn row:(int)rowIndex {
+- (void)tableView:(NSTableView *)infoTableView setObjectValue:(id)anObject forTableColumn:(NSTableColumn *)aTableColumn row:(NSInteger)rowIndex {
   NSParameterAssert(rowIndex >= 0 && rowIndex < [[[self document] accountInfo] count]);
   if (![[[[[self document] accountInfo] objectAtIndex:rowIndex] objectForKey:[aTableColumn identifier]] isEqual:anObject]) {
     [[self document] modifyInfoAtRow:rowIndex column:[aTableColumn identifier] newValue:anObject];
@@ -343,7 +343,7 @@ static NSArray *rowsToBeDragged;
 
 - (BOOL)tableView:(NSTableView *)tableView writeRows:(NSArray*)rows toPasteboard:(NSPasteboard*)pboard {
   NSMutableArray *tempArray;
-  int i;
+  NSInteger i;
 
   if (tableView == [self summaryTable])
     return NO;
@@ -370,7 +370,7 @@ static NSArray *rowsToBeDragged;
 
 - (NSDragOperation)tableView:(NSTableView*)tableView
                 validateDrop:(id <NSDraggingInfo>)info
-                 proposedRow:(int)row
+                 proposedRow:(NSInteger)row
        proposedDropOperation:(NSTableViewDropOperation)operation {
   if (operation == NSTableViewDropAbove) {
     return NSDragOperationAll;
@@ -379,9 +379,9 @@ static NSArray *rowsToBeDragged;
 }
 
 - (BOOL)tableView:(NSTableView*)tableView acceptDrop:(id <NSDraggingInfo>)info
-              row:(int)row
+              row:(NSInteger)row
     dropOperation:(NSTableViewDropOperation)operation {
-  int i, index;
+  NSInteger i, index;
   NSMutableArray *tempArray;
 
   if (tableView == [info draggingSource]) { // Dragging within the same table

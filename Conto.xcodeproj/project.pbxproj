@@ -1096,7 +1096,8 @@
 				CLANG_ENABLE_OBJC_ARC = NO;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Conto/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.johnwells.Conto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -1109,7 +1110,8 @@
 				CLANG_ENABLE_OBJC_ARC = NO;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Conto/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.johnwells.Conto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

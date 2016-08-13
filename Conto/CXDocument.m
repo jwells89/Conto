@@ -32,7 +32,7 @@
 // In particular, they don't check if parameters respond to used selectors.
 // 'context' is used to pass the column identifier.
 // This function is used to order the table wrt the Date column
-int compareRecordsBasedOnDate(id obj1, id obj2, void *context) {
+NSInteger compareRecordsBasedOnDate(id obj1, id obj2, void *context) {
   NSDate *date1;
   NSDate *date2;
 
@@ -42,7 +42,7 @@ int compareRecordsBasedOnDate(id obj1, id obj2, void *context) {
 }
 
 // This function is used to order the table wrt a column containing NSString's
-int compareRecordsBasedOnString(id obj1, id obj2, void *context) {
+NSInteger compareRecordsBasedOnString(id obj1, id obj2, void *context) {
   NSString *string1;
   NSString *string2;
 
@@ -59,7 +59,7 @@ int compareRecordsBasedOnString(id obj1, id obj2, void *context) {
 }
 
 // This function is used to order the table wrt a column containing numbers (Income or Expense)
-int compareRecordsBasedOnNumber(id obj1, id obj2, void *context) {
+NSInteger compareRecordsBasedOnNumber(id obj1, id obj2, void *context) {
   double num1;
   double num2;
   if ([[obj1 objectForKey:(NSString *)context] isKindOfClass:[NSString class]]) // Empty cell
@@ -125,7 +125,7 @@ int compareRecordsBasedOnNumber(id obj1, id obj2, void *context) {
 
 - (void)initializeAccountData {
   CXMonth m;
-  int k;
+  NSInteger k;
   NSMutableArray *records;
   NSMutableArray *tempArray = [[NSMutableArray alloc] initWithCapacity:12];
   
@@ -327,7 +327,7 @@ int compareRecordsBasedOnNumber(id obj1, id obj2, void *context) {
 }
 */
 
-- (void)insertRecord:(NSMutableDictionary *)record atIndex:(unsigned)index forMonth:(CXMonth)aMonth {
+- (void)insertRecord:(NSMutableDictionary *)record atIndex:(NSUInteger)index forMonth:(CXMonth)aMonth {
   if ((aMonth == CurrentMonth) || (aMonth == NoMonth)) {
     aMonth = [self currentMonth];
   }
@@ -425,7 +425,7 @@ int compareRecordsBasedOnNumber(id obj1, id obj2, void *context) {
 
 // Deprecated since v1.2.0
 // Returns NO if no change has been done (because anObject equals oldObject)
-- (BOOL)modifyFieldAtRow:(unsigned)row column:(id)columnIdentifier forMonth:(CXMonth)aMonth newValue:(id)anObject {
+- (BOOL)modifyFieldAtRow:(NSUInteger)row column:(id)columnIdentifier forMonth:(CXMonth)aMonth newValue:(id)anObject {
   id theRecord, oldObject;
 
   theRecord = nil;
@@ -523,8 +523,8 @@ int compareRecordsBasedOnNumber(id obj1, id obj2, void *context) {
   //NSMutableArray *tempArray = [NSMutableArray array]; // Convenience constructor => autoreleased
   NSDictionary *tempRecord;
   NSNumber *index;
-  unsigned int list[10]; // ABSOLUTELY UNSAFE! TO BE CHANGED! THIS CONSTRAINTS THE MAX NUMBERS OF SELECTED ITEMS TO ELEVEN!
-  unsigned int i;
+  NSUInteger list[10]; // ABSOLUTELY UNSAFE! TO BE CHANGED! THIS CONSTRAINTS THE MAX NUMBERS OF SELECTED ITEMS TO ELEVEN!
+  NSUInteger i;
   CXMonth m;
   
   if ((aMonth == CurrentMonth) || (aMonth == NoMonth)) {
@@ -559,7 +559,7 @@ int compareRecordsBasedOnNumber(id obj1, id obj2, void *context) {
 
 - (void)removeRecordIdenticalTo:(NSMutableDictionary *)aRecord forMonth:(CXMonth)aMonth {
   CXMonth m;
-  unsigned int index;
+  NSUInteger index;
   
   if ((aMonth == CurrentMonth) || (aMonth == NoMonth) || (aMonth == LastOfYear)) {
     aMonth = [self currentMonth];
@@ -599,7 +599,7 @@ int compareRecordsBasedOnNumber(id obj1, id obj2, void *context) {
 }
 
 // The following method is deprecated from v1.2.0
-- (void) removeRecordAtIndex:(unsigned)index forMonth:(CXMonth)aMonth {
+- (void) removeRecordAtIndex:(NSUInteger)index forMonth:(CXMonth)aMonth {
   NSMutableDictionary *tempRecord;
   CXMonth m;
   
@@ -633,8 +633,8 @@ int compareRecordsBasedOnNumber(id obj1, id obj2, void *context) {
                                                       object:self];  
 }
 
-- (void)moveRecord:(NSMutableDictionary *)record toIndex:(unsigned)newIndex forMonth:(CXMonth)aMonth {
-  unsigned int oldIndex;
+- (void)moveRecord:(NSMutableDictionary *)record toIndex:(NSUInteger)newIndex forMonth:(CXMonth)aMonth {
+  NSUInteger oldIndex;
 
   //oldIndex = [[self getRecordsForMonth:aMonth] indexOfObject:record];
  // [[[self undoManager] prepareWithInvocationTarget:self] moveRecord:record toIndex:oldIndex forMonth:aMonth];
@@ -653,7 +653,7 @@ int compareRecordsBasedOnNumber(id obj1, id obj2, void *context) {
 
 
 // Deprecated since v1.2.0
-- (void)moveRecordFromIndex:(unsigned)index toIndex:(unsigned)newIndex forMonth:(CXMonth)aMonth {
+- (void)moveRecordFromIndex:(NSUInteger)index toIndex:(NSUInteger)newIndex forMonth:(CXMonth)aMonth {
   NSMutableDictionary *tempRecord;
 
   if ((aMonth == CurrentMonth) || (aMonth == NoMonth) || (aMonth == LastOfYear)) {
@@ -719,7 +719,7 @@ int compareRecordsBasedOnNumber(id obj1, id obj2, void *context) {
                                                       object:self];
 }
 
-- (void)insertInfo:(NSMutableDictionary *)info atIndex:(unsigned)index {
+- (void)insertInfo:(NSMutableDictionary *)info atIndex:(NSUInteger)index {
   [[[self undoManager] prepareWithInvocationTarget:self] removeInfoAtIndex:index];
   [[self accountInfo] insertObject:info atIndex:index];
   // Post notification to update GUI
@@ -728,7 +728,7 @@ int compareRecordsBasedOnNumber(id obj1, id obj2, void *context) {
   
 }
 
-- (void)removeInfoAtIndex:(unsigned)index {
+- (void)removeInfoAtIndex:(NSUInteger)index {
   NSMutableDictionary *tempInfo;
 
   tempInfo = [[self accountInfo] objectAtIndex:index];
@@ -742,7 +742,7 @@ int compareRecordsBasedOnNumber(id obj1, id obj2, void *context) {
                                                       object:self];
 }
 
-- (void)modifyInfoAtRow:(unsigned)row column:(id)columnIdentifier newValue:(id)anObject {
+- (void)modifyInfoAtRow:(NSUInteger)row column:(id)columnIdentifier newValue:(id)anObject {
   id oldObject;
 
   oldObject = [[[self accountInfo] objectAtIndex:row] objectForKey:columnIdentifier];
@@ -919,8 +919,8 @@ int compareRecordsBasedOnNumber(id obj1, id obj2, void *context) {
 
 
 - (void)filterDescriptionsInMonth:(CXMonth)month {
-  unsigned int i;
-  unsigned int capacity;
+  NSUInteger i;
+  NSUInteger capacity;
   NSArray *records;
   
   if (![[self filter] isEqualToString:@""]) {
@@ -949,7 +949,7 @@ int compareRecordsBasedOnNumber(id obj1, id obj2, void *context) {
 
 - (double)incomeOfFilteredRecords {
   double filteredIncome;
-  unsigned int i, max;
+  NSUInteger i, max;
 
   filteredIncome = 0.0;
   max = [[self filteredRecords] count];
@@ -961,7 +961,7 @@ int compareRecordsBasedOnNumber(id obj1, id obj2, void *context) {
 
 - (double)expenseOfFilteredRecords {
   double filteredExpense;
-  unsigned int i, max;
+  NSUInteger i, max;
 
   filteredExpense = 0.0;
   max = [[self filteredRecords] count];
@@ -987,7 +987,7 @@ int compareRecordsBasedOnNumber(id obj1, id obj2, void *context) {
 // did the action.
 // On the other hand, adding an undo when the filter changes
 // seems a bit of overloading...
-- (void)insertFilteredRecord:(NSMutableDictionary *)record atIndex:(unsigned)index {
+- (void)insertFilteredRecord:(NSMutableDictionary *)record atIndex:(NSUInteger)index {
   if (![[self filter] isEqualToString:@""]) { // Some filter is active
     if ([[record objectForKey:@"Description"]
                   rangeOfString:[self filter]
@@ -1000,7 +1000,7 @@ int compareRecordsBasedOnNumber(id obj1, id obj2, void *context) {
 }
 
 - (void)removeFilteredRecordIdenticalTo:(NSMutableDictionary *)record {
-  unsigned int index = [[self filteredRecords] indexOfObject:record];
+  NSUInteger index = [[self filteredRecords] indexOfObject:record];
   if (index != NSNotFound) {
     [[[self undoManager] prepareWithInvocationTarget:self] insertFilteredRecord:record atIndex:index];
     [[self filteredRecords] removeObjectIdenticalTo:record];
@@ -1010,7 +1010,7 @@ int compareRecordsBasedOnNumber(id obj1, id obj2, void *context) {
 
 - (void)triggerTickOffForRecord:(NSMutableDictionary *)record {
   [[[self undoManager] prepareWithInvocationTarget:self] triggerTickOffForRecord:record];
-  [record setObject:([[record objectForKey:@"Check"] isEqualToString:@""] ? @"Ã" : @"") forKey:@"Check"];
+  [record setObject:([[record objectForKey:@"Check"] isEqualToString:@""] ? @"âœ“" : @"") forKey:@"Check"];
   // Post notification to update GUI
   [[NSNotificationCenter defaultCenter] postNotificationName:CXTableChangedNotification
                                                       object:self];
@@ -1018,14 +1018,14 @@ int compareRecordsBasedOnNumber(id obj1, id obj2, void *context) {
 }
 
 // Deprecated since 1.2.0
--(void)triggerTickOffAtIndex:(int)row {
+-(void)triggerTickOffAtIndex:(NSInteger)row {
   id theRecord;
   if ([[self filter] isEqualToString:@""])
     theRecord = [[self getRecordsForMonth:CurrentMonth] objectAtIndex:row];
   else
     theRecord = [[self filteredRecords] objectAtIndex:row];
   [[[self undoManager] prepareWithInvocationTarget:self] triggerTickOffAtIndex:row];
-  [theRecord setObject:([[theRecord objectForKey:@"Check"] isEqualToString:@""] ? @"Ã" : @"") forKey:@"Check"];
+  [theRecord setObject:([[theRecord objectForKey:@"Check"] isEqualToString:@""] ? @"âˆš" : @"") forKey:@"Check"];
   // Post notification to update GUI
   [[NSNotificationCenter defaultCenter] postNotificationName:CXTableChangedNotification
                                                       object:self];
@@ -1107,7 +1107,7 @@ int compareRecordsBasedOnNumber(id obj1, id obj2, void *context) {
 NSString *CXDocumentType = @"Conto Document Type";
 static NSString *CXDocumentClassKey = @"Class";
 static NSString *CXDocumentVersionKey = @"Version";
-static int currentCXDocumentVersion = 1;
+static NSInteger currentCXDocumentVersion = 1;
 static NSString *CXAccountDataKey = @"Account Data";
 static NSString *CXIncomeDataKey = @"Incomes";
 static NSString *CXExpenseDataKey = @"Expenses";
@@ -1211,7 +1211,7 @@ static NSString *CXArchivedData = @"Archived Data";
   
   // General identification information
   [dictionary setObject:NSStringFromClass([self class]) forKey:CXDocumentClassKey];
-  [dictionary setObject:[NSString stringWithFormat:@"%d", currentCXDocumentVersion] forKey:CXDocumentVersionKey];
+  [dictionary setObject:[NSString stringWithFormat:@"%ld", (long)currentCXDocumentVersion] forKey:CXDocumentVersionKey];
   // Data
   [dictionary setObject:[self accountData] forKey:CXAccountDataKey];
   // Incomes, expenses, balances
@@ -1237,9 +1237,9 @@ static NSString *CXArchivedData = @"Archived Data";
   [dictionary setObject:[NSNumber numberWithInt:[self lastMonthWithEntries]] forKey:CXLastMonthKey];
   // ...as well as strings
   // Currently displayed month 
-  [dictionary setObject:[NSString stringWithFormat:@"%d", [self currentMonth]] forKey:CXCurrentMonthKey];
+  [dictionary setObject:[NSString stringWithFormat:@"%ld", (long)[self currentMonth]] forKey:CXCurrentMonthKey];
   // Income/Expense radio cluster status
-  [dictionary setObject:[NSString stringWithFormat:@"%d", [self transactionType]] forKey:CXTransactionTypeKey];
+  [dictionary setObject:[NSString stringWithFormat:@"%ld", (long)[self transactionType]] forKey:CXTransactionTypeKey];
   // Tick off checkbox status
   [dictionary setObject:[NSString stringWithFormat:@"%d", [self tickOff]] forKey:CXTickOffKey];
   if ([self logo]) {
@@ -1262,10 +1262,10 @@ static NSString *CXArchivedData = @"Archived Data";
   
   if ([type isEqualToString:CXDocumentType]) {
     firstDictionary = [NSDictionary dictionaryWithContentsOfFile:fileName];
-    if (encryptedData = [firstDictionary objectForKey:CXEncryptedData]) { // File was encrypted
+    if ((encryptedData = [firstDictionary objectForKey:CXEncryptedData])) { // File was encrypted
       while (!data) {
         // Get passphrase from user
-        if (passphrase = [self getPassphrase])
+        if ((passphrase = [self getPassphrase]))
           data = [self decryptWithGpg:encryptedData usingPassphrase:passphrase];
         else
           return NO;
@@ -1279,7 +1279,7 @@ static NSString *CXArchivedData = @"Archived Data";
         return NO;
     }
     else { // No encryption
-      if (data = [firstDictionary objectForKey:CXArchivedData]) {
+      if ((data = [firstDictionary objectForKey:CXArchivedData])) {
         dictionary = [NSUnarchiver unarchiveObjectWithData:data];
         [self restoreFromStorage:dictionary];
         return (dictionary != nil);
@@ -1432,7 +1432,7 @@ static NSString *CXArchivedData = @"Archived Data";
   NSString *gpgDirectoryPath; // gpg directory (e.g. /usr/local/bin)
   NSString *gpgPath; // gpg executable path (e.g. /usr/local/bin/gpg)
   NSString *identity; // key ID
-  int exitStatus; // exit value returned from gpg
+  NSInteger exitStatus; // exit value returned from gpg
   
   /* Set arguments */
   [args addObject:@"--batch"]; // No interaction
@@ -1522,7 +1522,7 @@ static NSString *CXArchivedData = @"Archived Data";
   NSMutableData *decipheredData;
   NSString *gpgDirectoryPath;
   NSString *gpgPath;
-  int exitStatus;
+  NSInteger exitStatus;
   
   /* Set arguments */
   [args addObject:@"--batch"];
@@ -1570,7 +1570,7 @@ static NSString *CXArchivedData = @"Archived Data";
   [gpgTask launch];
   [writeHandle writeData:[[NSString stringWithString:passphrase]
                           dataUsingEncoding:NSASCIIStringEncoding]];
-  [writeHandle writeData:[[NSString stringWithString:@"\n"] // End of passphrase
+  [writeHandle writeData:[@"\n" // End of passphrase
                           dataUsingEncoding:NSASCIIStringEncoding]];
   [writeHandle writeData:encryptedData];
   [writeHandle closeFile]; // End of input
@@ -1592,7 +1592,7 @@ static NSString *CXArchivedData = @"Archived Data";
                                         @"Title of decryption failed error"),
                       NSLocalizedString(@"Passphrase not valid.",
                                         @"Text of decryption failed error"), @"OK",NULL,NULL);
-      NSLog(@"Decryption failed. Exit status: %d", exitStatus);
+      NSLog(@"Decryption failed. Exit status: %ld", (long)exitStatus);
       return nil;
   }
 }
@@ -1629,7 +1629,7 @@ static NSString *CXArchivedData = @"Archived Data";
 
 /*
  - (void)checkGpgTaskStatus:(NSNotification *)notification {
-  int status = [[notification object] terminationStatus];
+  NSInteger status = [[notification object] terminationStatus];
   if (status == 0)
     NSLog(@"Task succeeded.");
   else {
