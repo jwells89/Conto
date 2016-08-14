@@ -196,7 +196,7 @@
   [[[self document] undoManager] setActionName:
     NSLocalizedString(@"Add Account Info", @"Name of undo/redo menu item after adding an info")];
 
-  [[self infoTable] selectRow:[[self infoTable] numberOfRows]-1 byExtendingSelection:NO];
+  [[self infoTable] selectRowIndexes:[NSIndexSet indexSetWithIndex:[[self infoTable] numberOfRows]-1] byExtendingSelection:NO];
   // If I do not select the row, then editColumn:row:withEvent:select: raises an exception
   [[self infoTable] editColumn:[[self infoTable] columnWithIdentifier:@"Information name"]
                            row:([[self infoTable] numberOfRows]-1)
@@ -291,8 +291,10 @@
 }
 
 - (void)setGrid:(NSNotification *)notification {
-  [[self summaryTable] setDrawsGrid:[Prefs boolForKey:CXGridKey]];
-  [[self infoTable] setDrawsGrid:[Prefs boolForKey:CXGridKey]];
+  BOOL drawGrid = [Prefs boolForKey:CXGridKey];
+  NSUInteger gridStyle = drawGrid ? NSTableViewSolidVerticalGridLineMask | NSTableViewSolidHorizontalGridLineMask : NSTableViewGridNone;
+  [[self summaryTable] setGridStyleMask:gridStyle];
+  [[self infoTable] setGridStyleMask:gridStyle];
 }
 
 

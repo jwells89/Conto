@@ -33,7 +33,6 @@
 		528045141D5DB98300388530 /* cxStart.html in Resources */ = {isa = PBXBuildFile; fileRef = 528044711D5DB98300388530 /* cxStart.html */; };
 		528045151D5DB98300388530 /* cxSummaryWindow.html in Resources */ = {isa = PBXBuildFile; fileRef = 528044721D5DB98300388530 /* cxSummaryWindow.html */; };
 		528045161D5DB98300388530 /* cxToC.html in Resources */ = {isa = PBXBuildFile; fileRef = 528044731D5DB98300388530 /* cxToC.html */; };
-		528045171D5DB98300388530 /* ContoAppIcon48x48.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 528044751D5DB98300388530 /* ContoAppIcon48x48.tiff */; };
 		528045181D5DB98300388530 /* ContoIcon16x16.gif in Resources */ = {isa = PBXBuildFile; fileRef = 528044761D5DB98300388530 /* ContoIcon16x16.gif */; };
 		528045191D5DB98300388530 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 528044771D5DB98300388530 /* Credits.rtf */; };
 		5280451A1D5DB98300388530 /* CXDocument.nib in Resources */ = {isa = PBXBuildFile; fileRef = 528044791D5DB98300388530 /* CXDocument.nib */; };
@@ -85,7 +84,6 @@
 		528045481D5DB98300388530 /* cxStart.html in Resources */ = {isa = PBXBuildFile; fileRef = 528044BD1D5DB98300388530 /* cxStart.html */; };
 		528045491D5DB98300388530 /* cxSummaryWindow.html in Resources */ = {isa = PBXBuildFile; fileRef = 528044BE1D5DB98300388530 /* cxSummaryWindow.html */; };
 		5280454A1D5DB98300388530 /* cxToC.html in Resources */ = {isa = PBXBuildFile; fileRef = 528044BF1D5DB98300388530 /* cxToC.html */; };
-		5280454B1D5DB98300388530 /* ContoAppIcon48x48.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 528044C11D5DB98300388530 /* ContoAppIcon48x48.tiff */; };
 		5280454C1D5DB98300388530 /* ContoIcon16x16.gif in Resources */ = {isa = PBXBuildFile; fileRef = 528044C21D5DB98300388530 /* ContoIcon16x16.gif */; };
 		5280454D1D5DB98300388530 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 528044C31D5DB98300388530 /* Credits.rtf */; };
 		5280454E1D5DB98300388530 /* CXDocument.nib in Resources */ = {isa = PBXBuildFile; fileRef = 528044C51D5DB98300388530 /* CXDocument.nib */; };
@@ -112,7 +110,6 @@
 		528045631D5DB98300388530 /* cxStart.html in Resources */ = {isa = PBXBuildFile; fileRef = 528044E51D5DB98300388530 /* cxStart.html */; };
 		528045641D5DB98300388530 /* cxSummaryWindow.html in Resources */ = {isa = PBXBuildFile; fileRef = 528044E61D5DB98300388530 /* cxSummaryWindow.html */; };
 		528045651D5DB98300388530 /* cxToC.html in Resources */ = {isa = PBXBuildFile; fileRef = 528044E71D5DB98300388530 /* cxToC.html */; };
-		528045661D5DB98300388530 /* ContoAppIcon48x48.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 528044E91D5DB98300388530 /* ContoAppIcon48x48.tiff */; };
 		528045671D5DB98300388530 /* ContoIcon16x16.gif in Resources */ = {isa = PBXBuildFile; fileRef = 528044EA1D5DB98300388530 /* ContoIcon16x16.gif */; };
 		528045681D5DB98300388530 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 528044EB1D5DB98300388530 /* Credits.rtf */; };
 		528045691D5DB98300388530 /* CXDocument.nib in Resources */ = {isa = PBXBuildFile; fileRef = 528044ED1D5DB98300388530 /* CXDocument.nib */; };
@@ -616,7 +613,6 @@
 				5280456C1D5DB98300388530 /* CXPreferences.nib in Resources */,
 				528045441D5DB98300388530 /* cxLicense.html in Resources */,
 				528045111D5DB98300388530 /* cxPredefinedDescriptions.html in Resources */,
-				528045171D5DB98300388530 /* ContoAppIcon48x48.tiff in Resources */,
 				528045361D5DB98300388530 /* CXPassphrase.nib in Resources */,
 				528045691D5DB98300388530 /* CXDocument.nib in Resources */,
 				5280450C1D5DB98300388530 /* cxEncryption.html in Resources */,
@@ -636,13 +632,11 @@
 				528045631D5DB98300388530 /* cxStart.html in Resources */,
 				528045461D5DB98300388530 /* cxSearch.html in Resources */,
 				5280454C1D5DB98300388530 /* ContoIcon16x16.gif in Resources */,
-				5280454B1D5DB98300388530 /* ContoAppIcon48x48.tiff in Resources */,
 				5280450E1D5DB98300388530 /* cxHistory.html in Resources */,
 				5280456A1D5DB98300388530 /* CXGraph.nib in Resources */,
 				528045141D5DB98300388530 /* cxStart.html in Resources */,
 				528045491D5DB98300388530 /* cxSummaryWindow.html in Resources */,
 				5280450F1D5DB98300388530 /* cxindex.html in Resources */,
-				528045661D5DB98300388530 /* ContoAppIcon48x48.tiff in Resources */,
 				528045401D5DB98300388530 /* cxEncryption.html in Resources */,
 				528045671D5DB98300388530 /* ContoIcon16x16.gif in Resources */,
 				528045501D5DB98300388530 /* CXPassphrase.nib in Resources */,

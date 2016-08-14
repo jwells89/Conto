@@ -461,7 +461,9 @@
 }
 
 - (void)setGrid:(NSNotification *)notification {
-  [[self table] setDrawsGrid:[Prefs boolForKey:CXGridKey]];
+  BOOL drawGrid = [Prefs boolForKey:CXGridKey];
+  NSUInteger gridStyle = drawGrid ? NSTableViewSolidVerticalGridLineMask | NSTableViewSolidHorizontalGridLineMask : NSTableViewGridNone;
+  [[self table] setGridStyleMask:gridStyle];
 }
 
 
@@ -696,8 +698,8 @@
   NSMutableArray *tempArray;
   NSArray *records;
   NSPasteboard *pboard = [NSPasteboard generalPasteboard];
-  NSEnumerator *rows = [[self table] selectedRowEnumerator];
-  NSNumber *aRow;
+  NSIndexSet *rows = [[self table] selectedRowIndexes];
+  NSUInteger idx = [rows firstIndex];
 
   if (isFilterOn) // Cut from filtered array
     records = [[self document] filteredRecords];
@@ -705,8 +707,10 @@
     records = [[self document] getRecordsForMonth:CurrentMonth];  
   tempArray = [[NSMutableArray alloc] init];
 
-  while (aRow = [rows nextObject]) {
-    [tempArray addObject:[records objectAtIndex:[aRow intValue]]];
+  while (idx != NSNotFound) {
+    [tempArray addObject:[records objectAtIndex:idx]];
+      
+    idx = [rows indexGreaterThanIndex:idx];
   }
   [pboard declareTypes:[NSArray arrayWithObjects:@"Conto rows", nil] owner:self];
   [pboard setPropertyList:tempArray forType:@"Conto rows"];
@@ -728,17 +732,20 @@
   NSMutableArray *tempArray;
   NSArray *records;
   NSPasteboard *pboard = [NSPasteboard generalPasteboard];
-  NSEnumerator *rows = [[self table] selectedRowEnumerator];
-  NSNumber *aRow;
-
+  NSIndexSet *rows = [[self table] selectedRowIndexes];
+  NSUInteger idx = [rows firstIndex];
+    
   if (isFilterOn) // Copy from filtered array
     records = [[self document] filteredRecords];
   else
     records = [[self document] getRecordsForMonth:CurrentMonth];
   tempArray = [[NSMutableArray alloc] init];
-  while (aRow = [rows nextObject]) {
-    [tempArray addObject:[records objectAtIndex:[aRow intValue]]];
+  while (idx != NSNotFound) {
+    [tempArray addObject:[records objectAtIndex:idx]];
+      
+    idx = [rows indexGreaterThanIndex:idx];
   }
+    
   [pboard declareTypes:[NSArray arrayWithObjects:@"Conto rows", nil] owner:self];
   [pboard setPropertyList:tempArray forType:@"Conto rows"];
   [tempArray release];  
@@ -769,7 +776,7 @@
 
 - (IBAction)copyAsText:(id)sender {
   NSPasteboard *pboard = [NSPasteboard generalPasteboard];
-  NSEnumerator *rows = [[self table] selectedRowEnumerator];
+  NSIndexSet *rows = [[self table] selectedRowIndexes];
   NSArray *records;
   NSMutableString *copyString = [NSMutableString stringWithCapacity:1];
   NSNumber *aRow;
@@ -778,7 +785,7 @@
   NSDateFormatter *dateFormatter;
   NSArray *tableColumns = [[self table] tableColumns];
   NSString *columnIdentifier;
-  NSInteger i;
+  NSUInteger idx = [rows firstIndex];
 
   if (isFilterOn) // Copy from filtered array
     records = [[self document] filteredRecords];
@@ -787,10 +794,10 @@
   
   numberFormatter = [[CXPreferencesController sharedPreferencesController] numberFormatter];
   dateFormatter = [[CXPreferencesController sharedPreferencesController] dateFormatter];
-  while (aRow = [rows nextObject]) {
+  while (idx != NSNotFound) {
     aRecord = [records objectAtIndex:[aRow intValue]];
     //[copyString appendString:[aRecord objectForKey:@"Check"]];
-    for (i = 0; i < [tableColumns count]; i++) {
+    for (int i = 0; i < [tableColumns count]; i++) {
       columnIdentifier = [[tableColumns objectAtIndex:i] identifier];
       if ([columnIdentifier isEqualToString:@"Date"]) {
         [copyString appendString:[dateFormatter stringForObjectValue:[aRecord objectForKey:@"Date"]]];
@@ -809,6 +816,8 @@
       [copyString appendString:@"\t"];
     }
     [copyString appendString:@"\n"];
+      
+    idx = [rows indexGreaterThanIndex:idx];
   }
   [pboard declareTypes:[NSArray arrayWithObjects:NSTabularTextPboardType,NSStringPboardType,nil] owner:nil];
   [pboard setString:copyString forType:NSStringPboardType];
@@ -869,28 +878,31 @@
 // This method is called when TableView is first responder and
 // the user selects the Delete menu item (or presses the Delete key).
 - (void)deleteRecords:(id)sender {
-  NSEnumerator *selectedRowEnum;
-  NSNumber *rowIndex;
+  NSIndexSet *rows = [[self table] selectedRowIndexes];
   NSMutableArray *recordsToDelete;
-  NSInteger i;
+  NSUInteger idx = [rows firstIndex];
 
   recordsToDelete = [[NSMutableArray alloc] init]; // Released later in this method
-  selectedRowEnum = [[self table] selectedRowEnumerator];
   if (isFilterOn) { // Picks records from filtered array
-    while (rowIndex = [selectedRowEnum nextObject]) {
+    while (idx != NSNotFound) {
       [recordsToDelete addObject:[[[self document] filteredRecords]
-                                                   objectAtIndex:[rowIndex intValue]]];
+                                                   objectAtIndex:idx]];
+        
+      idx = [rows indexGreaterThanIndex:idx];
     }
+    
   }
   else {
-    while (rowIndex = [selectedRowEnum nextObject]) {
+    while (idx != NSNotFound) {
       [recordsToDelete addObject:[[[self document] getRecordsForMonth:CurrentMonth]
-                                                   objectAtIndex:[rowIndex intValue]]];
+                                                   objectAtIndex:idx]];
+        
+      idx = [rows indexGreaterThanIndex:idx];
     }
   }
   
   // Delete objects from account data
-  for (i = 0; i < [recordsToDelete count]; i++) {
+  for (int i = 0; i < [recordsToDelete count]; i++) {
     [[self document] removeRecordIdenticalTo:[recordsToDelete objectAtIndex:i] forMonth:CurrentMonth];
     /*
     if (isFilterOn)
