@@ -430,24 +430,26 @@ static NSArray *rowsToBeDragged;
 
 - (IBAction)copyAsText:(id)sender {
   NSPasteboard *pboard = [NSPasteboard generalPasteboard];
-  NSEnumerator *rows = [[self summaryTable] selectedRowEnumerator];
+  NSIndexSet *rows = [[self summaryTable] selectedRowIndexes];
   NSMutableString *copyString = [NSMutableString stringWithCapacity:1];
-  NSNumber *aRow;
+  NSUInteger idx = [rows firstIndex];
   NSNumberFormatter *numberFormatter;
 
   numberFormatter = [[CXPreferencesController sharedPreferencesController] numberFormatter];
-  while (aRow = [rows nextObject]) {
-    [copyString appendString:[self intToMonthName:(CXMonth)[aRow intValue]]];
+  while (idx != NSNotFound) {
+    [copyString appendString:[self intToMonthName:(CXMonth)idx]];
     [copyString appendString:@"\t"];
     [copyString appendString:[numberFormatter stringForObjectValue:
-      [NSDecimalNumber numberWithDouble:[[self document] getSumValueForKey:@"Income" month:(CXMonth)[aRow intValue]]]]];
+      [NSDecimalNumber numberWithDouble:[[self document] getSumValueForKey:@"Income" month:(CXMonth)idx]]]];
     [copyString appendString:@"\t"];
     [copyString appendString:[numberFormatter stringForObjectValue:
-      [NSDecimalNumber numberWithDouble:[[self document] getSumValueForKey:@"Expense" month:(CXMonth)[aRow intValue]]]]];
+      [NSDecimalNumber numberWithDouble:[[self document] getSumValueForKey:@"Expense" month:(CXMonth)idx]]]];
     [copyString appendString:@"\t"];
     [copyString appendString:[numberFormatter stringForObjectValue:
-      [NSDecimalNumber numberWithDouble:[[self document] getSumValueForKey:@"Balance" month:(CXMonth)[aRow intValue]]]]];
+      [NSDecimalNumber numberWithDouble:[[self document] getSumValueForKey:@"Balance" month:(CXMonth)idx]]]];
     [copyString appendString:@"\n"];
+      
+    idx = [rows indexGreaterThanIndex:idx];
   }
   [pboard declareTypes:[NSArray arrayWithObjects:NSTabularTextPboardType,NSStringPboardType,nil] owner:nil];
   [pboard setString:copyString forType:NSStringPboardType];

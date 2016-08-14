@@ -331,7 +331,7 @@ NSInteger compareRecordsBasedOnNumber(id obj1, id obj2, void *context) {
   if ((aMonth == CurrentMonth) || (aMonth == NoMonth)) {
     aMonth = [self currentMonth];
   }
-  if (index>=0 && index <= [[self getRecordsForMonth:aMonth] count]) {
+  if (index <= [[self getRecordsForMonth:aMonth] count]) {
     //[[[self undoManager] prepareWithInvocationTarget:self] removeRecordAtIndex:index forMonth:aMonth];
     [[[self undoManager] prepareWithInvocationTarget:self]
                          removeRecordIdenticalTo:record forMonth:aMonth];
@@ -434,12 +434,12 @@ NSInteger compareRecordsBasedOnNumber(id obj1, id obj2, void *context) {
   }
 
   if ([[self filter] isEqualToString:@""]) {
-    if (row >= 0 && row < [[self getRecordsForMonth:aMonth] count]) {
+    if (row < [[self getRecordsForMonth:aMonth] count]) {
       theRecord = [[self getRecordsForMonth:aMonth] objectAtIndex:row];
     }
   }
   else {
-    if (row >= 0 && row < [[self filteredRecords] count]) {
+    if (row < [[self filteredRecords] count]) {
       theRecord = [[self filteredRecords] objectAtIndex:row];
     }
   }
@@ -634,8 +634,6 @@ NSInteger compareRecordsBasedOnNumber(id obj1, id obj2, void *context) {
 }
 
 - (void)moveRecord:(NSMutableDictionary *)record toIndex:(NSUInteger)newIndex forMonth:(CXMonth)aMonth {
-  NSUInteger oldIndex;
-
   //oldIndex = [[self getRecordsForMonth:aMonth] indexOfObject:record];
  // [[[self undoManager] prepareWithInvocationTarget:self] moveRecord:record toIndex:oldIndex forMonth:aMonth];
 

@@ -466,7 +466,6 @@ static id sharedInstance = nil; // There is only one instance of this class. We 
   [[self descriptionTextField] setStringValue:@""];
   [[self incomeOpTextField] setStringValue:@""];
   [[self expenseOpTextField] setStringValue:@""];
-  [self controlTextDidChange:nil];
   // Notify
   [[NSNotificationCenter defaultCenter] postNotificationName:CXDescriptionsTableChangedNotification
                                                       object:self];
@@ -586,7 +585,6 @@ static id sharedInstance = nil; // There is only one instance of this class. We 
   if (row > -1 && row < [[self descriptions] count]) {
     [[self descriptionTextField] setStringValue:
       [[descriptions objectAtIndex:row] objectForKey:CXDefaultDescriptionKey]];
-    [self controlTextDidChange:nil];
     [[self incomeOperationButton] selectItemAtIndex:
       [[[descriptions objectAtIndex:row] objectForKey:CXIncomeOperationKey] intValue]];
     [[self expenseOperationButton] selectItemAtIndex:

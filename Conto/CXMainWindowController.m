@@ -779,7 +779,6 @@
   NSIndexSet *rows = [[self table] selectedRowIndexes];
   NSArray *records;
   NSMutableString *copyString = [NSMutableString stringWithCapacity:1];
-  NSNumber *aRow;
   NSDictionary *aRecord;
   NSNumberFormatter *numberFormatter;
   NSDateFormatter *dateFormatter;
@@ -795,7 +794,7 @@
   numberFormatter = [[CXPreferencesController sharedPreferencesController] numberFormatter];
   dateFormatter = [[CXPreferencesController sharedPreferencesController] dateFormatter];
   while (idx != NSNotFound) {
-    aRecord = [records objectAtIndex:[aRow intValue]];
+    aRecord = [records objectAtIndex:idx];
     //[copyString appendString:[aRecord objectForKey:@"Check"]];
     for (int i = 0; i < [tableColumns count]; i++) {
       columnIdentifier = [[tableColumns objectAtIndex:i] identifier];
