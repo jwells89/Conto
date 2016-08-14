@@ -6,6 +6,12 @@ Conto is an open source minimalistic finance manager for OS X originally written
 
 This fork was created with the intention of modernizing the project and adding new features while maintaining the original's lightweight, focused spirit.
 
+##PowerPC and OS X 10.4 Support
+Support for OS X 10.4 and PowerPC machines will continue up until at least version 1.5.0, however as I do not own a PPC Mac and/or a Mac capable of running OS X 10.4, I am unable to test these builds personally. I am looking to obtain a PPC Mac some time soon, but until then the best I'm able to test with is a VMWare Fusion VM running OS X 10.5 x86.
+
+##Download
+Head on over to the [Releases](/releases) page to download the latest builds.
+
 ##Building
 Just clone the repository, open the Xcode project, and build. No dependencies necessary.
 
