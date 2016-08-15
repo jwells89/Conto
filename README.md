@@ -10,7 +10,7 @@ This fork was created with the intention of modernizing the project and adding n
 Support for OS X 10.4 and PowerPC machines will continue up until at least version 1.5.0, however as I do not own a PPC Mac and/or a Mac capable of running OS X 10.4, I am unable to test these builds personally. I am looking to obtain a PPC Mac some time soon, but until then the best I'm able to test with is a VMWare Fusion VM running OS X 10.5 x86.
 
 ##Download
-Head on over to the [Releases](/releases) page to download the latest builds.
+Grab the [latest release](https://github.com/jwells89/Conto/releases/latest) or select one of the [other releases](https://github.com/jwells89/Conto/releases).
 
 ##Building
 Just clone the repository, open the Xcode project, and build. No dependencies necessary.
