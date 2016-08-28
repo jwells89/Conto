@@ -1101,6 +1101,10 @@ NSInteger compareRecordsBasedOnNumber(id obj1, id obj2, void *context) {
     // Add any code here that need to be executed once the windowController has loaded the document's window.
 }
 
++ (BOOL)autosavesInPlace {
+    return YES;
+}
+
 // Keys and values for dictionary
 NSString *CXDocumentType = @"Conto Document Type";
 static NSString *CXDocumentClassKey = @"Class";

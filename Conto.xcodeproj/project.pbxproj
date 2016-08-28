@@ -122,6 +122,8 @@
 		528045701D5DB98300388530 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 528044FB1D5DB98300388530 /* MainMenu.nib */; };
 		528045711D5DB98300388530 /* NextPageAction.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 528044FD1D5DB98300388530 /* NextPageAction.tiff */; };
 		528045721D5DB98300388530 /* PreviousPageAction.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 528044FE1D5DB98300388530 /* PreviousPageAction.tiff */; };
+		52A43A1A1D73979B00B40798 /* CXInstantMenuSegmentedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A43A191D73979B00B40798 /* CXInstantMenuSegmentedCell.m */; };
+		52A43A1C1D739B0D00B40798 /* popupArrowsTemplate.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 52A43A1B1D739B0D00B40798 /* popupArrowsTemplate.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -253,6 +255,9 @@
 		528044FC1D5DB98300388530 /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = MainMenu.nib; sourceTree = "<group>"; };
 		528044FD1D5DB98300388530 /* NextPageAction.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = NextPageAction.tiff; sourceTree = "<group>"; };
 		528044FE1D5DB98300388530 /* PreviousPageAction.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = PreviousPageAction.tiff; sourceTree = "<group>"; };
+		52A43A181D73979B00B40798 /* CXInstantMenuSegmentedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXInstantMenuSegmentedCell.h; sourceTree = "<group>"; };
+		52A43A191D73979B00B40798 /* CXInstantMenuSegmentedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXInstantMenuSegmentedCell.m; sourceTree = "<group>"; };
+		52A43A1B1D739B0D00B40798 /* popupArrowsTemplate.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = popupArrowsTemplate.pdf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -301,6 +306,9 @@
 				528044601D5DB98300388530 /* CXPreferencesController.m */,
 				528044611D5DB98300388530 /* CXSummaryController.h */,
 				528044621D5DB98300388530 /* CXSummaryController.m */,
+				52A43A181D73979B00B40798 /* CXInstantMenuSegmentedCell.h */,
+				52A43A191D73979B00B40798 /* CXInstantMenuSegmentedCell.m */,
+				52A43A1B1D739B0D00B40798 /* popupArrowsTemplate.pdf */,
 				528044631D5DB98300388530 /* Dutch.lproj */,
 				528044891D5DB98300388530 /* English.lproj */,
 				528044AF1D5DB98300388530 /* French.lproj */,
@@ -595,6 +603,7 @@
 				5280453B1D5DB98300388530 /* MainMenu.nib in Resources */,
 				528045091D5DB98300388530 /* cxAdd.html in Resources */,
 				528045581D5DB98300388530 /* cxAdd.html in Resources */,
+				52A43A1C1D739B0D00B40798 /* popupArrowsTemplate.pdf in Resources */,
 				528045161D5DB98300388530 /* cxToC.html in Resources */,
 				528045651D5DB98300388530 /* cxToC.html in Resources */,
 				528045551D5DB98300388530 /* MainMenu.nib in Resources */,
@@ -696,6 +705,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52A43A1A1D73979B00B40798 /* CXInstantMenuSegmentedCell.m in Sources */,
 				528045561D5DB98300388530 /* globals.m in Sources */,
 				528045041D5DB98300388530 /* CXGraphWindowController.m in Sources */,
 				528045011D5DB98300388530 /* CXAppDelegate.m in Sources */,

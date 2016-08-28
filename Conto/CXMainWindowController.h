@@ -42,6 +42,8 @@
     IBOutlet NSMatrix *inOutRadioCluster;
     IBOutlet NSButton *prevButton;
     IBOutlet NSButton *nextButton;
+    IBOutlet NSSegmentedControl *navigationControl;
+    IBOutlet NSMenu *monthsMenu;
     IBOutlet NSTextField *searchTextField;
 
     BOOL isFilterOn; // Tells whether we are filtering descriptions
@@ -110,6 +112,7 @@
 - (IBAction)printDocumentView:(id)sender;
 - (IBAction)prevMonthAction:(id)sender;
 - (IBAction)nextMonthAction:(id)sender;
+- (IBAction)navigateAction:(id)sender;
 - (IBAction)newEntryAction:(id)sender;
 //---
 - (void)handleClickOnTableItem; // Designated selector for the setAction: method in TableView (see windowDidLoad)

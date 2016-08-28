@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
-        <deployment version="1040" identifier="macosx"/>
+        <deployment version="1050" identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
     </dependencies>
     <objects>
@@ -11,10 +11,9 @@
                 <outlet property="expenseField" destination="46" id="75"/>
                 <outlet property="incomeField" destination="45" id="76"/>
                 <outlet property="logoImageView" destination="0qT-ol-TOr" id="EdT-s5-9aN"/>
-                <outlet property="monthPopUpMenu" destination="Ac2-3O-y19" id="2Dc-zX-cm9"/>
                 <outlet property="monthlyBalanceField" destination="108" id="109"/>
-                <outlet property="nextButton" destination="Eq0-5U-Ojl" id="7dh-Ls-bBJ"/>
-                <outlet property="prevButton" destination="v76-Mp-xdJ" id="V6k-8z-u7h"/>
+                <outlet property="monthsMenu" destination="LcI-yO-DnM" id="viC-rn-SxT"/>
+                <outlet property="navigationControl" destination="2FX-cM-ZR1" id="VwB-Xb-kgU"/>
                 <outlet property="searchTextField" destination="O6B-db-bhH" id="xye-io-nAi"/>
                 <outlet property="table" destination="23" id="79"/>
                 <outlet property="window" destination="5" id="69"/>
@@ -25,21 +24,21 @@
         <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="5" userLabel="Window">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="50" y="317" width="475" height="299"/>
+            <rect key="contentRect" x="50" y="317" width="475" height="295"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1152" height="746"/>
             <view key="contentView" id="6">
-                <rect key="frame" x="0.0" y="0.0" width="475" height="299"/>
+                <rect key="frame" x="0.0" y="0.0" width="475" height="295"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <scrollView horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" findBarPosition="aboveHorizontalRuler" id="24">
-                        <rect key="frame" x="-1" y="51" width="477" height="249"/>
+                    <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" findBarPosition="aboveHorizontalRuler" id="24">
+                        <rect key="frame" x="-1" y="47" width="477" height="249"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <clipView key="contentView" id="eUe-jb-586">
-                            <rect key="frame" x="1" y="0.0" width="460" height="233"/>
+                            <rect key="frame" x="1" y="0.0" width="475" height="248"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <tableView toolTip="Click on a column header to sort that column" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" autosaveColumns="NO" headerView="175" floatsGroupRows="NO" id="23">
-                                    <rect key="frame" x="0.0" y="0.0" width="460" height="210"/>
+                                <tableView toolTip="Click on a column header to sort that column" verticalHuggingPriority="750" allowsExpansionToolTips="YES" autosaveColumns="NO" headerView="175" floatsGroupRows="NO" id="23">
+                                    <rect key="frame" x="0.0" y="0.0" width="475" height="225"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <size key="intercellSpacing" width="3" height="2"/>
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -56,6 +55,19 @@
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </textFieldCell>
+                                            <tableColumnResizingMask key="resizingMask" userResizable="YES"/>
+                                        </tableColumn>
+                                        <tableColumn identifier="Description" width="206" minWidth="65.089996337890625" maxWidth="1000" id="27">
+                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Description">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                            </tableHeaderCell>
+                                            <textFieldCell key="dataCell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" alignment="left" title="Redwood City" drawsBackground="YES" id="173">
+                                                <font key="font" metaFont="cellTitle"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                         </tableColumn>
                                         <tableColumn identifier="Date" width="68" minWidth="43" maxWidth="1000" id="21">
@@ -69,7 +81,7 @@
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </textFieldCell>
-                                            <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                            <tableColumnResizingMask key="resizingMask" userResizable="YES"/>
                                         </tableColumn>
                                         <tableColumn identifier="Income" width="85" minWidth="47" maxWidth="1000" id="25">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="center" title="Income">
@@ -82,7 +94,7 @@
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
-                                            <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                            <tableColumnResizingMask key="resizingMask" userResizable="YES"/>
                                         </tableColumn>
                                         <tableColumn identifier="Expense" width="85" minWidth="47" maxWidth="1000" id="26">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="center" title="Expense">
@@ -95,20 +107,7 @@
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
-                                            <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
-                                        </tableColumn>
-                                        <tableColumn identifier="Description" width="191" minWidth="65.089996337890625" maxWidth="1000" id="27">
-                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Description">
-                                                <font key="font" metaFont="smallSystem"/>
-                                                <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
-                                            </tableHeaderCell>
-                                            <textFieldCell key="dataCell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" alignment="left" title="Redwood City" drawsBackground="YES" id="173">
-                                                <font key="font" metaFont="cellTitle"/>
-                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                            <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                            <tableColumnResizingMask key="resizingMask" userResizable="YES"/>
                                         </tableColumn>
                                     </tableColumns>
                                     <connections>
@@ -120,67 +119,31 @@
                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </clipView>
                         <edgeInsets key="contentInsets" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
-                        <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="174">
+                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="174">
                             <rect key="frame" x="1" y="233" width="460" height="15"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
-                        <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="176">
+                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="176">
                             <rect key="frame" x="461" y="23" width="15" height="210"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                         <tableHeaderView key="headerView" id="175">
-                            <rect key="frame" x="0.0" y="0.0" width="460" height="23"/>
+                            <rect key="frame" x="0.0" y="0.0" width="475" height="23"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </tableHeaderView>
                     </scrollView>
-                    <textField verticalHuggingPriority="750" id="42">
-                        <rect key="frame" x="22" y="29" width="47" height="14"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" alignment="right" title="Income:" id="147">
-                            <font key="font" metaFont="smallSystem"/>
-                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField verticalHuggingPriority="750" id="43">
-                        <rect key="frame" x="17" y="12" width="52" height="14"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" alignment="right" title="Expense:" id="148">
-                            <font key="font" metaFont="smallSystem"/>
-                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField verticalHuggingPriority="750" id="45">
-                        <rect key="frame" x="71" y="29" width="199" height="14"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                        <textFieldCell key="cell" controlSize="small" selectable="YES" sendsActionOnEndEditing="YES" alignment="left" title="0.00" id="150">
-                            <font key="font" metaFont="smallSystem"/>
-                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField verticalHuggingPriority="750" id="46">
-                        <rect key="frame" x="71" y="12" width="199" height="14"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                        <textFieldCell key="cell" controlSize="small" selectable="YES" sendsActionOnEndEditing="YES" alignment="left" title="0.00" id="151">
-                            <font key="font" metaFont="smallSystem"/>
-                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
                     <textField verticalHuggingPriority="750" id="44">
-                        <rect key="frame" x="282" y="12" width="79" height="14"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                        <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" alignment="right" title="Total Balance:" id="149">
+                        <rect key="frame" x="25" y="8" width="34" height="14"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" alignment="right" title="Total:" id="149">
                             <font key="font" metaFont="smallSystem"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <textField verticalHuggingPriority="750" id="49">
-                        <rect key="frame" x="365" y="12" width="92" height="14"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                        <rect key="frame" x="63" y="8" width="92" height="14"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <textFieldCell key="cell" controlSize="small" selectable="YES" sendsActionOnEndEditing="YES" alignment="left" title="0.00" id="152">
                             <font key="font" metaFont="smallSystem"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -188,8 +151,8 @@
                         </textFieldCell>
                     </textField>
                     <textField verticalHuggingPriority="750" id="108">
-                        <rect key="frame" x="365" y="29" width="92" height="14"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                        <rect key="frame" x="63" y="25" width="92" height="14"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <textFieldCell key="cell" controlSize="small" selectable="YES" sendsActionOnEndEditing="YES" state="on" alignment="left" title="0.00" id="161">
                             <font key="font" metaFont="smallSystem"/>
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -197,9 +160,45 @@
                         </textFieldCell>
                     </textField>
                     <textField verticalHuggingPriority="750" id="111">
-                        <rect key="frame" x="275" y="29" width="86" height="14"/>
+                        <rect key="frame" x="18" y="25" width="41" height="14"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" alignment="right" title="Month:" id="162">
+                            <font key="font" metaFont="smallSystem"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" id="42">
+                        <rect key="frame" x="327" y="25" width="47" height="14"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                        <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" alignment="right" title="Month Balance:" id="162">
+                        <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" alignment="right" title="Income:" id="147">
+                            <font key="font" metaFont="smallSystem"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" id="43">
+                        <rect key="frame" x="322" y="8" width="52" height="14"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                        <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" alignment="right" title="Expense:" id="148">
+                            <font key="font" metaFont="smallSystem"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" id="45">
+                        <rect key="frame" x="378" y="25" width="79" height="14"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                        <textFieldCell key="cell" controlSize="small" selectable="YES" sendsActionOnEndEditing="YES" alignment="left" title="0.00" id="150">
+                            <font key="font" metaFont="smallSystem"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" id="46">
+                        <rect key="frame" x="378" y="8" width="79" height="14"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                        <textFieldCell key="cell" controlSize="small" selectable="YES" sendsActionOnEndEditing="YES" alignment="left" title="0.00" id="151">
                             <font key="font" metaFont="smallSystem"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -214,70 +213,6 @@
                     <toolbarItem implicitItemIdentifier="NSToolbarPrintItem" id="Qdl-5o-tDQ"/>
                     <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="FBC-hT-6LR"/>
                     <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="yRH-g4-nBs"/>
-                    <toolbarItem implicitItemIdentifier="E5B7F851-60A5-40EF-B397-49044B7E9F92" label="Month" paletteLabel="Month" id="3Ru-mB-C2E">
-                        <nil key="toolTip"/>
-                        <size key="minSize" width="108" height="25"/>
-                        <size key="maxSize" width="108" height="26"/>
-                        <popUpButton key="view" verticalHuggingPriority="750" id="Ac2-3O-y19">
-                            <rect key="frame" x="0.0" y="14" width="108" height="25"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            <popUpButtonCell key="cell" type="roundTextured" title="January" bezelStyle="texturedRounded" alignment="center" lineBreakMode="clipping" state="on" borderStyle="border" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="vZx-qE-rCr" id="W5N-Z3-xwZ">
-                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                <font key="font" metaFont="menu"/>
-                                <menu key="menu" title="OtherViews" id="U9o-f1-oqL">
-                                    <items>
-                                        <menuItem title="January" state="on" id="vZx-qE-rCr"/>
-                                        <menuItem title="February" id="ulp-Sw-g5O"/>
-                                        <menuItem title="March" id="NFM-33-6TF"/>
-                                        <menuItem title="April" id="Uc4-34-5eM"/>
-                                        <menuItem title="May" id="Kfk-Bx-nbd"/>
-                                        <menuItem title="June" id="sp2-Zo-JJp"/>
-                                        <menuItem title="July" id="wmk-ib-4ui"/>
-                                        <menuItem title="August" id="4Yf-Cx-mdp"/>
-                                        <menuItem title="September" id="wDW-VH-Gaz"/>
-                                        <menuItem title="October" id="mKI-c3-JBh"/>
-                                        <menuItem title="November" id="ymD-uU-YDf"/>
-                                        <menuItem title="December" id="XQS-wu-Fku"/>
-                                    </items>
-                                </menu>
-                            </popUpButtonCell>
-                            <connections>
-                                <action selector="monthPopUpAction:" target="-2" id="ub3-y0-1K1"/>
-                            </connections>
-                        </popUpButton>
-                    </toolbarItem>
-                    <toolbarItem implicitItemIdentifier="7B225D08-9696-49E9-8996-750A55592669" label="Previous" paletteLabel="Previous" image="NSGoLeftTemplate" id="00A-Rb-DL8">
-                        <nil key="toolTip"/>
-                        <size key="minSize" width="26" height="25"/>
-                        <size key="maxSize" width="26" height="32"/>
-                        <button key="view" verticalHuggingPriority="750" id="v76-Mp-xdJ">
-                            <rect key="frame" x="14" y="14" width="26" height="25"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSGoLeftTemplate" imagePosition="only" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="grV-7M-Nk3">
-                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                <font key="font" metaFont="system"/>
-                            </buttonCell>
-                        </button>
-                        <connections>
-                            <action selector="prevMonthAction:" target="-2" id="y8d-JP-xDU"/>
-                        </connections>
-                    </toolbarItem>
-                    <toolbarItem implicitItemIdentifier="18F0A4F7-E5EC-49CD-A226-3C4DC5BA6713" label="Next" paletteLabel="Next" image="NSGoRightTemplate" id="q7A-ux-de7">
-                        <nil key="toolTip"/>
-                        <size key="minSize" width="26" height="25"/>
-                        <size key="maxSize" width="26" height="32"/>
-                        <button key="view" verticalHuggingPriority="750" id="Eq0-5U-Ojl">
-                            <rect key="frame" x="3" y="14" width="26" height="25"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSGoRightTemplate" imagePosition="only" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="qmB-dn-0Z4">
-                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                <font key="font" metaFont="system"/>
-                            </buttonCell>
-                        </button>
-                        <connections>
-                            <action selector="nextMonthAction:" target="-2" id="8Lg-IO-3gn"/>
-                        </connections>
-                    </toolbarItem>
                     <toolbarItem implicitItemIdentifier="EF1DBFC8-92FB-4002-A7D7-E342B90F8194" label="Logo" paletteLabel="Logo" id="LCr-mS-tfr">
                         <nil key="toolTip"/>
                         <size key="minSize" width="26" height="26"/>
@@ -324,21 +259,110 @@
                             <action selector="newEntryAction:" target="-2" id="374-8P-exy"/>
                         </connections>
                     </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="11E01BA2-4BFA-4499-B7BC-E11CBB8872B9" label="Navigation" paletteLabel="Navigation" id="00W-ws-9yJ">
+                        <nil key="toolTip"/>
+                        <size key="minSize" width="141" height="25"/>
+                        <size key="maxSize" width="141" height="25"/>
+                        <segmentedControl key="view" verticalHuggingPriority="750" id="2FX-cM-ZR1">
+                            <rect key="frame" x="0.0" y="14" width="141" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <segmentedCell key="cell" borderStyle="border" alignment="left" style="texturedSquare" trackingMode="momentary" id="MHk-dp-C1S" customClass="CXInstantMenuSegmentedCell">
+                                <font key="font" metaFont="system"/>
+                                <segments>
+                                    <segment toolTip="Previous Month" image="NSGoLeftTemplate" width="25">
+                                        <nil key="label"/>
+                                    </segment>
+                                    <segment toolTip="Current Month" imageScaling="proportionallyUpOrDown" width="87" tag="1">
+                                        <nil key="label"/>
+                                    </segment>
+                                    <segment toolTip="Next Month" image="NSGoRightTemplate" width="25">
+                                        <nil key="label"/>
+                                    </segment>
+                                </segments>
+                            </segmentedCell>
+                            <connections>
+                                <action selector="navigateAction:" target="-2" id="Gcf-1a-DZC"/>
+                            </connections>
+                        </segmentedControl>
+                    </toolbarItem>
                 </allowedToolbarItems>
                 <defaultToolbarItems>
-                    <toolbarItem reference="00A-Rb-DL8"/>
-                    <toolbarItem reference="3Ru-mB-C2E"/>
-                    <toolbarItem reference="q7A-ux-de7"/>
-                    <toolbarItem reference="yRH-g4-nBs"/>
                     <toolbarItem reference="ZtU-OO-8wK"/>
                     <toolbarItem reference="mkf-kK-7bd"/>
+                    <toolbarItem reference="FBC-hT-6LR"/>
+                    <toolbarItem reference="yRH-g4-nBs"/>
+                    <toolbarItem reference="00W-ws-9yJ"/>
                 </defaultToolbarItems>
             </toolbar>
             <connections>
                 <outlet property="delegate" destination="-2" id="88"/>
             </connections>
-            <point key="canvasLocation" x="-242.5" y="372.5"/>
+            <point key="canvasLocation" x="-242.5" y="370.5"/>
         </window>
+        <menu title="OtherViews" id="LcI-yO-DnM">
+            <items>
+                <menuItem title="January" state="on" id="6Gw-xg-VQM">
+                    <connections>
+                        <action selector="monthPopUpAction:" target="-2" id="APe-L1-Ja0"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="February" id="F9F-J4-E8T">
+                    <connections>
+                        <action selector="monthPopUpAction:" target="-2" id="iqi-jC-9zD"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="March" id="sZl-mK-KKE">
+                    <connections>
+                        <action selector="monthPopUpAction:" target="-2" id="agN-pY-s7R"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="April" id="wst-2S-YtV">
+                    <connections>
+                        <action selector="monthPopUpAction:" target="-2" id="hkx-54-zlE"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="May" id="hfq-yX-qWx">
+                    <connections>
+                        <action selector="monthPopUpAction:" target="-2" id="l47-1c-Jbp"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="June" id="VlI-02-R7O">
+                    <connections>
+                        <action selector="monthPopUpAction:" target="-2" id="Vz0-ZD-fKy"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="July" id="SsB-wF-MRf">
+                    <connections>
+                        <action selector="monthPopUpAction:" target="-2" id="dwc-rH-TOg"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="August" id="Csd-6C-cM5">
+                    <connections>
+                        <action selector="monthPopUpAction:" target="-2" id="AZM-Cm-q5P"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="September" id="SVS-4z-XvL">
+                    <connections>
+                        <action selector="monthPopUpAction:" target="-2" id="HSJ-Zm-hfx"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="October" id="nVC-hQ-egG">
+                    <connections>
+                        <action selector="monthPopUpAction:" target="-2" id="n1W-NA-d5y"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="November" id="RED-6F-Fb1">
+                    <connections>
+                        <action selector="monthPopUpAction:" target="-2" id="RfY-wJ-uqB"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="December" id="hQV-Bg-lXl">
+                    <connections>
+                        <action selector="monthPopUpAction:" target="-2" id="LAC-Mh-4JC"/>
+                    </connections>
+                </menuItem>
+            </items>
+        </menu>
     </objects>
     <resources>
         <image name="NSAddTemplate" width="11" height="11"/>

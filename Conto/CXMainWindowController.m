@@ -59,10 +59,13 @@
   [[self table] registerForDraggedTypes:[NSArray arrayWithObjects:@"Conto rows",nil]];
 
 
+  [navigationControl setMenu:monthsMenu forSegment:1];
+    
   //[[self tickOffSwitch] setState:([[self document] tickOff] ? NSOnState : NSOffState)];
   [self updateCheckbox:[self tickOffSwitch] setting:[[self document] tickOff]];
   //[[self monthPopUpMenu] selectItemAtIndex:[[self document] currentMonth]];
-  [self updatePopUpButton:[self monthPopUpMenu] setting:[[self document] currentMonth]];
+//  [self updatePopUpButton:[self monthPopUpMenu] setting:[[self document] currentMonth]];
+    [self updateNavigationSegment];
   //[[self inOutRadioCluster] selectCellWithTag:[[self document] transactionType]];
   [self updateRadioCluster:[self inOutRadioCluster] setting:[[self document] transactionType]];
   //[[self table] setDrawsGrid:YES]; // Well, this doesn't work if set with IB 2.2
@@ -660,12 +663,24 @@
 }
 
 - (IBAction)monthPopUpAction:(id)sender {
-  if ([sender indexOfSelectedItem] != [[self document] currentMonth]) {
+  NSMenuItem *selected = [monthsMenu itemAtIndex:[[self document] currentMonth]];
     [[self table] deselectAll:self];
-    [[self document] setCurrentMonth:[sender indexOfSelectedItem]];
+    [[self document] setCurrentMonth:[monthsMenu indexOfItem:sender]];
+    [self updateNavigationSegment];
     [[[self document] undoManager] setActionName:
-      NSLocalizedString(@"Change Month", @"Name of undo/redo menu item after changing month via pop up menu")];
-  }
+     NSLocalizedString(@"Change Month", @"Name of undo/redo menu item after changing month via pop up menu")];
+}
+
+- (void)updateNavigationSegment
+{
+    for (int i = 0; i < [[monthsMenu itemArray] count]; i++) {
+        NSMenuItem *item = [monthsMenu itemAtIndex:i];
+        [item setState: NSOffState];
+        if (i == [[self document] currentMonth]) {
+            [item setState: NSOnState];
+            [navigationControl setLabel:[item title] forSegment:1];
+        }
+    }
 }
 
 - (IBAction)tickOffAction:(id)sender {
@@ -825,7 +840,7 @@
 - (IBAction)prevMonthAction:(id)sender {
   NSInteger newMonthIndex;
 
-  newMonthIndex = [[self monthPopUpMenu] indexOfSelectedItem] - 1;
+  newMonthIndex = [[self document] currentMonth] - 1;
   if (newMonthIndex < January)
     newMonthIndex = December;
   [[self table] deselectAll:self];
@@ -837,13 +852,28 @@
 - (IBAction)nextMonthAction:(id)sender {
   NSInteger newMonthIndex;
 
-  newMonthIndex = [[self monthPopUpMenu] indexOfSelectedItem] + 1;
+  newMonthIndex = [[self document] currentMonth] + 1;
   if (newMonthIndex > December)
     newMonthIndex = January;
   [[self table] deselectAll:self];
   [[self document] setCurrentMonth:newMonthIndex];
   [[[self document] undoManager] setActionName:
     NSLocalizedString(@"Change Month", @"Name of undo/redo menu item after changing month via pop up menu")];  
+}
+
+- (IBAction)navigateAction:(id)sender {
+    switch ([navigationControl selectedSegment]) {
+        case 0:
+            [self prevMonthAction:nil];
+            break;
+        case 2:
+            [self nextMonthAction:nil];
+            break;
+        default:
+            break;
+    }
+    
+    [self updateNavigationSegment];
 }
 
 - (IBAction)newEntryAction:(id)sender {
