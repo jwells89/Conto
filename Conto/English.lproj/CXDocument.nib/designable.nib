@@ -45,16 +45,15 @@
                                     <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                     <tableColumns>
                                         <tableColumn identifier="Check" editable="NO" width="16" minWidth="16" maxWidth="1000" id="22">
-                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="√">
+                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
                                                 <font key="font" metaFont="smallSystem"/>
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             </tableHeaderCell>
-                                            <textFieldCell key="dataCell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" alignment="left" title="9" id="170">
-                                                <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            </textFieldCell>
+                                            <buttonCell key="dataCell" type="check" title="Check" bezelStyle="regularSquare" imagePosition="only" controlSize="mini" inset="2" id="KAJ-Gb-NpF">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="miniSystem"/>
+                                            </buttonCell>
                                             <tableColumnResizingMask key="resizingMask" userResizable="YES"/>
                                         </tableColumn>
                                         <tableColumn identifier="Description" width="206" minWidth="65.089996337890625" maxWidth="1000" id="27">
@@ -206,7 +205,7 @@
                     </textField>
                 </subviews>
             </view>
-            <toolbar key="toolbar" implicitIdentifier="24C26A1B-8A99-4DF0-A795-35C71FFB32EC" autosavesConfiguration="NO" displayMode="iconOnly" sizeMode="regular" id="T7D-5f-782">
+            <toolbar key="toolbar" implicitIdentifier="24C26A1B-8A99-4DF0-A795-35C71FFB32EC" displayMode="iconOnly" sizeMode="regular" id="T7D-5f-782">
                 <allowedToolbarItems>
                     <toolbarItem implicitItemIdentifier="NSToolbarShowColorsItem" id="XDE-n3-d7B"/>
                     <toolbarItem implicitItemIdentifier="NSToolbarShowFontsItem" id="RfE-rO-wgm"/>

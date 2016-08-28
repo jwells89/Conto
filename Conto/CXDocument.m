@@ -1008,7 +1008,7 @@ NSInteger compareRecordsBasedOnNumber(id obj1, id obj2, void *context) {
 
 - (void)triggerTickOffForRecord:(NSMutableDictionary *)record {
   [[[self undoManager] prepareWithInvocationTarget:self] triggerTickOffForRecord:record];
-  [record setObject:([[record objectForKey:@"Check"] isEqualToString:@""] ? @"✓" : @"") forKey:@"Check"];
+  [record setObject:([[record objectForKey:@"Check"] boolValue] ? @(NSOnState) : @(NSOffState)) forKey:@"Check"];
   // Post notification to update GUI
   [[NSNotificationCenter defaultCenter] postNotificationName:CXTableChangedNotification
                                                       object:self];
@@ -1023,7 +1023,7 @@ NSInteger compareRecordsBasedOnNumber(id obj1, id obj2, void *context) {
   else
     theRecord = [[self filteredRecords] objectAtIndex:row];
   [[[self undoManager] prepareWithInvocationTarget:self] triggerTickOffAtIndex:row];
-  [theRecord setObject:([[theRecord objectForKey:@"Check"] isEqualToString:@""] ? @"√" : @"") forKey:@"Check"];
+  [theRecord setObject:([[theRecord objectForKey:@"Check"] boolValue] ? @(NSOnState) : @(NSOffState)) forKey:@"Check"];
   // Post notification to update GUI
   [[NSNotificationCenter defaultCenter] postNotificationName:CXTableChangedNotification
                                                       object:self];

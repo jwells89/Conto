@@ -522,7 +522,7 @@
     [[self dateField] setObjectValue:[NSDate date]];
   }
   [record setObject:[[self dateField] objectValue] forKey:@"Date"]; 
-  [record setObject:([[self document] tickOff] ? @"✓" : @"") forKey:@"Check"];
+  [record setObject:([[self document] tickOff] ? @(NSOnState) : @(NSOffState)) forKey:@"Check"];
   newDescription = [[self descriptionField] stringValue];
   [record setObject:newDescription forKey:@"Description"];
 
@@ -878,7 +878,7 @@
 
 - (IBAction)newEntryAction:(id)sender {
     NSMutableDictionary *record = [NSMutableDictionary dictionaryWithCapacity:5];
-    record[@"Check"] = @"";
+    record[@"Check"] = @(NSOffState);
     record[@"Date"] = [NSDate date];
     record[@"Income"] = @(0);
     record[@"Expense"] = @(0);
@@ -909,7 +909,7 @@
       else
         theRecord = [[[self document] getRecordsForMonth:CurrentMonth] objectAtIndex:row];
       [[self document] triggerTickOffForRecord:theRecord]; 
-      if ([[theRecord objectForKey:@"Check"] isEqualToString:@""])
+      if ([[theRecord objectForKey:@"Check"] boolValue])
         [[[self document] undoManager] setActionName:
           NSLocalizedString(@"Clear Tick Off", @"Name of undo/redo menu item after switching a tick off in table")];
       else
