@@ -1242,7 +1242,7 @@ static NSString *CXArchivedData = @"Archived Data";
   [dictionary setObject:[NSString stringWithFormat:@"%d", [self tickOff]] forKey:CXTickOffKey];
   if ([self logo]) {
     [dictionary setObject:[[self logo] TIFFRepresentationUsingCompression:NSTIFFCompressionLZW
-                                                                   factor:0.0] forKey:CXLogoKey];
+                                                                   factor:(float)0.0] forKey:CXLogoKey];
   }
   [dictionary setObject:[self accountInfo] forKey:CXAccountInfoKey];
   

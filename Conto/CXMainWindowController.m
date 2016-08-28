@@ -476,14 +476,14 @@
       [[column dataCell] setFont:
         [NSFont systemFontOfSize:[NSFont smallSystemFontSize]]];
     }
-    [[self table] setRowHeight:13.0];
+    [[self table] setRowHeight:(float)13.0];
   }
   else {
     while (column = [enumerator nextObject]) {
       [[column dataCell] setFont:
         [NSFont systemFontOfSize:[NSFont systemFontSize]]];
     }
-    [[self table] setRowHeight:17.0];
+    [[self table] setRowHeight:(float)17.0];
   }
 }
 
@@ -844,6 +844,22 @@
   [[self document] setCurrentMonth:newMonthIndex];
   [[[self document] undoManager] setActionName:
     NSLocalizedString(@"Change Month", @"Name of undo/redo menu item after changing month via pop up menu")];  
+}
+
+- (IBAction)newEntryAction:(id)sender {
+    NSMutableDictionary *record = [NSMutableDictionary dictionaryWithCapacity:5];
+    record[@"Check"] = @"";
+    record[@"Date"] = [NSDate date];
+    record[@"Income"] = @(0);
+    record[@"Expense"] = @(0);
+    record[@"Description"] = @"";
+    
+    [[self document] insertRecord:record atIndex:[[[self document] getRecordsForMonth:CurrentMonth] count]
+                         forMonth:CurrentMonth];
+    NSUInteger targetRow = [[[self document] getRecordsForMonth:CurrentMonth] count]-1;
+    [table selectRowIndexes:[NSIndexSet indexSetWithIndex:targetRow] byExtendingSelection:NO];
+//    [table scrollRowToVisible:[[[self document] getRecordsForMonth:CurrentMonth] count]-1];
+    [table editColumn:1 row:targetRow withEvent:nil select:YES];
 }
 
 

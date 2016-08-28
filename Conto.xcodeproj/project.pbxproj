@@ -1086,26 +1086,34 @@
 		528044511D5DB92400388530 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_OBJC_ARC = NO;
 				COMBINE_HIDPI_IMAGES = YES;
+				GCC_VERSION = "";
 				INFOPLIST_FILE = Conto/Info.plist;
+				LD_DONT_RUN_DEDUPLICATION = NO;
 				LD_RUNPATH_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.johnwells.Conto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
 		528044521D5DB92400388530 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_OBJC_ARC = NO;
 				COMBINE_HIDPI_IMAGES = YES;
+				GCC_VERSION = "";
 				INFOPLIST_FILE = Conto/Info.plist;
+				LD_DONT_RUN_DEDUPLICATION = NO;
 				LD_RUNPATH_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.johnwells.Conto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};

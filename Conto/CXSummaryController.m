@@ -259,14 +259,14 @@
       [[column dataCell] setFont:
         [NSFont systemFontOfSize:[NSFont smallSystemFontSize]]];
     }
-    [[self infoTable] setRowHeight:13.0];
+    [[self infoTable] setRowHeight:(float)13.0];
     while (column = [enumerator nextObject]) {
       [[column dataCell] setFont:
         [NSFont systemFontOfSize:[NSFont smallSystemFontSize]]];
     }
-    [[self summaryTable] setRowHeight:13.0];
-    [[self window] setMinSize:NSMakeSize(380.0,295.0)];
-    [[self window] setMaxSize:NSMakeSize(10000.0,295.0)];
+    [[self summaryTable] setRowHeight:(float)13.0];
+    [[self window] setMinSize:NSMakeSize((float)380.0,(float)295.0)];
+    [[self window] setMaxSize:NSMakeSize((float)10000.0,(float)295.0)];
     newRect = [[self window] frame];
     (newRect.size).height = [[self window] minSize].height;
     [[self window] setFrame:newRect display:YES];
@@ -276,14 +276,14 @@
       [[column dataCell] setFont:
         [NSFont systemFontOfSize:[NSFont systemFontSize]]];
     }
-    [[self infoTable] setRowHeight:17.0];
+    [[self infoTable] setRowHeight:(float)17.0];
     while (column = [enumerator nextObject]) {
       [[column dataCell] setFont:
         [NSFont systemFontOfSize:[NSFont systemFontSize]]];
     }
-    [[self summaryTable] setRowHeight:17.0];
-    [[self window] setMinSize:NSMakeSize(380.0,350.0)];
-    [[self window] setMaxSize:NSMakeSize(10000.0,350.0)];
+    [[self summaryTable] setRowHeight:(float)17.0];
+    [[self window] setMinSize:NSMakeSize((float)380.0,(float)350.0)];
+    [[self window] setMaxSize:NSMakeSize((float)10000.0,(float)350.0)];
     newRect = [[self window] frame];
     (newRect.size).height = [[self window] minSize].height;
     [[self window] setFrame:newRect display:YES];

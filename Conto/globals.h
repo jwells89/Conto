@@ -64,7 +64,7 @@ extern NSString *CXIncomeOpValueKey;
 extern NSString *CXExpenseOpValueKey;
 extern NSString *CXAutocompleteKey;
 
-typedef NS_ENUM(NSInteger, CXMonth) {
+typedef enum {
   CurrentMonth = 127,
   NoMonth = -1,
   January = 0,
@@ -80,29 +80,29 @@ typedef NS_ENUM(NSInteger, CXMonth) {
   November,
   December,
   LastOfYear // This one is used to index totals
-};
+} CXMonth;
 
-typedef NS_ENUM(NSInteger, CXTransactionType) {
+typedef enum {
     Income = 0,
     Expense
-};
+} CXTransactionType;
 
-typedef NS_ENUM(NSInteger, CXFontSize) {
+typedef enum {
   Smaller = 0,
   Bigger
-};
+} CXFontSize;
 
-typedef NS_ENUM(NSInteger, CXCurrencyPosition) {
+typedef enum {
   Before = 0,
   After
-};
+} CXCurrencyPosition;
 
-typedef NS_ENUM(NSInteger, CXSeparator) {
+typedef enum {
   Comma = 0,
   Period
-};
+} CXSeparator;
 
-typedef NS_ENUM(NSInteger, CXDateFormat) {
+typedef enum {
   DDMMYY = 0,          // 24-12-02
   DDMMYYWithSlash,     // 24/12/02
   DDMM,                // 24-12
@@ -111,9 +111,9 @@ typedef NS_ENUM(NSInteger, CXDateFormat) {
   DDMonYear,           // 24 dec 2002
   DDMonth,             // 24 december
   DDMon                // 24 dec
-};
+} CXDateFormat;
 
-typedef NS_ENUM(NSInteger, CXOperationType) {
+typedef enum {
   NoOperation = 0,
   Add,
   Subtract,
@@ -121,7 +121,7 @@ typedef NS_ENUM(NSInteger, CXOperationType) {
   Divide,
   AddPercent,
   SubtractPercent
-};
+} CXOperationType;
 
   
 

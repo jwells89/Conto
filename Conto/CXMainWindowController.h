@@ -110,6 +110,7 @@
 - (IBAction)printDocumentView:(id)sender;
 - (IBAction)prevMonthAction:(id)sender;
 - (IBAction)nextMonthAction:(id)sender;
+- (IBAction)newEntryAction:(id)sender;
 //---
 - (void)handleClickOnTableItem; // Designated selector for the setAction: method in TableView (see windowDidLoad)
 - (void)deleteRecords:(id)sender;

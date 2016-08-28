@@ -30,12 +30,12 @@
 #import <math.h>
 
 #define Prefs   [NSUserDefaults standardUserDefaults]
-#define GAP     10.0
-#define PADH    10.0
-#define PADV    25.0
-#define V_OFFSET_CAPTION  7.0
-#define H_OFFSET_CAPTION  190.0
-#define SQUARE_SIZE 12.0
+const float GAP = (float)10.0;
+const float PADH = (float)10.0;
+const float PADV = (float)25.0;
+const float V_OFFSET_CAPTION = (float)7.0;
+const float H_OFFSET_CAPTION = (float)190.0;
+const float SQUARE_SIZE = (float)12.0;
 
 @implementation CXGraphView
 
@@ -127,14 +127,14 @@
   [textCell setStringValue:NSLocalizedString(@"Balance", @"Balance")];
   [textCell drawWithFrame:NSMakeRect(originH+155,originV,[textCell cellSize].width,[textCell cellSize].height) inView:self];
       
-  maxValue = [[[self graphController] document] getMaximumValue];
-  minValue = [[[self graphController] document] getMinimumValue]; // Zero if balances are nonnegative, otherwise it is a negative value
+  maxValue = (float)[[[self graphController] document] getMaximumValue];
+  minValue = (float)[[[self graphController] document] getMinimumValue]; // Zero if balances are nonnegative, otherwise it is a negative value
   valueRange = maxValue-minValue;
 
   if (maxValue > 0.0) { // maxValue == 0 means that the table is either empty or it contains only zeros
     // Draw labels
-    labelStepValue = valueRange / 10.0;
-    labelStepV = maxH / 10.0;
+    labelStepValue = (float)(valueRange / 10.0);
+    labelStepV = (float)(maxH / 10.0);
     if (labelStepV<10)
       labelStepV = 10;
     labelValue = maxValue;
@@ -150,23 +150,23 @@
       (thereby moving the pen to the center of a pixel) a line with a width of 1 will appear on the screen as just that."
       If I don't do so, lines will have a width of two pixels or so...
       */    
-    originH = PADH+0.5;
+    originH = PADH+(float)0.5;
     originV = maxH+PADV;
     bp = [NSBezierPath bezierPath];
-    [bp setLineWidth:1.0];
+    [bp setLineWidth:(float)1.0];
     [[NSColor blackColor] set];
     for (i=0;i<=10;i++) {
       [textCell setDoubleValue:labelValue-labelStepValue*i];
       [textCell drawWithFrame:NSMakeRect(originH,originV-[textCell cellSize].height/2,width,height) inView:self];
       // Draw an horizontal line
-      [bp moveToPoint:NSMakePoint(originH+width,floor(originV)+0.5)];
-      [bp lineToPoint:NSMakePoint(maxW+PADH,floor(originV)+0.5)];
+      [bp moveToPoint:NSMakePoint((float)originH+width,(float)floor(originV)+(float)0.5)];
+      [bp lineToPoint:NSMakePoint((float)maxW+PADH,(float)floor(originV)+(float)0.5)];
       [bp stroke];
       originV -= labelStepV;
     }
 
     // Draw bars
-    originV = floor((-minValue/valueRange)*maxH+PADV)+0.5; // Leaves room for negative balances
+    originV = (float)floor(((float)-minValue/valueRange)*maxH+PADV)+(float)0.5; // Leaves room for negative balances
     originH += width;
     // Draw X-axis
     [bp moveToPoint:NSMakePoint(originH,originV)];
@@ -177,21 +177,21 @@
     //  width = 5;
     for (m=January;m<=December;m++) {
       // Bar for Incomes
-      height = [[[self graphController] document] incomeForMonth:m];
-      height = (height/valueRange) * maxH;
+      height = (float)[[[self graphController] document] incomeForMonth:m];
+      height = (float)(height/valueRange) * maxH;
       r = NSMakeRect(originH, originV, width, height);
       [[NSColor greenColor] set];
       NSRectFill(r);
       originH += width;
       // Bar for Expenses
-      height = [[[self graphController] document] expenseForMonth:m];
+      height = (float)[[[self graphController] document] expenseForMonth:m];
       height = (height/valueRange) * maxH;
       r = NSMakeRect(originH, originV, width, height);
       [[NSColor redColor] set];
       NSRectFill(r);
       originH += width;
       // Bar for Balances (they can be both positive and negative)
-      height = [[[self graphController] document] balanceForMonth:m];
+      height = (float)[[[self graphController] document] balanceForMonth:m];
       height = (height/valueRange) * maxH;
       if (height >= 0)
         r = NSMakeRect(originH, originV, width, height);

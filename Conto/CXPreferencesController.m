@@ -97,7 +97,7 @@ static id sharedInstance = nil; // There is only one instance of this class. We 
     [[column dataCell] setFont:
       [NSFont systemFontOfSize:[NSFont smallSystemFontSize]]];
   }
-  [[self descriptionsTableView] setRowHeight:13.0];
+  [[self descriptionsTableView] setRowHeight:(float)13.0];
 
   [self setNumberFormat:nil];
   [self updateCheckbox:[self autocompleteCheckbox] setting:[Prefs boolForKey:CXAutocompleteKey]];
