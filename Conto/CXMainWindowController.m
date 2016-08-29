@@ -900,6 +900,10 @@
 
   column = [[self table] clickedColumn];
   row = [[self table] clickedRow];
+    
+  if (column < 0 || column > [[table tableColumns] count] || row < 0 || row > [table numberOfRows] ) {
+      return;
+  }
   
   if ([[[[[self table] tableColumns] objectAtIndex:column] identifier] isEqual:@"Check"]) {
     if (row > -1) { // If row == -1, no row was selected (the user clicked the header or outside the cells)
